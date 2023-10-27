@@ -20,18 +20,39 @@
 }
 
 .logo img {
-  width: 250px;
+  width: 70%;
 }
 
 .btn {
+  margin: auto;
   width: 120px;
-  height: 25px;
+  padding: 6px 0px 6px 0px;
   cursor: pointer;
   background-color: #d9d9d9;
   border: 0px;
   border-radius: 20px;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
+  vertical-align: middle;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: black;
+}
+
+/* user type page */
+
+.btn-sec2 {
+  display: flex;
+  justify-content: center;
+}
+.btn-sec2 a {
+  text-decoration: none;
+}
+
+.icon {
+  margin-left: 20px;
 }
 
 @media screen and (max-width: 500px) {
