@@ -1,0 +1,165 @@
+.background-01 {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../../images/bg-cover.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-box-01 {
+  width: 28%;
+  background: linear-gradient(to left, #164a41, #4d774e);
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 0px 4px 21px 4px #012a03;
+  padding: 50px 0px 50px 0px;
+}
+
+.logo img {
+  width: 70%;
+}
+
+.btn {
+  margin: auto;
+  width: 120px;
+  padding: 6px 0px 6px 0px;
+  cursor: pointer;
+  background-color: #d9d9d9;
+  border: 0px;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: black;
+}
+
+/* user type page */
+
+.btn-sec2 {
+  display: flex;
+  justify-content: center;
+}
+.btn-sec2 a {
+  text-decoration: none;
+}
+
+.icon {
+  margin-left: 20px;
+}
+
+/* login page */
+
+.background-02 {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #174c26;
+}
+
+.main-box-02 {
+  width: 28%;
+  background-color: white;
+  text-align: center;
+  border-radius: 30px;
+  box-shadow: 0px 4px 21px 4px #012a03;
+  padding: 50px 0px 50px 0px;
+}
+
+.textboxsec {
+  justify-content: center;
+  display: flex;
+}
+
+.input-box1 {
+  width: 100%;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.textbox {
+  width: 80%;
+  height: 20px;
+  position: relative;
+  left: 10px;
+  top: 9px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.profimage {
+  width: 15px;
+  position: relative;
+  top: 7px;
+}
+
+.normalButtons01 {
+  width: 100px;
+  height: 25px;
+  background-color: #164a25;
+  color: white;
+  border: 0px;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.none {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.btn-sec3 {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.btn-box {
+  margin: auto;
+  display: flex;
+}
+
+.btn-box a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .main-box-01 {
+    width: 80%;
+    background: linear-gradient(to left, #164a41, #4d774e);
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0px 4px 21px 4px #012a03;
+    padding: 50px 0px 50px 0px;
+  }
+
+  .main-box-02 {
+    width: 80%;
+    background-color: white;
+    text-align: center;
+    border-radius: 30px;
+    box-shadow: 0px 4px 21px 4px #012a03;
+    padding: 50px 0px 50px 0px;
+  }
+}
