@@ -55,7 +55,7 @@ body {
   color: black;
   font-family: "Castoro Titling", cursive;
   font-family: "Sofia Sans Condensed", sans-serif;
-  font-size: 55px;
+  font-size: 40px;
 }
 
 .icon-set {
@@ -133,7 +133,114 @@ body {
   text-decoration: none;
 }
 
-@media screen and (max-width: 500px) {
+/* personal_details_01 */
+
+.right-box2 {
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.textboxsec2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-box2 {
+  width: 80%;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.input-box3 {
+  width: 30%;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.tag {
+  width: 20%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.tag2 {
+  width: 20%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding-left: 60px;
+}
+
+.textbox2 {
+  width: 95%;
+  height: 20px;
+  position: relative;
+  left: 5px;
+  top: 9px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+/* personal_details_02 */
+
+.input-box4 {
+  width: 35%;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.input-box5 {
+  width: 15%;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+
+.plus {
+  width: 40px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: white;
+}
+
+.right-box3 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+@media screen and (max-width: 700px) {
   body {
     margin: 0px;
     padding: 0px;
@@ -167,12 +274,14 @@ body {
     font-family: "Castoro Titling", cursive;
     font-family: "Montserrat", sans-serif;
   }
+
   .text-01 {
     color: white;
     font-family: "Castoro Titling", cursive;
     font-family: "Sofia Sans Condensed", sans-serif;
     font-size: 14px;
   }
+
   .btn-back {
     width: 20%;
     background-color: white;
@@ -187,10 +296,102 @@ body {
     color: black;
     font-family: "Castoro Titling", cursive;
     font-family: "Sofia Sans Condensed", sans-serif;
-    font-size: 35px;
+    font-size: 25px;
   }
+
   .textboxsec {
     width: 100%;
     margin: auto;
+  }
+
+  /* personal_details_01 */
+
+  .right-box2 {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .input-box2 {
+    width: 100%;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 10px;
+  }
+
+  .tag {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+  }
+
+  .input-box3 {
+    width: 60%;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 10px;
+  }
+
+  .tag2 {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    padding-left: 0;
+  }
+
+  /* personal_details_02 */
+
+  .input-box4 {
+    width: 100%;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 10px;
+  }
+
+  .input-box5 {
+    width: 35%;
+    background-color: #d9d9d9;
+    border-radius: 15px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    padding-left: 10px;
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+
+  .plus {
+    width: 40px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    background-color: white;
+  }
+
+  .right-box3 {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
