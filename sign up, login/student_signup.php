@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="right-box">
-    <div>
+    <div class="main-div">
       <div class="text-02"><b>Create an account</b></div>
       <br />
       <div class="icon-set mt-2 mb-3">
@@ -36,7 +36,6 @@
       <div class="text-03 mb-4">or use your email to SignUp</div>
       <form action="">
         <div class="textboxsec">
-
           <div class="input-box1">
             <img class="profimage" src="../images/profile.png" alt="" />
             <input class="textbox" type="text" placeholder="Username" />
@@ -60,6 +59,7 @@
         </div>
       </form>
     </div>
+  </div>
 </body>
 
 </html>
