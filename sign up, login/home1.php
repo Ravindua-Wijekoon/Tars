@@ -22,7 +22,7 @@
             <div class="div2">
                 <div class="home"><a href="home1.php" class="none">Home </a></div>
                 <div><a href="#" class="none">About Us </a></div>
-                <div><a href="#" class="none">Login </a></div>
+                <div><a href="login.php" class="none">Login </a></div>
                 <img src=" ../images/search.png" height="20px" alt="" />
             </div>
         </div>
@@ -55,13 +55,13 @@
     <div class="section-03">
         <div class="colour">
             <div>
-                <b>Unlock Opportunities: Join <span>Tars</span></b><br /><br />
+                <b>Unlock Opportunities: Join Tars</b><br /><br />
                 <div>
                     Discover valuable internships, gain hands-on experience, and shape
                     your future. <br />
                     Register now to kick start your career journey.
                 </div>
-                <a href="#" class="none">
+                <a href="user_type.php" class="none">
                     <div class="register-btn mt-5">Register</div>
                 </a>
             </div>

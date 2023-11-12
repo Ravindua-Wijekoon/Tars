@@ -58,9 +58,9 @@
                     </a>
                 </div>
                 <div class="text-03 mb-4 ">
-                    Already have an account? 
-                    <a href="user_type.html" class="none">
-                        <b>Login</b>
+                    Don’t have an account?
+                    <a href="user_type.php" class="none">
+                        <b>Sign up</b>
                     </a>
                 </div>
             </form>
