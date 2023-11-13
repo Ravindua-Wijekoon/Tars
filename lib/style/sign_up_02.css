@@ -67,6 +67,15 @@ body {
   width: 40px;
 }
 
+.none {
+  text-decoration: none;
+  color: #949494;
+}
+
+.none :hover {
+  color: #949494;
+}
+
 .text-03 {
   color: #949494;
   font-family: "Castoro Titling", cursive;
@@ -78,6 +87,11 @@ body {
 .textboxsec {
   width: 75%;
   margin: auto;
+}
+
+.main-div {
+  width: 60%;
+  text-align: center;
 }
 
 .input-box1 {
@@ -127,10 +141,6 @@ body {
   display: flex;
   width: 100%;
   justify-content: center;
-}
-
-.none {
-  text-decoration: none;
 }
 
 /* personal_details_01 */
@@ -265,6 +275,11 @@ body {
     display: flex;
     height: 550px;
     justify-content: center;
+  }
+
+  .main-div {
+    width: 70%;
+    text-align: center;
   }
 
   .title {
