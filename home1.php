@@ -22,7 +22,7 @@
             <div class="div2">
                 <div class="home"><a href="home1.php" class="none">Home </a></div>
                 <div><a href="#" class="none">About Us </a></div>
-                <div><a href="login.php" class="none">Login </a></div>
+                <div><a href="../login/login.php" class="none">Login </a></div>
                 <img src=" ../images/search.png" height="20px" alt="" />
             </div>
         </div>
