@@ -143,7 +143,7 @@ body {
   justify-content: center;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   .div1 {
     width: 100%;
     margin: auto;
