@@ -61,7 +61,7 @@
                     your future. <br />
                     Register now to kick start your career journey.
                 </div>
-                <a href="user_type.php" class="none">
+                <a href="student_signup/user_type.php" class="none">
                     <div class="register-btn mt-5">Register</div>
                 </a>
             </div>
