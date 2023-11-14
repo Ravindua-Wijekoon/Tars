@@ -49,7 +49,7 @@
                 </div>
                 <div class="btn-sec">
                     <div class="btn-box">
-                        <input type="submit" class="normalButtons01" value="SignUp" />
+                        <input type="submit" class="normalButtons01" value="Login" />
                     </div>
                 </div>
                 <div class="text-03 mb-2 mt-4">
