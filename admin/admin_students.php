@@ -65,16 +65,23 @@
                         <?php
                         for ($i = 0; $i < 5; $i++) {
                             ?>
-                            <tr>
-                                <td>2021T01250</td>
-                                <td>Blake Lively</td>
-                                <td>ICT</td>
-                                <td>N/A</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
+                        <tr>
+                            <td>2021T01250</td>
+                            <td>Blake Lively</td>
+                            <td>ICT</td>
+                            <td>N/A</td>
+                            <td>
+                                <a href="#" class="none">
+                                    <img src="../images/call icon.png" alt="" class="contact-icon">
+                                </a>
+                                <a href="https://www.google.com" class="none">
+                                    <img src="../images/email icon.png" alt="" class="contact-icon">
+                                </a>
+                            </td>
+                            <td></td>
+                        </tr>
 
-                            <?php
+                        <?php
                         }
                         ?>
 
