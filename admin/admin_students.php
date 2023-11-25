@@ -79,6 +79,9 @@
                                 </a>
                             </td>
                             <td></td>
+                            <td>
+                                <img src="../images/circle-xmark-regular.png" alt="" class="contact-icon">
+                            </td>
                         </tr>
 
                         <?php
