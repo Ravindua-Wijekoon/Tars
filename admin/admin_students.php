@@ -57,34 +57,35 @@
                             <th>Department</th>
                             <th>Company</th>
                             <th>Contact</th>
-                            <th>Status</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php
-                        for ($i = 0; $i < 5; $i++) {
+                        for ($i = 0; $i < 10; $i++) {
                             ?>
-                        <tr>
-                            <td>2021T01250</td>
-                            <td>Blake Lively</td>
-                            <td>ICT</td>
-                            <td>N/A</td>
-                            <td>
-                                <a href="#" class="none">
-                                    <img src="../images/call icon.png" alt="" class="contact-icon">
-                                </a>
-                                <a href="https://www.google.com" class="none">
-                                    <img src="../images/email icon.png" alt="" class="contact-icon">
-                                </a>
-                            </td>
-                            <td></td>
-                            <td>
-                                <img src="../images/circle-xmark-regular.png" alt="" class="contact-icon">
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>2021T01250</td>
+                                <td>Blake Lively</td>
+                                <td>ICT</td>
+                                <td>N/A</td>
+                                <td>
+                                    <a href="#" class="none">
+                                        <img src="../images/call icon.png" alt="" class="contact-icon">
+                                    </a>
+                                    <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
+                                        <img src="../images/email icon.png" alt="" class="contact-icon">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="#">
+                                        <img src="../images/circle-xmark-regular.png" alt="" class="contact-icon">
+                                    </a>
 
-                        <?php
+                                </td>
+                            </tr>
+
+                            <?php
                         }
                         ?>
 
