@@ -79,7 +79,6 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 1px solid #164a41;
   overflow: hidden;
   cursor: pointer;
 }
@@ -117,6 +116,16 @@ body {
   cursor: pointer;
   align-items: center;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.cardBox .card:hover {
+  background: white;
+  border: 1px black solid;
+}
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName {
+  color: black;
 }
 
 .cardBox .card .numbers {
