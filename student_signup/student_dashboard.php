@@ -26,36 +26,54 @@
 
                 <li>
                     <a href="#">
+                        <span class="nav-icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
+                        <span class="nav-icon">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </span>
                         <span class="title">Search Job</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
+                        <span class="nav-icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
                         <span class="title">Companies</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
+                        <span class="nav-icon">
+                            <ion-icon name="document-text-outline"></ion-icon>
+                        </span>
                         <span class="title">Application</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
+                        <span class="nav-icon">
+                            <ion-icon name="chatbubble-outline"></ion-icon>
+                        </span>
                         <span class="title">Messages</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
+                        <span class="nav-icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
                         <span class="title">Profile</span>
                     </a>
                 </li>
@@ -65,6 +83,9 @@
         <!-- ========================= Main ==================== -->
         <div class="main">
             <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
                 <div class="topic">
                     Dashboard
                 </div>
@@ -143,12 +164,12 @@
                         <?php
                         for ($i = 0; $i < 3; $i++) {
                             ?>
-                        <div class="c-card">
-                            <img src="../images/Group 105.png" alt="">
-                            <span>Apple Inc.</span>
-                            <span class="int-no">5 Internships</span>
-                        </div>
-                        <?php
+                            <div class="c-card">
+                                <img src="../images/Group 105.png" alt="">
+                                <span>Apple Inc.</span>
+                                <span class="int-no">5 Internships</span>
+                            </div>
+                            <?php
                         }
                         ?>
                     </div>
@@ -160,15 +181,15 @@
                         <?php
                         for ($i = 0; $i < 2; $i++) {
                             ?>
-                        <div class="int-card">
-                            <img src="../images/Group 105.png" alt="">
-                            <div class="text1">
-                                <span>UI/UX Designer</span>
-                                <span>Dribbble Holdings Ltd.</span>
-                                <span>LKR 50,000 - LKR 80,000</span>
+                            <div class="int-card">
+                                <img src="../images/Group 105.png" alt="">
+                                <div class="text1">
+                                    <span>UI/UX Designer</span>
+                                    <span>Dribbble Holdings Ltd.</span>
+                                    <span>LKR 50,000 - LKR 80,000</span>
+                                </div>
                             </div>
-                        </div>
-                        <?php
+                            <?php
                         }
                         ?>
                     </div>
@@ -176,17 +197,18 @@
                 <div class="item3">
                     <span class="title">Recent Activities</span>
                 </div>
+
             </div>
 
         </div>
     </div>
 
     <!-- =========== Scripts =========  -->
-    <script src="assets/js/main.js"></script>
+    <script src="../lib/js/main.js"></script>
 
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
 </body>
 
 </html>
