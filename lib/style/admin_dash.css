@@ -149,7 +149,7 @@ body {
 }
 
 /* ====================== Responsive Design ========================== */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   body {
     display: flex;
     flex-wrap: wrap;

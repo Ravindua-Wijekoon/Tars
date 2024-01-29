@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Dashboard</title>
+    <title>Companies</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="../lib/style/student_dash.css">
 </head>
@@ -87,7 +87,7 @@
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
                 <div class="topic">
-                    Dashboard
+                    Companies
                 </div>
                 <div class="search">
                     <label>
@@ -112,94 +112,41 @@
                     </div>
 
                 </div>
-
-
             </div>
 
-            <!-- ======================= Cards ================== -->
-            <div class="cardBox">
-                <div class="card">
-                    <div>
-                        <div class="cardName">Applied</div>
-                        <div class="numbers">20</div>
-
-                    </div>
-
-                    <div class="image">
-                        <img src="../images/briefcase.png" alt="">
-                    </div>
+            <div class="search-sec">
+                <div class="search-bar">
+                    <label>
+                        <input type="text" placeholder="Search by Title or Company">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
                 </div>
-
-                <div class="card">
-                    <div>
-                        <div class="cardName">Interviews</div>
-                        <div class="numbers">10</div>
-
-                    </div>
-
-                    <div class="image">
-                        <img src="../images/calendar.png" alt="">
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="cardName">Messages</div>
-                        <div class="numbers">08</div>
-
-                    </div>
-
-                    <div class="image">
-                        <img src="../images/messagetext1.png" alt="">
-                    </div>
+                <div class="search-button">
+                    Search
                 </div>
 
             </div>
 
-            <!-- ================ Company list ================= -->
-            <div class="grid-container">
-                <div class="item1">
-                    <span class="title">Featured Companies</span>
-                    <div class="card-sec">
-                        <?php
-                        for ($i = 0; $i < 3; $i++) {
-                            ?>
-                            <div class="c-card">
-                                <img src="../images/Group 105.png" alt="">
-                                <span>Apple Inc.</span>
-                                <span class="int-no">5 Internships</span>
-                            </div>
-                            <?php
-                        }
-                        ?>
+            <!-- ========================= Cards ==================== -->
+
+            <div class="card-sec">
+
+                <?php
+                for ($i = 0; $i < 7; $i++) {
+                    ?>
+                    <div class="company-card">
+                        <img src="../images/Group 105.png" alt="">
+                        <div class="company-name">
+                            Apple Inc.
+                        </div>
+                        <div class="company-type">
+                            Technology Company
+                        </div>
+
                     </div>
-                </div>
-
-                <!-- ================ Internship list ================= -->
-
-                <div class="item2">
-                    <span class="title">Recommended Internships</span>
-                    <div class="int-sec">
-                        <?php
-                        for ($i = 0; $i < 2; $i++) {
-                            ?>
-                            <div class="int-card">
-                                <img src="../images/Group 105.png" alt="">
-                                <div class="text1">
-                                    <span>UI/UX Designer</span>
-                                    <span>Dribbble Holdings Ltd.</span>
-                                    <span>LKR 50,000 - LKR 80,000</span>
-                                </div>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                    </div>
-                </div>
-                <div class="item3">
-                    <span class="title">Recent Activities</span>
-                </div>
-
+                    <?php
+                }
+                ?>
             </div>
 
         </div>
