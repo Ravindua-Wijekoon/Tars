@@ -19,7 +19,7 @@
         <div class="text-box">
             <div class="title">New here?</div>
             <div class="text-01">
-                Please log in with your <br />
+                Please log in with your <br/>
                 personal details
             </div>
             <a type="button" href="../home1.php" class="btn-back mt-4">Back</a>
