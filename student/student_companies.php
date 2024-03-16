@@ -134,17 +134,17 @@
                 <?php
                 for ($i = 0; $i < 7; $i++) {
                     ?>
-                    <div class="company-card">
-                        <img src="../images/Group 105.png" alt="">
-                        <div class="company-name">
-                            Apple Inc.
-                        </div>
-                        <div class="company-type">
-                            Technology Company
-                        </div>
-
+                <div class="company-card">
+                    <img src="../images/Group 105.png" alt="">
+                    <div class="company-name">
+                        Apple Inc.
                     </div>
-                    <?php
+                    <div class="company-type">
+                        Technology Company
+                    </div>
+
+                </div>
+                <?php
                 }
                 ?>
             </div>
