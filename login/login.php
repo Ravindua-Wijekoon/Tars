@@ -34,7 +34,7 @@
                 <img class="" src="../images/linkedin-icon.png" alt="">
             </div>
             <div class="text-03 mb-4">or use your email to Login</div>
-            <form action="../lib/php/authenticate.php" method="post">
+            <form action="../lib/php/login_BE.php" method="post">
                 <div class="textboxsec">
 
                     <div class="input-box1">
