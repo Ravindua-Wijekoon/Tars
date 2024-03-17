@@ -58,9 +58,11 @@
                 <div class="text-03 mb-4 mt-4">Already have an account? <a href="../login/login.php" class="none">
                         <b>Login</b></a>
                 </div>
+                
             </form>
         </div>
     </div>
+    
 </body>
 
 </html>

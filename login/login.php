@@ -22,7 +22,7 @@
                 Please log in with your <br/>
                 personal details
             </div>
-            <a type="button" href="../home1.php" class="btn-back mt-4">Back</a>
+            <a type="button" href="../student_signup/home1.php" class="btn-back mt-4">Back</a>
         </div>
     </div>
     <div class="right-box">

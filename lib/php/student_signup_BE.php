@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 $DATABASE_HOST = 'localhost';
@@ -16,8 +15,6 @@ if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['conf
     exit('Please fill all the fields!');
 }
 
-
-
 if ($_POST['password'] !== $_POST['confirm_password']) {
     exit('Passwords do not match!');
 }
@@ -31,10 +28,13 @@ if ($stmt = $con->prepare('SELECT id FROM student WHERE username = ?')) {
         echo 'Username exists, please choose another!';
     } else {
         if ($stmt = $con->prepare('INSERT INTO student (username, password) VALUES (?, ?)')) {
-            $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-            $stmt->bind_param('ss', $_POST['username'], $password);
+            $stmt->bind_param('ss', $_POST['username'], $_POST['password']);
             $stmt->execute();
             echo 'You have successfully registered, you can now login!';
+
+            header("Location: ../../student_signup/personal_details_01.php");
+            exit;
+
         } else {
             echo 'Could not prepare statement!';
         }
@@ -46,5 +46,4 @@ if ($stmt = $con->prepare('SELECT id FROM student WHERE username = ?')) {
 }
 
 $con->close();
-
 ?>

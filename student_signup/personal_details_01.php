@@ -28,7 +28,7 @@
           Fill in your details so we can <br />
           get to know you!
         </div>
-        <a type="button" href="#home" class="btn-back mt-4">Back</a>
+        <a type="button" href="student_signup.php" class="btn-back mt-4">Back</a>
       </div>
     </div>
     <div class="right-box2">
