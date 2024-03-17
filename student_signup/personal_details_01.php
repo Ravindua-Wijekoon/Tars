@@ -35,31 +35,31 @@
       <div style="width: 100%">
         <div class="text-02"><b>Personal Details</b></div>
         <br />
-        <form action="">
+        <form action="../lib/php/personal_details_01_BE.php" method="post">
           <div class="textboxsec2">
             <div class="tag">Full name</div>
             <div class="input-box2">
-              <input class="textbox2" type="text" />
+              <input class="textbox2" type="text" name="full_name" />
             </div>
             <div class="tag">Name with initials</div>
             <div class="input-box2">
-              <input class="textbox2" type="text" />
+              <input class="textbox2" type="text" name="name_with_initials" />
             </div>
             <div class="tag">Date of birth</div>
             <div class="input-box3" style="margin-right: 40%">
-              <input class="textbox2" type="date" />
+              <input class="textbox2" type="date" name="date_of_birth" />
             </div>
             <div class="tag">Address</div>
             <div class="input-box2">
-              <input class="textbox2" type="text" />
+              <input class="textbox2" type="text" name="address" />
             </div>
             <div class="tag">City/Town</div>
             <div class="input-box3">
-              <input class="textbox2" type="text" />
+              <input class="textbox2" type="text" name="city_town" />
             </div>
             <div class="tag2">ZIP Code</div>
             <div class="input-box3">
-              <input class="textbox2" type="text" />
+              <input class="textbox2" type="text" name="zip_code" />
             </div>
           </div>
           <div class="btn-sec">

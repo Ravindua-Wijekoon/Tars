@@ -32,18 +32,18 @@
         <div style="width: 100%">
             <div class="text-02"><b>Qualification Details</b></div>
             <br />
-            <form action="">
+            <form action="../lib/php/personal_details_02_BE.php" method="post">
                 <div class="textboxsec2">
                     <div class="tag">Education</div>
                     <div class="input-box4">
-                        <input class="textbox2" type="text" placeholder="Institution" />
+                        <input class="textbox2" type="text" placeholder="Institution" name="institution_edu" />
                     </div>
                     <div></div>
                     <div class="input-box5">
-                        <input class="textbox2" type="text" placeholder="Start" />
+                        <input class="textbox2" type="text" placeholder="Start" name="start_edu" />
                     </div>
                     <div class="input-box5">
-                        <input class="textbox2" type="text" placeholder="End" />
+                        <input class="textbox2" type="text" placeholder="End" name="end_edu" />
                     </div>
                     <button class="plus">
                         <img src="../images/plus.svg" alt="" />
@@ -60,13 +60,13 @@
 
                     <div class="tag">Experience</div>
                     <div class="input-box4">
-                        <input class="textbox2" type="text" placeholder="Institution" />
+                        <input class="textbox2" type="text" placeholder="Institution" name="institution_exp" />
                     </div>
                     <div class="input-box5">
-                        <input class="textbox2" type="text" placeholder="Start" />
+                        <input class="textbox2" type="text" placeholder="Start" name="start_exp" />
                     </div>
                     <div class="input-box5">
-                        <input class="textbox2" type="text" placeholder="End" />
+                        <input class="textbox2" type="text" placeholder="End" name="end_exp" />
                     </div>
                     <button class="plus">
                         <img src="../images/plus.svg" alt="" />
@@ -82,7 +82,7 @@
 
                     <div class="tag">Skills</div>
                     <div class="input-box4">
-                        <input class="textbox2" type="text" />
+                        <input class="textbox2" type="text" name="skills" />
                     </div>
                     <button class="plus">
                         <img src="../images/plus.svg" alt="" />
@@ -100,7 +100,7 @@
 
                     <div class="tag">Languages</div>
                     <div class="input-box4">
-                        <input class="textbox2" type="text" />
+                        <input class="textbox2" type="text" name="language" />
                     </div>
                     <button class="plus">
                         <img src="../images/plus.svg" alt="" />
