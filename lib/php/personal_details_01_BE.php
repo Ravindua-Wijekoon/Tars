@@ -11,6 +11,8 @@ $_SESSION['city_town'] = $_POST['city_town'];
 $_SESSION['zip_code'] = $_POST['zip_code'];
 
 
+
+
 header("Location: ../../student_signup/personal_details_02.php");
 exit;
 ?>
