@@ -137,10 +137,16 @@
                     <?php
                     for ($i = 0; $i < 3; $i++) {
                         ?>
-                    <div class="intern-card">
-                        sds
-                    </div>
-                    <?php
+                        <div class="intern-card">
+                            <div class="int-name">
+                                <h3>Product UI/UX Engineers</h3>
+                                <h4>Colombo, LK</h4>
+                            </div>
+                            <div class="int-button">
+
+                            </div>
+                        </div>
+                        <?php
                     }
                     ?>
 
