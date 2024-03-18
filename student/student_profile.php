@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Job</title>
+    <title>Profile</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="../lib/style/student_dash.css">
+
 </head>
 
 <body>
@@ -87,7 +88,7 @@
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
                 <div class="topic">
-                    Search Job
+                    Profile
                 </div>
                 <div class="search">
                     <label>
@@ -113,60 +114,44 @@
 
                 </div>
             </div>
+            <div class="marg">
+                <div class="card-sec">
+                    <div class="profile-card">
+                        <div class="profile-pic">
+                            <img src="../images/profile_photos/customer02.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <h3>Blake Lively</h3>
+                            <h5>Software Developer</h5>
+                            <h6>blakelively@gmail.com</h6>
 
-            <div class="search-sec">
-                <div class="search-bar">
-                    <label>
-                        <input type="text" placeholder="Search by Title or Company">
-                        <ion-icon name="search-outline"></ion-icon>
-                    </label>
-                </div>
-                <div class="search-button">
-                    Search
-                </div>
-
-            </div>
-
-            <div class="lable-bar">
-                <div>Software Engineer</div>
-                <div>Marketing</div>
-                <div>UI/UX Designer</div>
-                <div>Web Developer</div>
-            </div>
-
-            <!-- ========================= Cards ==================== -->
-
-            <div class="job-card-sec">
-                <?php
-                for ($i = 0; $i < 12; $i++) {
-                    ?>
-                    <div class="job-card">
-                        <div class="sec">
-                            <span class="card-name">
-                                Dribbble Holdings Ltd. <br>
-                                <span class="card-topic">UI/UX Designer</span>
-                            </span>
-                            <div class="image">
-                                <img src="../images/Group 105.png" alt="">
-                            </div>
+                            <h5>Bio</h5>
+                            <span>I am a Software Developer with critical thinking skills and also creative
+                                skills.</span>
+                            <br><br>
+                            <h5>Links</h5>
+                            <span><b>Github |</b> <span>github.com/blakelively</span></span><br>
+                            <span><b>Gitlabs |</b> <span>gitlabs.com/blakelively</span></span><br>
+                            <span><b>LinkedIn |</b> <span> linkedin.com/in//blakelively</span></span><br>
+                            <span><b>Twitter |</b> <span>twitter.com/blakelively</span></span>
 
                         </div>
 
-                        <div class="price-tag">LKR 50,000 - LKR 80,000</div><br>
-                        <div class="about">UI/UX Designer of Dribbble Holdings Ltd. is a job that challenges the creativity
-                            of a person.
-                            Dribbble Holdings Ltd. is known for the quality products among customers. The goal of the job is
-                            to
-                            design efficient UI/UX designs to the web developers.
-                        </div>
-                        <div class="lable-bar">
-                            <div>Online</div>
-                            <div class="none">Los Angeles, USA</div>
-                        </div>
                     </div>
-                    <?php
-                }
-                ?>
+
+                    <div class="qual">
+                        <h5>Education</h5>
+                        <span>BSc. (Hons) Computer Science (Stanford University)</span>
+                        <h5>Experience</h5>
+                        <span>Millenium IT (2018 - 2022)</span>
+                        <h5>Skills</h5>
+                        <span>Python HTML CSS C React Bootstrap</span>
+                        <h5>Languages</h5>
+                        <span>English French Swedish</span>
+                    </div>
+                </div>
+
+
             </div>
 
         </div>

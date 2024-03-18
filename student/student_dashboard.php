@@ -181,7 +181,7 @@
                     <span class="title">Recommended Internships</span>
                     <div class="int-sec">
                         <?php
-                        for ($i = 0; $i < 2; $i++) {
+                        for ($i = 0; $i < 5; $i++) {
                             ?>
                         <div class="int-card">
                             <img src="../images/Group 105.png" alt="">

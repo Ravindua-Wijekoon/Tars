@@ -19,6 +19,11 @@ body {
   width: 100%;
 }
 
+.container2 {
+  position: relative;
+  width: 100%;
+}
+
 /* =============== Navigation ================ */
 .navigation {
   position: fixed;
@@ -136,14 +141,14 @@ body {
 
 /* ===================== Main ===================== */
 .main {
-  position: fixed;
+  position: relative;
   width: calc(100% - 250px);
   left: 250px;
-  min-height: 100vh;
-  background: white;
+  min-height: 100svh;
+  background: rgb(255, 255, 255);
   transition: 0.5s;
   border-radius: 30px 0px 0px 30px;
-  overflow-y: scroll;
+  padding-bottom: 20px;
 }
 .main.active {
   width: calc(100% - 80px);
@@ -308,9 +313,8 @@ body {
   display: grid;
   grid-template-columns: auto auto;
   gap: 10px;
-  margin: 35px;
-  margin-top: 0px;
-  height: 400px;
+  margin: 0px 35px 0px;
+  height: auto;
 }
 
 .grid-container > div {
@@ -620,7 +624,7 @@ body {
 .marg {
   width: 95%;
   margin: 20px auto 0 auto;
-  height: 500px;
+  height: auto;
 }
 
 .company-det {
@@ -677,12 +681,28 @@ body {
 
 .intern-card .int-name {
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .intern-card .int-button {
   width: 30%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.int-button div {
+  background-color: #355188;
+  padding: 5px;
+  border-radius: 50px;
+  width: 60%;
+  text-align: center;
+  color: white;
+  margin-top: 5px;
+  cursor: pointer;
 }
 
 .intern-card h3 {
@@ -705,6 +725,35 @@ body {
 .comp-about h4 {
   line-height: 30px;
 }
+
+/* =============== Student Companies Profile =============== */
+
+.contact-icon {
+  width: 30px;
+}
+
+.head {
+  background-color: #e7e5e5;
+  height: 20%;
+}
+
+.search-icon {
+  margin-top: 10px;
+}
+
+tbody tr:hover {
+  background-color: #164a25;
+}
+
+tbody tr:hover td {
+  color: white;
+}
+
+td {
+  max-width: 250px;
+}
+
+/* =============== Student Profile =============== */
 
 /* ====================== Responsive Design ========================== */
 @media (max-width: 900px) {
@@ -797,5 +846,50 @@ body {
 
   .company-card {
     width: 100%;
+  }
+
+  /* =============== Student Companies Profile =============== */
+
+  .company-det {
+    justify-content: center;
+  }
+
+  .company-det .comp-name {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .comp-about {
+    width: 100%;
+  }
+
+  .comp-about h4 {
+    text-align: center;
+  }
+
+  .intern-card {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .intern-card .int-name {
+    width: 100%;
+  }
+
+  .intern-card .int-button {
+    width: 100%;
+    margin-top: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .int-button div {
+    width: 40%;
+    text-align: center;
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
   }
 }

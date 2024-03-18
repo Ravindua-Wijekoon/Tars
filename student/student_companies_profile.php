@@ -135,15 +135,16 @@
 
                 <div class="intern-sec">
                     <?php
-                    for ($i = 0; $i < 3; $i++) {
+                    for ($i = 0; $i < 6; $i++) {
                         ?>
                         <div class="intern-card">
                             <div class="int-name">
-                                <h3>Product UI/UX Engineers</h3>
+                                <h3>Product UI/UX Engineers</h3><br>
                                 <h4>Colombo, LK</h4>
                             </div>
                             <div class="int-button">
-
+                                <div>Details</div>
+                                <div>Apply</div>
                             </div>
                         </div>
                         <?php
