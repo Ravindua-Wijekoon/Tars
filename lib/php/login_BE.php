@@ -12,8 +12,9 @@ if (mysqli_connect_errno()) {
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-if (!isset($_POST['username'], $_POST['password'])) {
-    exit('Please fill both the username and password fields!');
+if (empty($_POST['username']) || empty($_POST['password'])) {
+    echo '<script>alert("Please fill both the username and password fields!");</script>';
+    exit();
 }
 
 
