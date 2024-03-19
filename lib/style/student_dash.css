@@ -949,6 +949,48 @@ label {
   color: #7b7676;
 }
 
+.div2 .input-full {
+  width: 90%;
+}
+
+.preview {
+  width: 100%;
+  background-color: white;
+  padding: 5px 10px 0px 0px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.preview div {
+  background-color: #b3b2b2;
+  height: auto;
+  width: auto;
+  border-radius: 15px;
+  padding: 0px 5px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-wrap: nowrap;
+  margin-bottom: 5px;
+}
+
+.preview div div {
+  color: black;
+  margin-left: 5px;
+  border-radius: 7px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.preview div div img {
+  width: 12px;
+}
+
 /* ====================== Responsive Design ========================== */
 @media (max-width: 900px) {
   .navigation {

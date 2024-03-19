@@ -133,10 +133,9 @@
                                 <br><br>
                                 <h5>Links</h5>
                                 <span class="links"><b>Github |</b> <span>github.com/blakelively</span></span><br>
-                                <span class="links"><b>Gitlabs |</b> <span>gitlabs.com/blakelively</span></span><br>
                                 <span class="links"><b>LinkedIn |</b> <span>
                                         linkedin.com/in//blakelively</span></span><br>
-                                <span class="links"><b>Twitter |</b> <span>twitter.com/blakelively</span></span>
+                                <span class="links"><b>Portfolio |</b> <span>twitter.com/blakelively</span></span>
 
                             </div>
 
@@ -149,19 +148,14 @@
                         </div>
                         <form action="">
                             <div class="edit-sec">
-                                <div class="div1">
-                                    <label>First Name</label>
-                                    <div>
+                                <div class="div2">
+                                    <label>Full Name</label>
+                                    <div class="input-full">
                                         <input class="edit-input" type="text" placeholder="Get old data from DB">
                                     </div>
 
                                 </div>
-                                <div class="div1">
-                                    <label>Last Name</label>
-                                    <div>
-                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
-                                    </div>
-                                </div>
+
                                 <div class="div1">
                                     <label>City/Town</label>
                                     <div>
@@ -202,6 +196,20 @@
                                         <img src="../images/plus.svg" alt="" />
                                     </button>
                                 </div>
+                                <div class="preview">
+                                    <?php
+                                    for ($i = 0; $i < 5; $i++) {
+                                        ?>
+                                    <div>
+                                        <label>Test</label>
+                                        <div>
+                                            <img src="../images/circle-xmark-regular.png" alt="">
+                                        </div>
+                                    </div>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
                                 <div class="div2">
                                     <label>Experience</label><br>
                                     <div>
@@ -216,6 +224,42 @@
                                     <button class="plus">
                                         <img src="../images/plus.svg" alt="" />
                                     </button>
+
+                                </div>
+
+                                <div class="preview">
+                                    <?php
+                                    for ($i = 0; $i < 5; $i++) {
+                                        ?>
+                                    <div>
+                                        <label>Test</label>
+                                        <div>
+                                            <img src="../images/circle-xmark-regular.png" alt="">
+                                        </div>
+                                    </div>
+                                    <?php
+                                    }
+                                    ?>
+                                </div>
+                                <div class="div2">
+                                    <label>GitHub</label>
+                                    <div class="input-full">
+                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                    </div>
+
+                                </div>
+                                <div class="div2">
+                                    <label>LinkedIn</label>
+                                    <div class="input-full">
+                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                    </div>
+
+                                </div>
+                                <div class="div2">
+                                    <label>Portfolio</label>
+                                    <div class="input-full">
+                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                    </div>
 
                                 </div>
                             </div>
