@@ -83,32 +83,23 @@
                         education.forEach(item => {
                             let div = document.createElement("div");
                             div.innerHTML = `
-                                <div>
-                                    <p>Institute: ${item.institute}</p>
-                                    <p>Start Year: ${item.startYear}</p>
-                                    <p>End Year: ${item.endYear}</p>
-                                    <button onclick="removeEducation(${item.key})">Remove</button>
-                                </div>
+                            <div class="preview">
+                        
+                        <div>
+                            <label> ${item.institute}</label>
+                            <div onclick="removeEducation(${item.key})">
+                                <img src="../images/circle-xmark-regular.png" alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
                             `;
                             list.appendChild(div);
                         });
                     }
                     </script>
 
-                    <div class="preview">
-                        <?php
-                        for ($i = 0; $i < 3; $i++) {
-                            ?>
-                        <div>
-                            <label>Test</label>
-                            <div>
-                                <img src="../images/circle-xmark-regular.png" alt="">
-                            </div>
-                        </div>
-                        <?php
-                        }
-                        ?>
-                    </div>
+                    
 
                     <div class="tag">Experience</div>
                     <div class="input-box4">
@@ -146,7 +137,7 @@
                     <div class="plus">
                         <img src="../images/plus.svg" alt="" />
                     </div>
-                    <div style="width: 40%"></div>
+                    <div style="width: 20%"></div>
 
                     <!--<div class="preview">
                         <?php
@@ -171,7 +162,7 @@
                         <img src="../images/plus.svg" alt="" />
                     </div>
 
-                    <div style="width: 40%"></div>
+                    <div style="width: 20%"></div>
 
                     <!--<div class="preview">
                         <?php
