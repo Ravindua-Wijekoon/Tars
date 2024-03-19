@@ -40,10 +40,10 @@
                     </div>
                     <div></div>
                     <div class="input-box5">
-                        <input class="textbox2" type="text" placeholder="Start" name="start_edu" />
+                        <input class="textbox2" type="date" placeholder="Start" name="start_edu" />
                     </div>
                     <div class="input-box5">
-                        <input class="textbox2" type="text" placeholder="End" name="end_edu" />
+                        <input class="textbox2" type="date" placeholder="End" name="end_edu" />
                     </div>
                     <button class="plus">
                         <img src="../images/plus.svg" alt="" />
@@ -69,10 +69,10 @@
                         <input class="textbox2" type="text" placeholder="Experience" name="institution_exp" />
                     </div>
                     <div class="input-box5">
-                        <input class="textbox2" type="text" placeholder="Start" name="start_exp" />
+                        <input class="textbox2" type="date" placeholder="Start" name="start_exp" />
                     </div>
                     <div class="input-box5">
-                        <input class="textbox2" type="text" placeholder="End" name="end_exp" />
+                        <input class="textbox2" type="date" placeholder="End" name="end_exp" />
                     </div>
                     <button class="plus">
                         <img src="../images/plus.svg" alt="" />
