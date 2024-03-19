@@ -115,39 +115,50 @@
                 </div>
             </div>
             <div class="marg">
-                <div class="card-sec">
-                    <div class="profile-card">
-                        <div class="profile-pic">
-                            <img src="../images/profile_photos/customer02.jpg" alt="">
+                <div class="card-sec2">
+
+                    <div class="section1">
+                        <div class="profile-card">
+                            <div class="profile-pic">
+                                <img src="../images/profile_photos/customer02.jpg" alt="">
+                            </div>
+                            <div class="info">
+                                <h1>Blake Lively</h1>
+                                <h5>Software Developer</h5>
+                                <h6>blakelively@gmail.com</h6>
+
+                                <h5>Bio</h5>
+                                <span>I am a Software Developer with critical thinking skills and also creative
+                                    skills.</span>
+                                <br><br>
+                                <h5>Links</h5>
+                                <span class="links"><b>Github |</b> <span>github.com/blakelively</span></span><br>
+                                <span class="links"><b>Gitlabs |</b> <span>gitlabs.com/blakelively</span></span><br>
+                                <span class="links"><b>LinkedIn |</b> <span>
+                                        linkedin.com/in//blakelively</span></span><br>
+                                <span class="links"><b>Twitter |</b> <span>twitter.com/blakelively</span></span>
+
+                            </div>
+
                         </div>
-                        <div class="info">
-                            <h3>Blake Lively</h3>
-                            <h5>Software Developer</h5>
-                            <h6>blakelively@gmail.com</h6>
-
-                            <h5>Bio</h5>
-                            <span>I am a Software Developer with critical thinking skills and also creative
-                                skills.</span>
-                            <br><br>
-                            <h5>Links</h5>
-                            <span><b>Github |</b> <span>github.com/blakelively</span></span><br>
-                            <span><b>Gitlabs |</b> <span>gitlabs.com/blakelively</span></span><br>
-                            <span><b>LinkedIn |</b> <span> linkedin.com/in//blakelively</span></span><br>
-                            <span><b>Twitter |</b> <span>twitter.com/blakelively</span></span>
-
-                        </div>
-
                     </div>
 
-                    <div class="qual">
-                        <h5>Education</h5>
-                        <span>BSc. (Hons) Computer Science (Stanford University)</span>
-                        <h5>Experience</h5>
-                        <span>Millenium IT (2018 - 2022)</span>
-                        <h5>Skills</h5>
-                        <span>Python HTML CSS C React Bootstrap</span>
-                        <h5>Languages</h5>
-                        <span>English French Swedish</span>
+                    <div class="section2">
+                        <div class="button-sec">
+                            <div>About</div>
+                            <div>Edit</div>
+                        </div>
+                        <div class="qual">
+                            <h3>Education</h3>
+                            <div>BSc. (Hons) Computer Science (Stanford University)</div>
+                            <h3>Experience</h3>
+                            <div>Millenium IT (2018 - 2022)</div>
+                            <h3>Skills</h3>
+                            <div>Python HTML CSS C React Bootstrap</div>
+                            <h3>Languages</h3>
+                            <div>English French Swedish</div>
+                        </div>
+
                     </div>
                 </div>
 
