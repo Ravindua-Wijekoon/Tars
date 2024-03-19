@@ -36,7 +36,8 @@
                 <div class="textboxsec2">
                     <div class="tag">Education</div>
                     <div class="input-box4">
-                        <input class="textbox2" id='institute_edu' type="text" placeholder="Institution" name="institution_edu" />
+                        <input class="textbox2" id='institute_edu' type="text" placeholder="Institution"
+                            name="institution_edu" />
                     </div>
                     <div></div>
                     <div class="input-box5">
@@ -45,7 +46,7 @@
                     <div class="input-box5">
                         <input class="textbox2" id='endYear_edu' type="date" placeholder="End" name="end_edu" />
                     </div>
-                    <div class="plus" onclick="addEducation()" style="cursor:pointer">
+                    <div class="plus" onclick="addEducation()">
                         <img src="../images/plus.svg" alt="" />
                     </div>
 
@@ -56,12 +57,17 @@
 
                     function addEducation() {
                         //alert('ds')
-                        
+
                         let institute = document.getElementById("institute_edu").value;
                         let startYear = document.getElementById("startYear_edu").value;
                         let endYear = document.getElementById("endYear_edu").value;
                         //debugger
-                        let newItem = { key: education.length + 1, institute: institute, startYear: startYear, endYear: endYear };
+                        let newItem = {
+                            key: education.length + 1,
+                            institute: institute,
+                            startYear: startYear,
+                            endYear: endYear
+                        };
                         education.push(newItem);
                         displayEducation();
                     }
@@ -87,22 +93,22 @@
                             list.appendChild(div);
                         });
                     }
-                </script>
+                    </script>
 
-                        <!-- <div class="preview">
+                    <div class="preview">
                         <?php
                         for ($i = 0; $i < 3; $i++) {
                             ?>
+                        <div>
+                            <label>Test</label>
                             <div>
-                                <label>Test</label>
-                                <div>
-                                    <img src="../images/circle-xmark-regular.png" alt="">
-                                </div>
+                                <img src="../images/circle-xmark-regular.png" alt="">
                             </div>
-                            <?php
+                        </div>
+                        <?php
                         }
                         ?>
-                    </div>-->
+                    </div>
 
                     <div class="tag">Experience</div>
                     <div class="input-box4">
@@ -114,9 +120,9 @@
                     <div class="input-box5">
                         <input class="textbox2" type="date" placeholder="End" name="end_exp" />
                     </div>
-                    <button class="plus">
+                    <div class="plus">
                         <img src="../images/plus.svg" alt="" />
-                    </button>
+                    </div>
 
                     <!--<div class="preview">
                         <?php
@@ -137,10 +143,10 @@
                     <div class="input-box4">
                         <input class="textbox2" type="text" name="skills" placeholder="Skills" />
                     </div>
-                    <button class="plus">
+                    <div class="plus">
                         <img src="../images/plus.svg" alt="" />
-                    </button>
-                    <div style="width: 20%"></div>
+                    </div>
+                    <div style="width: 40%"></div>
 
                     <!--<div class="preview">
                         <?php
@@ -161,11 +167,11 @@
                     <div class="input-box4">
                         <input class="textbox2" type="text" name="language" placeholder="Language" />
                     </div>
-                    <button class="plus">
+                    <div class="plus">
                         <img src="../images/plus.svg" alt="" />
-                    </button>
+                    </div>
 
-                    <div style="width: 20%"></div>
+                    <div style="width: 40%"></div>
 
                     <!--<div class="preview">
                         <?php

@@ -872,7 +872,7 @@ td {
   margin-bottom: 20px;
 }
 
-.div1 label {
+label {
   color: #7b7676;
   width: 100%;
 }
@@ -891,6 +891,7 @@ td {
 .div1 input {
   border: none;
   outline: none;
+  width: 95%;
   font-size: 15px;
   background-color: transparent;
 }
@@ -903,6 +904,91 @@ td {
   background-color: transparent;
   cursor: pointer;
   margin: 5px 0 0 15px;
+}
+
+.div2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.div2 div {
+  background-color: #efefef;
+  width: 40%;
+  border-radius: 5px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.div2 input {
+  border: none;
+  outline: none;
+  width: 95%;
+  font-size: 15px;
+  background-color: transparent;
+}
+
+.div2 .short {
+  background-color: #efefef;
+  width: 20%;
+  border-radius: 5px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.div2 .short input {
+  color: #7b7676;
+}
+
+.div2 .input-full {
+  width: 90%;
+}
+
+.preview {
+  width: 100%;
+  background-color: white;
+  padding: 5px 10px 0px 0px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.preview div {
+  background-color: #b3b2b2;
+  height: auto;
+  width: auto;
+  border-radius: 15px;
+  padding: 0px 5px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-wrap: nowrap;
+  margin-bottom: 5px;
+}
+
+.preview div div {
+  color: black;
+  margin-left: 5px;
+  border-radius: 7px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.preview div div img {
+  width: 12px;
 }
 
 /* ====================== Responsive Design ========================== */
