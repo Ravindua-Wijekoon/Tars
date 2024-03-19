@@ -50,7 +50,9 @@
                         <img src="../images/plus.svg" alt="" />
                     </div>
 
-                    <div id="educationList" style="height:15px"></div>
+                    <div class="preview" id="educationList">
+
+                    </div>
 
                     <script>
                     let education = [];
@@ -83,23 +85,18 @@
                         education.forEach(item => {
                             let div = document.createElement("div");
                             div.innerHTML = `
-                            <div class="preview">
-                        
-                        <div>
                             <label> ${item.institute}</label>
                             <div onclick="removeEducation(${item.key})">
                                 <img src="../images/circle-xmark-regular.png" alt="">
                             </div>
-                        </div>
-                        
-                    </div>
+                            
                             `;
                             list.appendChild(div);
                         });
                     }
                     </script>
 
-                    
+
 
                     <div class="tag">Experience</div>
                     <div class="input-box4">
