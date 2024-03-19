@@ -12,8 +12,6 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
     <title>Student Details</title>
-
-    
 </head>
 
 <body>
@@ -27,95 +25,77 @@
                 Fill in your details so we can <br />
                 get to know you!
             </div>
-            <a type="button" href="personal_details_01.php" class="btn-back mt-4">Back</a>
+            <a type="button" href="#home" class="btn-back mt-4">Back</a>
         </div>
     </div>
     <div class="right-box3">
         <div style="width: 100%">
             <div class="text-02"><b>Qualification Details</b></div>
             <br />
-            <form action="" method="post">
+            <form action="../lib/php/personal_details_02_BE.php" method="post">
                 <div class="textboxsec2">
-                <div class="tag">Education</div>
-                <div class="input-box4">
-                    <input class="textbox2" type="text" placeholder="Institution" name="institution_edu" id="institute_edu" />
-                </div>
-                <div></div>
-                <div class="input-box5">
-                    <input class="textbox2" type="text" placeholder="Start" name="start_edu" id="startYear_edu" />
-                </div>
-                <div class="input-box5">
-                    <input class="textbox2" type="text" placeholder="End" name="end_edu" id="endYear_edu" />
-                </div>
-                <button class="plus" onclick="addEducation()">
-                    <img src="../images/plus.svg" alt="" />
-                </button>
-
-                <div id="educationList"></div>
-
-                <script>
-                    let education = [];
-
-                    function addEducation() {
-                        let institute = document.getElementById("institute_edu").value;
-                        let startYear = document.getElementById("startYear_edu").value;
-                        let endYear = document.getElementById("endYear_edu").value;
-                        let newItem = { key: education.length + 1, institute: institute, startYear: startYear, endYear: endYear };
-                        education.push(newItem);
-                        displayEducation();
-                    }
-
-                    function removeEducation(key) {
-                        education = education.filter(item => item.key !== key);
-                        displayEducation();
-                    }
-
-                    function displayEducation() {
-                        let list = document.getElementById("educationList");
-                        list.innerHTML = "";
-                        education.forEach(item => {
-                            let div = document.createElement("div");
-                            div.innerHTML = `
-                                <div>
-                                    <p>Institute: ${item.institute}</p>
-                                    <p>Start Year: ${item.startYear}</p>
-                                    <p>End Year: ${item.endYear}</p>
-                                    <button onclick="removeEducation(${item.key})">Remove</button>
-                                </div>
-                            `;
-                            list.appendChild(div);
-                        });
-                    }
-                </script>
-
-
-                  
-
-                    <div class="tag">Experience</div>
+                    <div class="tag">Education</div>
                     <div class="input-box4">
-                        <input class="textbox2" type="text" placeholder="Institution" name="institution_exp" />
+                        <input class="textbox2" type="text" placeholder="Institution" name="institution_edu" />
+                    </div>
+                    <div></div>
+                    <div class="input-box5">
+                        <input class="textbox2" type="date" placeholder="Start" name="start_edu" />
                     </div>
                     <div class="input-box5">
-                        <input class="textbox2" type="text" placeholder="Start" name="start_exp" />
-                    </div>
-                    <div class="input-box5">
-                        <input class="textbox2" type="text" placeholder="End" name="end_exp" />
+                        <input class="textbox2" type="date" placeholder="End" name="end_edu" />
                     </div>
                     <button class="plus">
                         <img src="../images/plus.svg" alt="" />
                     </button>
 
                     <div class="preview">
-                        <!-- <div>Test
-                            <a href="#">
-                                <img src="../images/circle-xmark-regular.png" alt="">
-                            </a>
-                        </div> -->
+                        <?php
+                        for ($i = 0; $i < 3; $i++) {
+                            ?>
+                            <div>
+                                <label>Test</label>
+                                <div>
+                                    <img src="../images/circle-xmark-regular.png" alt="">
+                                </div>
+                            </div>
+                            <?php
+                        }
+                        ?>
+                    </div>
+
+                    <div class="tag">Experience</div>
+                    <div class="input-box4">
+                        <input class="textbox2" type="text" placeholder="Experience" name="institution_exp" />
+                    </div>
+                    <div class="input-box5">
+                        <input class="textbox2" type="date" placeholder="Start" name="start_exp" />
+                    </div>
+                    <div class="input-box5">
+                        <input class="textbox2" type="date" placeholder="End" name="end_exp" />
+                    </div>
+                    <button class="plus">
+                        <img src="../images/plus.svg" alt="" />
+                    </button>
+
+                    <div class="preview">
+                        <?php
+                        for ($i = 0; $i < 3; $i++) {
+                            ?>
+                            <div>
+                                <label>Test</label>
+                                <div>
+                                    <img src="../images/circle-xmark-regular.png" alt="">
+                                </div>
+                            </div>
+                            <?php
+                        }
+                        ?>
                     </div>
 
                     <div class="tag">Skills</div>
                     <div class="input-box4">
-                        <input class="textbox2" type="text" name="skills" />
+                        <input class="textbox2" type="text" name="skills" placeholder="Skills" />
                     </div>
                     <button class="plus">
                         <img src="../images/plus.svg" alt="" />
@@ -123,17 +103,23 @@
                     <div style="width: 20%"></div>
 
                     <div class="preview">
-                        <!-- <div>Test
-                            <a href="#">
-                                <img src="../images/circle-xmark-regular.png" alt="">
-                            </a>
-                        </div> -->
-
+                        <?php
+                        for ($i = 0; $i < 3; $i++) {
+                            ?>
+                            <div>
+                                <label>Test</label>
+                                <div>
+                                    <img src="../images/circle-xmark-regular.png" alt="">
+                                </div>
+                            </div>
+                            <?php
+                        }
+                        ?>
                     </div>
 
                     <div class="tag">Languages</div>
                     <div class="input-box4">
-                        <input class="textbox2" type="text" name="language" />
+                        <input class="textbox2" type="text" name="language" placeholder="Language" />
                     </div>
                     <button class="plus">
                         <img src="../images/plus.svg" alt="" />
@@ -142,13 +128,35 @@
                     <div style="width: 20%"></div>
 
                     <div class="preview">
-                        <!-- <div>Test
-                            <a href="#">
-                                <img src="../images/circle-xmark-regular.png" alt="">
-                            </a>
-                        </div> -->
-
+                        <?php
+                        for ($i = 0; $i < 3; $i++) {
+                            ?>
+                            <div>
+                                <label>Test</label>
+                                <div>
+                                    <img src="../images/circle-xmark-regular.png" alt="">
+                                </div>
+                            </div>
+                            <?php
+                        }
+                        ?>
                     </div>
+
+                    <div class="tag">GitHub Link</div>
+                    <div class="input-box6">
+                        <input class="textbox2" type="text" name="language" />
+                    </div>
+
+                    <div class="tag">LinkedIn Link</div>
+                    <div class="input-box6">
+                        <input class="textbox2" type="text" name="language" />
+                    </div>
+
+                    <div class="tag">Portfolio Link</div>
+                    <div class="input-box6">
+                        <input class="textbox2" type="text" name="language" />
+                    </div>
+
                 </div>
                 <div class="btn-sec">
                     <div class="btn-box">
