@@ -25,7 +25,7 @@
                 Fill in your details so we can <br />
                 get to know you!
             </div>
-            <a type="button" href="#home" class="btn-back mt-4">Back</a>
+            <a type="button" href="personal_details_01.php" class="btn-back mt-4">Back</a>
         </div>
     </div>
     <div class="right-box3">
