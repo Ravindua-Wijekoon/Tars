@@ -897,13 +897,18 @@ label {
 }
 
 .plus {
-  width: 20px;
+  width: 50px;
   border: none;
   border-radius: 30px;
   text-decoration: none;
   background-color: transparent;
   cursor: pointer;
   margin: 5px 0 0 15px;
+  background-color: red;
+}
+
+.plus img {
+  width: 20px;
 }
 
 .div2 {

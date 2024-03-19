@@ -36,20 +36,66 @@
                 <div class="textboxsec2">
                     <div class="tag">Education</div>
                     <div class="input-box4">
-                        <input class="textbox2" type="text" placeholder="Institution" name="institution_edu" />
+                        <input class="textbox2" id='institute_edu' type="text" placeholder="Institution"
+                            name="institution_edu" />
                     </div>
                     <div></div>
                     <div class="input-box5">
-                        <input class="textbox2" type="date" placeholder="Start" name="start_edu" />
+                        <input class="textbox2" id='startYear_edu' type="date" placeholder="Start" name="start_edu" />
                     </div>
                     <div class="input-box5">
-                        <input class="textbox2" type="date" placeholder="End" name="end_edu" />
+                        <input class="textbox2" id='endYear_edu' type="date" placeholder="End" name="end_edu" />
                     </div>
-                    <button class="plus">
+                    <div class="plus" onclick="addEducation()">
                         <img src="../images/plus.svg" alt="" />
-                    </button>
+                    </div>
 
-                    <div class="preview">
+                    <div id="educationList" style="height:15px"></div>
+
+                    <script>
+                        let education = [];
+
+                        function addEducation() {
+                            //alert('ds')
+
+                            let institute = document.getElementById("institute_edu").value;
+                            let startYear = document.getElementById("startYear_edu").value;
+                            let endYear = document.getElementById("endYear_edu").value;
+                            //debugger
+                            let newItem = {
+                                key: education.length + 1,
+                                institute: institute,
+                                startYear: startYear,
+                                endYear: endYear
+                            };
+                            education.push(newItem);
+                            displayEducation();
+                        }
+
+                        function removeEducation(key) {
+                            education = education.filter(item => item.key !== key);
+                            displayEducation();
+                        }
+
+                        function displayEducation() {
+                            let list = document.getElementById("educationList");
+                            list.innerHTML = "";
+                            education.forEach(item => {
+                                let div = document.createElement("div");
+                                div.innerHTML = `
+                                <div>
+                                    <p>Institute: ${item.institute}</p>
+                                    <p>Start Year: ${item.startYear}</p>
+                                    <p>End Year: ${item.endYear}</p>
+                                    <button onclick="removeEducation(${item.key})">Remove</button>
+                                </div>
+                            `;
+                                list.appendChild(div);
+                            });
+                        }
+                    </script>
+
+                    <!-- <div class="preview">
                         <?php
                         for ($i = 0; $i < 3; $i++) {
                             ?>
@@ -59,10 +105,10 @@
                                     <img src="../images/circle-xmark-regular.png" alt="">
                                 </div>
                             </div>
-                            <?php
+                        <?php
                         }
                         ?>
-                    </div>
+                    </div>-->
 
                     <div class="tag">Experience</div>
                     <div class="input-box4">
@@ -74,11 +120,11 @@
                     <div class="input-box5">
                         <input class="textbox2" type="date" placeholder="End" name="end_exp" />
                     </div>
-                    <button class="plus">
+                    <div class="plus">
                         <img src="../images/plus.svg" alt="" />
-                    </button>
+                    </div>
 
-                    <div class="preview">
+                    <!--<div class="preview">
                         <?php
                         for ($i = 0; $i < 3; $i++) {
                             ?>
@@ -91,18 +137,18 @@
                             <?php
                         }
                         ?>
-                    </div>
+                    </div>-->
 
                     <div class="tag">Skills</div>
                     <div class="input-box4">
                         <input class="textbox2" type="text" name="skills" placeholder="Skills" />
                     </div>
-                    <button class="plus">
+                    <div class="plus">
                         <img src="../images/plus.svg" alt="" />
-                    </button>
-                    <div style="width: 20%"></div>
+                    </div>
+                    <div style="width: 40%"></div>
 
-                    <div class="preview">
+                    <!--<div class="preview">
                         <?php
                         for ($i = 0; $i < 3; $i++) {
                             ?>
@@ -115,19 +161,19 @@
                             <?php
                         }
                         ?>
-                    </div>
+                    </div>-->
 
                     <div class="tag">Languages</div>
                     <div class="input-box4">
                         <input class="textbox2" type="text" name="language" placeholder="Language" />
                     </div>
-                    <button class="plus">
+                    <div class="plus">
                         <img src="../images/plus.svg" alt="" />
-                    </button>
+                    </div>
 
-                    <div style="width: 20%"></div>
+                    <div style="width: 40%"></div>
 
-                    <div class="preview">
+                    <!--<div class="preview">
                         <?php
                         for ($i = 0; $i < 3; $i++) {
                             ?>
@@ -140,7 +186,7 @@
                             <?php
                         }
                         ?>
-                    </div>
+                    </div>-->
 
                     <div class="tag">GitHub Link</div>
                     <div class="input-box6">

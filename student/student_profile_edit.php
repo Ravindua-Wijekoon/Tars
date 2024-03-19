@@ -167,9 +167,9 @@
                                     <div>
                                         <input class="edit-input" type="text" placeholder="Get old data from DB">
                                     </div>
-                                    <button class="plus">
+                                    <div class="plus">
                                         <img src="../images/plus.svg" alt="" />
-                                    </button>
+                                    </div>
                                 </div>
                                 <div class="div1">
                                     <label>Email</label>
@@ -192,21 +192,21 @@
                                     <div class="short">
                                         <input class="edit-input" type="date" placeholder="Get">
                                     </div>
-                                    <button class="plus">
+                                    <div class="plus">
                                         <img src="../images/plus.svg" alt="" />
-                                    </button>
+                                    </div>
                                 </div>
                                 <div class="preview">
                                     <?php
                                     for ($i = 0; $i < 5; $i++) {
                                         ?>
-                                    <div>
-                                        <label>Test</label>
                                         <div>
-                                            <img src="../images/circle-xmark-regular.png" alt="">
+                                            <label>Test</label>
+                                            <div>
+                                                <img src="../images/circle-xmark-regular.png" alt="">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <?php
+                                        <?php
                                     }
                                     ?>
                                 </div>
@@ -221,9 +221,9 @@
                                     <div class="short">
                                         <input class="edit-input" type="date" placeholder="Get">
                                     </div>
-                                    <button class="plus">
+                                    <div class="plus">
                                         <img src="../images/plus.svg" alt="" />
-                                    </button>
+                                    </div>
 
                                 </div>
 
@@ -231,13 +231,13 @@
                                     <?php
                                     for ($i = 0; $i < 5; $i++) {
                                         ?>
-                                    <div>
-                                        <label>Test</label>
                                         <div>
-                                            <img src="../images/circle-xmark-regular.png" alt="">
+                                            <label>Test</label>
+                                            <div>
+                                                <img src="../images/circle-xmark-regular.png" alt="">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <?php
+                                        <?php
                                     }
                                     ?>
                                 </div>
