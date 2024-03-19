@@ -19,6 +19,17 @@ $address = $_SESSION['address'];
 $city_town = $_SESSION['city_town'];
 $zip_code = $_SESSION['zip_code'];
 
+//step 1  :insert initial data of students in student main table
+
+//step 2 :get latest student key
+
+//step 3:fetch education array data
+
+//step 4:check the lengt of of education array in if condition, education array eka for loop ekakata aragena
+// education[i]['institute']
+// insert query eka gahanna ona for loop eka atule
+
+
 $_SESSION['institution_edu'] = $_POST['institution_edu'];
 $_SESSION['start_edu'] = $_POST['start_edu'];
 $_SESSION['end_edu'] = $_POST['end_edu'];
