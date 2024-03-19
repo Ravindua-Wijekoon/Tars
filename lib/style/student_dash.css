@@ -851,6 +851,60 @@ td {
   cursor: pointer;
 }
 
+/* =============== Student Profile Edit =============== */
+
+.edit-sec {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 0px 30px 30px 30px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.div1 {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.div1 label {
+  color: #7b7676;
+  width: 100%;
+}
+
+.div1 div {
+  background-color: #efefef;
+  width: 80%;
+  border-radius: 5px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.div1 input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background-color: transparent;
+}
+
+.plus {
+  width: 20px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 5px 0 0 15px;
+}
+
 /* ====================== Responsive Design ========================== */
 @media (max-width: 900px) {
   .navigation {
