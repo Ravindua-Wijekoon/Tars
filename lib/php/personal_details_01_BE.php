@@ -13,7 +13,7 @@ $_SESSION['zip_code'] = $_POST['zip_code'];
 
 
 
-header("Location: ../../student_signup/personal_details_02.php");
+header("Location: ../../student/personal_details_02.php");
 exit;
 ?>
 

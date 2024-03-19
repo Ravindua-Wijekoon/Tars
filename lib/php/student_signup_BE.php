@@ -31,7 +31,7 @@ if ($stmt = $con->prepare('SELECT id FROM student WHERE username = ?')) {
             $stmt->execute();
             echo 'You have successfully registered, you can now login!';
 
-            header("Location: ../../student_signup/personal_details_01.php");
+            header("Location: ../../student/personal_details_01.php");
             exit;
 
         } else {

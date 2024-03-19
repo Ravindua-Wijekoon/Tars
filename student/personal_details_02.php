@@ -49,14 +49,7 @@
                         <img src="../images/plus.svg" alt="" />
                     </button>
 
-                    <div class="preview">
-                        <div>Test
-                            <a href="#">
-                                <img src="../images/circle-xmark-regular.png" alt="">
-                            </a>
-                        </div>
-
-                    </div>
+                  
 
                     <div class="tag">Experience</div>
                     <div class="input-box4">

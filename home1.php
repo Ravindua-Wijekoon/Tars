@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
 
-    <link rel="stylesheet" href="../lib/style/home.css" />
+    <link rel="stylesheet" href="lib/style/home.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Sofia+Sans:wght@200&display=swap"
@@ -18,12 +18,12 @@
 <body>
     <div class="section-01">
         <div class="div1">
-            <img class="logo" src="../images/logo.png" alt="" />
+            <img class="logo" src="images/logo.png" alt="" />
             <div class="div2">
                 <div class="home"><a href="home1.php" class="none">Home </a></div>
                 <div><a href="#" class="none">About Us </a></div>
-                <div><a href="../login/login.php" class="none">Login </a></div>
-                <img src=" ../images/search.png" height="20px" alt="" />
+                <div><a href="login/login.php" class="none">Login </a></div>
+                <img src=" images/search.png" height="20px" alt="" />
             </div>
         </div>
         <div class="welcome-txt">
@@ -39,7 +39,7 @@
                 <span>Tars</span> is not just a platform;<br />it's a
                 <span>BRIDGE</span>
             </div>
-            <img class="mt-5 mb-5" src="../images/W1.png" alt="" width="40%" />
+            <img class="mt-5 mb-5" src="images/W1.png" alt="" width="40%" />
             <div class="sec2-div2 mb-2">
                 connecting talented <b>STUDENTS</b> and <br />
                 passionate
@@ -61,14 +61,14 @@
                     your future. <br />
                     Register now to kick start your career journey.
                 </div>
-                <a href="user_type.php" class="none">
+                <a href="student/user_type.php" class="none">
                     <div class="register-btn mt-5">Register</div>
                 </a>
             </div>
         </div>
     </div>
     <div class="section-04">
-        <img src="../images/logo.png" alt="" width="40px" />
+        <img src="images/logo.png" alt="" width="40px" />
     </div>
 </body>
 

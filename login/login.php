@@ -22,7 +22,7 @@
                 Please log in with your <br/>
                 personal details
             </div>
-            <a type="button" href="../student_signup/home1.php" class="btn-back mt-4">Back</a>
+            <a type="button" href="../home1.php" class="btn-back mt-4">Back</a>
         </div>
     </div>
     <div class="right-box">
@@ -59,7 +59,7 @@
                 </div>
                 <div class="text-03 mb-4 ">
                     Don’t have an account?
-                    <a href="../student_signup/user_type.php" class="none">
+                    <a href="../student/user_type.php" class="none">
                         <b>Sign up</b>
                     </a>
                 </div>

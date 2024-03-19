@@ -32,8 +32,8 @@ if ($stmt = $con->prepare('SELECT id, password FROM student WHERE username = ?')
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            echo 'Welcome to User dashboard ' . $_SESSION['name'] . '!';
-            exit();
+            header("Location: ../../student/student_dashboard.php");
+            exit;
         } else {
             echo 'Incorrect username and/or password!';
             exit();
@@ -70,7 +70,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM company WHERE username = ?')
 }
 
 
-if ($stmt = $con->prepare('SELECT id, password FROM admintars WHERE username = ?')) {
+if ($stmt = $con->prepare('SELECT id, password FROM admin WHERE username = ?')) {
     $stmt->bind_param('s', $_POST['username']);
     $stmt->execute();
     $stmt->store_result();
@@ -84,8 +84,8 @@ if ($stmt = $con->prepare('SELECT id, password FROM admintars WHERE username = ?
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
             $_SESSION['id'] = $id;
-            echo 'Welcome to Admin Dashboard ' . $_SESSION['name'] . '!';
-            exit();
+            header("Location: ../../admin/admin_dashboard.php");
+            exit;
         } else {
             echo 'Incorrect username and/or password!';
             exit();
