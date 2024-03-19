@@ -50,7 +50,7 @@
                         <img src="../images/plus.svg" alt="" />
                     </div>
 
-                    <!-- aaaaaaaaaaaaaaaaa -->
+                   
                     <div class="preview" id="educationList">
 
                     </div>
