@@ -20,6 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
 }
 
 .title {
@@ -244,10 +245,61 @@ body {
 
 .right-box3 {
   width: 70%;
-  display: flex;
+  max-height: 100vh;
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
+  padding-top: 50px;
+  overflow: scroll;
+}
+
+.preview {
+  width: 80%;
+  background-color: white;
+  padding: 5px 10px 0px 10px;
+  margin-bottom: 10px;
+  margin-left: 20%;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.preview div {
+  background-color: #b3b2b2;
+  height: auto;
+  width: auto;
+  border-radius: 15px;
+  padding: 0px 5px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-wrap: nowrap;
+  margin-bottom: 5px;
+}
+
+.preview div div {
+  color: black;
+  margin-left: 5px;
+  border-radius: 7px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.preview div div img {
+  width: 12px;
+}
+
+.input-box6 {
+  width: 70%;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  padding-left: 10px;
 }
 
 @media screen and (max-width: 900px) {

@@ -145,45 +145,81 @@
 
                     <div class="section2">
                         <div class="button-sec">
-                            <div>About</div>
-                            <div>Edit</div>
+
                         </div>
-                        <div class="edit-sec">
-                            <div class="div1">
-                                <label>First Name</label><br>
-                                <div>
-                                    <input class="edit-input" type="text" placeholder="Get old data from DB">
+                        <form action="">
+                            <div class="edit-sec">
+                                <div class="div1">
+                                    <label>First Name</label>
+                                    <div>
+                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                    </div>
+
+                                </div>
+                                <div class="div1">
+                                    <label>Last Name</label>
+                                    <div>
+                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                    </div>
+                                </div>
+                                <div class="div1">
+                                    <label>City/Town</label>
+                                    <div>
+                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                    </div>
+                                </div>
+                                <div class="div1">
+                                    <label>Experience</label>
+                                    <div>
+                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                    </div>
+                                    <button class="plus">
+                                        <img src="../images/plus.svg" alt="" />
+                                    </button>
+                                </div>
+                                <div class="div1">
+                                    <label>Email</label>
+                                    <div>
+                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                    </div>
+                                </div>
+                                <div class="div1">
+
                                 </div>
 
-                            </div>
-                            <div class="div1">
-                                <label>Last Name</label><br>
-                                <div>
-                                    <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                <div class="div2">
+                                    <label>Education</label><br>
+                                    <div>
+                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                    </div>
+                                    <div class="short">
+                                        <input class="edit-input" type="date" placeholder="Get">
+                                    </div>
+                                    <div class="short">
+                                        <input class="edit-input" type="date" placeholder="Get">
+                                    </div>
+                                    <button class="plus">
+                                        <img src="../images/plus.svg" alt="" />
+                                    </button>
+                                </div>
+                                <div class="div2">
+                                    <label>Experience</label><br>
+                                    <div>
+                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                    </div>
+                                    <div class="short">
+                                        <input class="edit-input" type="date" placeholder="Get">
+                                    </div>
+                                    <div class="short">
+                                        <input class="edit-input" type="date" placeholder="Get">
+                                    </div>
+                                    <button class="plus">
+                                        <img src="../images/plus.svg" alt="" />
+                                    </button>
+
                                 </div>
                             </div>
-                            <div class="div1">
-                                <label>City/Town</label><br>
-                                <div>
-                                    <input class="edit-input" type="text" placeholder="Get old data from DB">
-                                </div>
-                            </div>
-                            <div class="div1">
-                                <label>Experience</label><br>
-                                <div>
-                                    <input class="edit-input" type="text" placeholder="Get old data from DB">
-                                </div>
-                                <button class="plus">
-                                    <img src="../images/plus.svg" alt="" />
-                                </button>
-                            </div>
-                            <div class="div1">
-                                <label>Email</label><br>
-                                <div>
-                                    <input class="edit-input" type="text" placeholder="Get old data from DB">
-                                </div>
-                            </div>
-                        </div>
+                        </form>
 
                     </div>
                 </div>

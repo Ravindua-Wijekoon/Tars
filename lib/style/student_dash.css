@@ -872,7 +872,7 @@ td {
   margin-bottom: 20px;
 }
 
-.div1 label {
+label {
   color: #7b7676;
   width: 100%;
 }
@@ -891,6 +891,7 @@ td {
 .div1 input {
   border: none;
   outline: none;
+  width: 95%;
   font-size: 15px;
   background-color: transparent;
 }
@@ -903,6 +904,49 @@ td {
   background-color: transparent;
   cursor: pointer;
   margin: 5px 0 0 15px;
+}
+
+.div2 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.div2 div {
+  background-color: #efefef;
+  width: 40%;
+  border-radius: 5px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+.div2 input {
+  border: none;
+  outline: none;
+  width: 95%;
+  font-size: 15px;
+  background-color: transparent;
+}
+
+.div2 .short {
+  background-color: #efefef;
+  width: 20%;
+  border-radius: 5px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.div2 .short input {
+  color: #7b7676;
 }
 
 /* ====================== Responsive Design ========================== */
