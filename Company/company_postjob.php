@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Dashboard</title>
+    <title>Post Job</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="../lib/style/company_dash.css">
 </head>
@@ -78,7 +78,7 @@
                     <ion-icon name="menu-outline"></ion-icon>
                 </div>
                 <div class="topic">
-                    Dashboard
+                    Post Job
                 </div>
                 <div class="search">
                     <label>
@@ -108,58 +108,29 @@
             </div>
 
             <!-- ======================= Cards ================== -->
-            <div class="cardBox">
-                <div class="card">
-                    <div>
-                        <div class="cardName">Internships</div>
-                        <div class="numbers">20</div>
-
-                    </div>
-
-                    <div class="image">
-                        <img src="../images/briefcase.png" alt="">
-                    </div>
+            <div class="cardBox2">
+                <div class="card2">
+                    <img src="../images/plus.svg" alt="" />
+                    <h6>Add New Intern</h6>
                 </div>
 
-                <div class="card">
-                    <div>
-                        <div class="cardName">Applications</div>
-                        <div class="numbers">10</div>
-
-                    </div>
-
-                    <div class="image">
-                        <img src="../images/calendar.png" alt="">
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <div class="cardName">Messages</div>
-                        <div class="numbers">08</div>
-
-                    </div>
-
-                    <div class="image">
-                        <img src="../images/messagetext1.png" alt="">
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- ================ Company list ================= -->
-            <div class="cont-box">
                 <?php
                 for ($i = 0; $i < 7; $i++) {
                     ?>
-                    <div class="item1">
-                        <h3>UI/UX Designer</h3><br>
-                        <h5>Applicant <span>20</span></h5>
+
+                    <div class="card3">
+                        <h2>WordPress Developer asddas</h2>
+                        <h4>Colombo, LK</h4>
+                        <div class="type">Remote</div>
+                        <h6>Applied</h6>
+                        <h5>14</h5>
                     </div>
+
                     <?php
                 }
                 ?>
             </div>
+
 
         </div>
     </div>
