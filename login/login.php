@@ -19,7 +19,7 @@
         <div class="text-box">
             <div class="title">New here?</div>
             <div class="text-01">
-                Please log in with your <br/>
+                Please log in with your <br />
                 personal details
             </div>
             <a type="button" href="../home1.php" class="btn-back mt-4">Back</a>
@@ -38,8 +38,8 @@
                 <div class="textboxsec">
 
                     <div class="input-box1">
-                        <img class="profimage" src="../images/profile.png" alt="" />
-                        <input class="textbox" type="text" name="username" placeholder="Username" />
+                        <img class="profimage" src="../images/email-icon2.png" alt="" />
+                        <input class="textbox" type="text" name="username" placeholder="Email" />
                     </div>
                     <div class="input-box1">
                         <img class="profimage" src="../images/pass.png" alt="" />

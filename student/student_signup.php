@@ -37,8 +37,8 @@
             <form action="../lib/php/student_signup_BE.php" method="post">
                 <div class="textboxsec">
                     <div class="input-box1">
-                        <img class="profimage" src="../images/profile.png" alt="" />
-                        <input class="textbox" type="text" placeholder="Username" name="username" />
+                        <img class="profimage" src="../images/email-icon2.png" alt="" />
+                        <input class="textbox" type="text" placeholder="Email" name="username" />
                     </div>
                     <div class="input-box1">
                         <img class="profimage" src="../images/pass.png" alt="" />
@@ -58,11 +58,11 @@
                 <div class="text-03 mb-4 mt-4">Already have an account? <a href="../login/login.php" class="none">
                         <b>Login</b></a>
                 </div>
-                
+
             </form>
         </div>
     </div>
-    
+
 </body>
 
 </html>
