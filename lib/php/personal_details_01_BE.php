@@ -9,6 +9,7 @@ $_SESSION['date_of_birth'] = $_POST['date_of_birth'];
 $_SESSION['address'] = $_POST['address'];
 $_SESSION['city_town'] = $_POST['city_town'];
 $_SESSION['zip_code'] = $_POST['zip_code'];
+$_SESSION['bio'] = $_POST['bio'];
 
 
 

@@ -38,7 +38,7 @@
                 <div class="textboxsec">
                     <div class="input-box1">
                         <img class="profimage" src="../images/profile.png" alt="" />
-                        <input class="textbox" type="text" placeholder="UOC Email" name="" />
+                        <input class="textbox" type="text" placeholder="UOC Index" name="uocindex" />
                     </div>
                     <div class="input-box1">
                         <img class="profimage" src="../images/email-icon2.png" alt="" />

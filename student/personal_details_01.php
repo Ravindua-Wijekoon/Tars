@@ -42,13 +42,9 @@
           <div class="input-box2">
             <input class="textbox2" type="text" name="name_with_initials" />
           </div>
-          <div class="tag">UOC Index Number</div>
-          <div class="input-box2">
-            <input class="textbox2" type="text" name="" />
-          </div>
           <div class="tag">Bio</div>
           <div class="input-box2">
-            <input class="textbox2" type="text" name="" />
+            <input class="textbox2" type="text" name="bio" />
           </div>
           <div class="tag">Date of birth</div>
           <div class="input-box3" style="margin-right: 40%">

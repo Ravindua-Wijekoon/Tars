@@ -12,7 +12,7 @@ if (mysqli_connect_errno()) {
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-if (empty($_POST['email']) || empty($_POST['password']) || empty($_POST['confirm_password'])) {
+if (empty($_POST['email']) || empty($_POST['password']) || empty($_POST['confirm_password']) || empty($_POST['uocindex'])) {
     exit('Please fill all the fields!');
 }
 
@@ -28,12 +28,12 @@ if ($stmt = $con->prepare('SELECT id FROM student_info WHERE email = ?')) {
     if ($stmt->num_rows > 0) {
         echo 'Email exists, please choose another!';
     } else {
-        if ($stmt = $con->prepare('INSERT INTO student_info (email, password) VALUES (?, ?)')) {
-            $stmt->bind_param('ss', $_POST['email'], $_POST['password']);
+        if ($stmt = $con->prepare('INSERT INTO student_info (email, password, uocindex) VALUES (?, ?, ?)')) {
+            $stmt->bind_param('sss', $_POST['email'], $_POST['password'], $_POST['uocindex']);
             $stmt->execute();
             echo 'You have successfully registered, you can now login!';
 
-            $_SESSION['full_name'] = $_POST['full_name'];
+            $_SESSION['uocindex'] = $_POST['uocindex'];
 
             header("Location: ../../student/personal_details_01.php");
             exit;

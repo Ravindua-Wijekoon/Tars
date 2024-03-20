@@ -179,17 +179,17 @@
 
                     <div class="tag">GitHub Link</div>
                     <div class="input-box6">
-                        <input class="textbox2" type="text" name="language" />
+                        <input class="textbox2" type="text" name="github" />
                     </div>
 
                     <div class="tag">LinkedIn Link</div>
                     <div class="input-box6">
-                        <input class="textbox2" type="text" name="language" />
+                        <input class="textbox2" type="text" name="linkedin" />
                     </div>
 
                     <div class="tag">Portfolio Link</div>
                     <div class="input-box6">
-                        <input class="textbox2" type="text" name="language" />
+                        <input class="textbox2" type="text" name="portfolio" />
                     </div>
 
                 </div>
