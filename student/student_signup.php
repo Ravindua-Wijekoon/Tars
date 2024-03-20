@@ -37,6 +37,10 @@
             <form action="../lib/php/student_signup_BE.php" method="post">
                 <div class="textboxsec">
                     <div class="input-box1">
+                        <img class="profimage" src="../images/profile.png" alt="" />
+                        <input class="textbox" type="text" placeholder="UOC Email" name="" />
+                    </div>
+                    <div class="input-box1">
                         <img class="profimage" src="../images/email-icon2.png" alt="" />
                         <input class="textbox" type="text" placeholder="Email" name="email" />
                     </div>
