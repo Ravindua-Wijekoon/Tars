@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin Students</title>
+    <title>Admin Companies</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="../lib/style/admin_stu.css" />
 
@@ -25,7 +25,7 @@
         <div class="main p-2">
             <div class="topbar">
                 <div class="title">
-                    Student
+                    Approved Company
                 </div>
                 <div class="messages">
                     <img src="../images/messages.png" alt="" />
@@ -53,9 +53,9 @@
                     <thead>
                         <tr class="head my-3">
                             <th>ID</th>
-                            <th>Student</th>
-                            <th>Department</th>
-                            <th>Company</th>
+                            <th>Name</th>
+                            <th>Sector</th>
+                            <th>Location</th>
                             <th>Contact</th>
                             <th></th>
                         </tr>
@@ -65,10 +65,10 @@
                         for ($i = 0; $i < 10; $i++) {
                             ?>
                             <tr>
-                                <td>2021T01250</td>
-                                <td>Blake Lively</td>
-                                <td>ICT</td>
-                                <td>N/A</td>
+                                <td>CMP#0001</td>
+                                <td>CodeGen International</td>
+                                <td>Technology Company</td>
+                                <td>London, England.</td>
                                 <td>
                                     <a href="#" class="none">
                                         <img src="../images/call icon.png" alt="" class="contact-icon">

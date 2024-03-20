@@ -213,6 +213,58 @@ td {
   color: #164a25;
 }
 
+/* ====================== admin_req_dtudent_details ========================== */
+
+.main-div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.main-div .sub-div {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #e7e5e5;
+  border-radius: 15px;
+  padding: 20px;
+  padding-right: 40px;
+}
+
+.button-sec {
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 40%;
+}
+
+.button-sec div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.accept {
+  background-color: #559c56;
+}
+
+.reject {
+  background-color: #e4412c;
+}
+
 /* ====================== Responsive Design ========================== */
 
 @media (max-width: 900px) {
