@@ -39,7 +39,7 @@
 
                     <div class="input-box1">
                         <img class="profimage" src="../images/email-icon2.png" alt="" />
-                        <input class="textbox" type="text" name="username" placeholder="Email" />
+                        <input class="textbox" type="text" name="email" placeholder="Email" />
                     </div>
                     <div class="input-box1">
                         <img class="profimage" src="../images/pass.png" alt="" />

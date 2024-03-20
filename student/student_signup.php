@@ -38,7 +38,7 @@
                 <div class="textboxsec">
                     <div class="input-box1">
                         <img class="profimage" src="../images/email-icon2.png" alt="" />
-                        <input class="textbox" type="text" placeholder="Email" name="username" />
+                        <input class="textbox" type="text" placeholder="Email" name="email" />
                     </div>
                     <div class="input-box1">
                         <img class="profimage" src="../images/pass.png" alt="" />
