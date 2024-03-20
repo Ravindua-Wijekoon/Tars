@@ -13,7 +13,7 @@
 <body class="background-01">
     <div class="main-box-01">
         <div class="logo">
-            <img src="../images/logo01.png" alt="logo" />
+              <a href="../home1.php"><img src="../images/logo01.png" alt="logo" /></a>
         </div>
         <br /><br />
 

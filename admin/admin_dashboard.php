@@ -38,7 +38,7 @@
             <div class="cardBox">
                 <div class="card">
                     <div>
-                        <div class="cardName">Approved <br>Students</div>
+                        <div class="cardName">Students</div>
                         <div class="numbers">05</div>
                     </div>
 
@@ -60,7 +60,7 @@
 
                 <div class="card">
                     <div>
-                        <div class="cardName">Request Student <br>Approvals</div>
+                        <div class="cardName">Request <br>Approvals</div>
                         <div class="numbers">03</div>
                     </div>
 
@@ -71,12 +71,12 @@
 
                 <div class="card">
                     <div>
-                        <div class="cardName">Request Company <br>Approvals</div>
+                        <div class="cardName">Notices</div>
                         <div class="numbers">08</div>
                     </div>
 
                     <div>
-                        <img src="../images/briefcase.png" alt="">
+                        <img src="../images/messagetext1.png" alt="">
                     </div>
                 </div>
                 <div class="bt-height"></div>

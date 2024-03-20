@@ -34,22 +34,22 @@
                 <img class="" src="../images/linkedin-icon.png" alt="">
             </div>
             <div class="text-03 mb-4">or use your email to Login</div>
-            <form action="">
+            <form action="../lib/php/login_BE.php" method="post">
                 <div class="textboxsec">
 
                     <div class="input-box1">
-                        <img class="profimage" src="../images/profile.png" alt="" />
-                        <input class="textbox" type="text" placeholder="Username" />
+                        <img class="profimage" src="../images/email-icon2.png" alt="" />
+                        <input class="textbox" type="text" name="username" placeholder="Email" />
                     </div>
                     <div class="input-box1">
                         <img class="profimage" src="../images/pass.png" alt="" />
-                        <input class="textbox" type="password" placeholder="Password" />
+                        <input class="textbox" type="password" name="password" placeholder="Password" />
                     </div>
 
                 </div>
                 <div class="btn-sec">
                     <div class="btn-box">
-                        <input type="submit" class="normalButtons01" value="Login" />
+                        <input type="submit" class="normalButtons01" name="login" value="Login" />
                     </div>
                 </div>
                 <div class="text-03 mb-2 mt-4">
@@ -59,7 +59,7 @@
                 </div>
                 <div class="text-03 mb-4 ">
                     Don’t have an account?
-                    <a href="../student_signup/user_type.php" class="none">
+                    <a href="../student/user_type.php" class="none">
                         <b>Sign up</b>
                     </a>
                 </div>

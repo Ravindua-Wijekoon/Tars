@@ -138,7 +138,7 @@
 
             <div class="job-card-sec">
                 <?php
-                for ($i = 0; $i < 12; $i++) {
+                for ($i = 0; $i < 23; $i++) {
                     ?>
                     <div class="job-card">
                         <div class="sec">

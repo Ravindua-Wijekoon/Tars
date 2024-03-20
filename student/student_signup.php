@@ -34,19 +34,19 @@
                 <img class="" src="../images/linkedin-icon.png" alt="">
             </div>
             <div class="text-03 mb-4">or use your email to SignUp</div>
-            <form action="">
+            <form action="../lib/php/student_signup_BE.php" method="post">
                 <div class="textboxsec">
                     <div class="input-box1">
-                        <img class="profimage" src="../images/profile.png" alt="" />
-                        <input class="textbox" type="text" placeholder="Username" />
+                        <img class="profimage" src="../images/email-icon2.png" alt="" />
+                        <input class="textbox" type="text" placeholder="Email" name="username" />
                     </div>
                     <div class="input-box1">
                         <img class="profimage" src="../images/pass.png" alt="" />
-                        <input class="textbox" type="password" placeholder="Password" />
+                        <input class="textbox" type="password" placeholder="Password" name="password" />
                     </div>
                     <div class="input-box1">
                         <img class="profimage" src="../images/pass.png" alt="" />
-                        <input class="textbox" type="password" placeholder="Confirm Password" />
+                        <input class="textbox" type="password" placeholder="Confirm Password" name="confirm_password" />
                     </div>
 
                 </div>
@@ -58,9 +58,11 @@
                 <div class="text-03 mb-4 mt-4">Already have an account? <a href="../login/login.php" class="none">
                         <b>Login</b></a>
                 </div>
+
             </form>
         </div>
     </div>
+
 </body>
 
 </html>
