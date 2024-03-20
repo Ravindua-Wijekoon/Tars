@@ -25,7 +25,7 @@
         <div class="main p-2">
             <div class="topbar">
                 <div class="title">
-                    Student
+                    Request Approvals
                 </div>
                 <div class="messages">
                     <img src="../images/messages.png" alt="" />
@@ -54,8 +54,7 @@
                         <tr class="head my-3">
                             <th>ID</th>
                             <th>Student</th>
-                            <th>Department</th>
-                            <th>Company</th>
+                            <th>Address</th>
                             <th>Contact</th>
                             <th></th>
                         </tr>
@@ -67,8 +66,7 @@
                             <tr>
                                 <td>2021T01250</td>
                                 <td>Blake Lively</td>
-                                <td>ICT</td>
-                                <td>N/A</td>
+                                <td>Colombo</td>
                                 <td>
                                     <a href="#" class="none">
                                         <img src="../images/call icon.png" alt="" class="contact-icon">

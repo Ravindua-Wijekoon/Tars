@@ -56,9 +56,8 @@
                         <br><br>
                         <h5>Links</h5>
                         <span><b>Github |</b> <span>github.com/blakelively</span></span><br>
-                        <span><b>Gitlabs |</b> <span>gitlabs.com/blakelively</span></span><br>
-                        <span><b>LinkedIn |</b> <span> linkedin.com/in//blakelively</span></span><br>
-                        <span><b>Twitter |</b> <span>twitter.com/blakelively</span></span>
+                        <span><b>Portfolio |</b> <span>gitlabs.com/blakelively</span></span><br>
+                        <span><b>LinkedIn |</b> <span> linkedin.com/in//blakelively</span></span>
 
                     </div>
 
@@ -73,6 +72,10 @@
                     <span>Python HTML CSS C React Bootstrap</span>
                     <h5>Languages</h5>
                     <span>English French Swedish</span>
+                    <h5>Birthday</h5>
+                    <span>date</span>
+                    <h5>Address</h5>
+                    <span>Colombo</span>
                 </div>
             </div>
 
