@@ -25,7 +25,7 @@
         <div class="main p-2">
             <div class="topbar">
                 <div class="title">
-                    Student
+                    Approved Student
                 </div>
                 <div class="messages">
                     <img src="../images/messages.png" alt="" />

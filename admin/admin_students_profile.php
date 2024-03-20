@@ -56,9 +56,8 @@
                         <br><br>
                         <h5>Links</h5>
                         <span><b>Github |</b> <span>github.com/blakelively</span></span><br>
-                        <span><b>Gitlabs |</b> <span>gitlabs.com/blakelively</span></span><br>
-                        <span><b>LinkedIn |</b> <span> linkedin.com/in//blakelively</span></span><br>
-                        <span><b>Twitter |</b> <span>twitter.com/blakelively</span></span>
+                        <span><b>Portfolio |</b> <span>gitlabs.com/blakelively</span></span><br>
+                        <span><b>LinkedIn |</b> <span> linkedin.com/in//blakelively</span></span>
 
                     </div>
 
