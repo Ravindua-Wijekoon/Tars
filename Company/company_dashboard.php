@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Dashboard</title>
     <!-- ======= Styles ====== -->
-    <link rel="stylesheet" href="../lib/style/student_dash.css">
+    <link rel="stylesheet" href="../lib/style/company_dash.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                 </li>
 
                 <li>
-                    <a href="../Student/student_dashboard.php">
+                    <a href="#">
                         <span class="nav-icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -34,27 +34,18 @@
                 </li>
 
                 <li>
-                    <a href="../Student/student_search_job.php">
+                    <a href="#">
                         <span class="nav-icon">
                             <ion-icon name="search-outline"></ion-icon>
                         </span>
-                        <span class="title">Search Job</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../Student/student_companies.php">
-                        <span class="nav-icon">
-                            <ion-icon name="people-outline"></ion-icon>
-                        </span>
-                        <span class="title">Companies</span>
+                        <span class="title">Post Job</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
                         <span class="nav-icon">
-                            <ion-icon name="document-text-outline"></ion-icon>
+                            <ion-icon name="people-outline"></ion-icon>
                         </span>
                         <span class="title">Application</span>
                     </a>
@@ -157,49 +148,10 @@
             </div>
 
             <!-- ================ Company list ================= -->
-            <div class="grid-container">
+            <div class="container">
                 <div class="item1">
-                    <span class="title">Featured Companies</span>
-                    <div class="card-sec">
-                        <?php
-                        for ($i = 0; $i < 3; $i++) {
-                            ?>
-                            <div class="c-card">
-                                <img src="../images/Group 105.png" alt="">
-                                <span>Apple Inc.</span>
-                                <span class="int-no">5 Internships</span>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                    </div>
-                </div>
 
-                <!-- ================ Internship list ================= -->
-
-                <div class="item2">
-                    <span class="title">Recommended Internships</span>
-                    <div class="int-sec">
-                        <?php
-                        for ($i = 0; $i < 5; $i++) {
-                            ?>
-                            <div class="int-card">
-                                <img src="../images/Group 105.png" alt="">
-                                <div class="text1">
-                                    <span>UI/UX Designer</span>
-                                    <span>Dribbble Holdings Ltd.</span>
-                                    <span>LKR 50,000 - LKR 80,000</span>
-                                </div>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                    </div>
                 </div>
-                <div class="item3">
-                    <span class="title">Recent Activities</span>
-                </div>
-
             </div>
 
         </div>
