@@ -118,15 +118,15 @@
                 for ($i = 0; $i < 7; $i++) {
                     ?>
 
-                    <div class="card3">
-                        <h2>WordPress Developer asddas</h2>
-                        <h4>Colombo, LK</h4>
-                        <div class="type">Remote</div>
-                        <h6>Applied</h6>
-                        <h5>14</h5>
-                    </div>
+                <div class="card3">
+                    <h2>WordPress Developer</h2>
+                    <h4>Colombo, LK</h4>
+                    <div class="type">Remote</div>
+                    <h6>Applied</h6>
+                    <h5>14</h5>
+                </div>
 
-                    <?php
+                <?php
                 }
                 ?>
             </div>
