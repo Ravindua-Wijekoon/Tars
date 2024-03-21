@@ -101,35 +101,62 @@
                     <div class="user">
                         <img src="../images/profile_photos/customer02.jpg" alt="">
                     </div>
-
                 </div>
-
 
             </div>
+            <div class="main-appbox">
+                <div class="appbox1">
+                    <h2>Add Internship Details</h2>
 
-            <!-- ======================= Cards ================== -->
-            <div class="cardBox2">
-                <div class="card2">
-                    <img src="../images/plus.svg" alt="" />
-                    <h6>Add New Intern</h6>
-                </div>
-
-                <?php
-                for ($i = 0; $i < 7; $i++) {
-                    ?>
-
-                    <div class="card3">
-                        <h2>WordPress Developer</h2>
-                        <h4>Colombo, LK</h4>
-                        <div class="type">Remote</div>
-                        <h6>Applied</h6>
-                        <h5>14</h5>
+                    <label class="label2 ">Add Internship Title</label>
+                    <div class="outer-box">
+                        <input type="text" class="normal">
                     </div>
 
-                    <?php
-                }
-                ?>
+                    <label class="label2 ">Add Internship Title</label>
+                    <div class="outer-box2">
+                        <textarea class="normal2" rows="10">
+                        </textarea>
+                    </div>
+
+                    <label class="label2 ">Location</label>
+                    <div class="outer-box">
+                        <input type="text" class="normal">
+                    </div>
+                    <label class="label2 ">Expected Qualifications</label>
+                    <div class="outer-box">
+                        <input type="text" class="normal">
+                    </div>
+                    <label class="label2 ">Internship Type</label>
+                    <div class="outer-box3">
+                        <div>
+                            <input type="radio" value="Remote" name="type">
+                            <label>Remote</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" value="Onsite" name="type">
+                            <label>Onsite</label>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="appbox2">
+                    <div class="button">
+                        Cancel
+                    </div>
+                    <div class="button">
+                        Publish
+                    </div>
+                </div>
+
+
             </div>
+
+
+
 
 
         </div>
