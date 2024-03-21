@@ -65,7 +65,7 @@ body {
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 50px;
+  padding-top: 20px;
   overflow: scroll;
 }
 
@@ -115,4 +115,25 @@ body {
   outline: none;
   background: transparent;
   font-size: 14px;
+}
+
+.btn-sec {
+  display: flex;
+  width: 100%;
+  justify-content: right;
+}
+
+.normalButtons01 {
+  width: 150px;
+  height: 35px;
+  background-color: #164a25;
+  color: white;
+  border: 0px;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
