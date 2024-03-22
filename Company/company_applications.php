@@ -5,19 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application</title>
+    <title>Applications</title>
     <!-- ======= Styles ====== -->
-    <link rel="stylesheet" href="../lib/style/student_dash.css">
+    <link rel="stylesheet" href="../lib/style/company_dash.css">
 
     <!-- =========== Bootstrap ============ -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
 </head>
 
 <body>
     <!-- =============== Navigation ================ -->
-    <div class="container2">
+    <div class="container1">
         <div class="navigation">
             <ul>
                 <li>
@@ -30,7 +29,7 @@
                 </li>
 
                 <li>
-                    <a href="../Student/student_dashboard.php">
+                    <a href="#">
                         <span class="nav-icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -39,27 +38,18 @@
                 </li>
 
                 <li>
-                    <a href="../Student/student_search_job.php">
+                    <a href="#">
                         <span class="nav-icon">
                             <ion-icon name="search-outline"></ion-icon>
                         </span>
-                        <span class="title">Search Job</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="../Student/student_companies.php">
-                        <span class="nav-icon">
-                            <ion-icon name="people-outline"></ion-icon>
-                        </span>
-                        <span class="title">Companies</span>
+                        <span class="title">Post Job</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
                         <span class="nav-icon">
-                            <ion-icon name="document-text-outline"></ion-icon>
+                            <ion-icon name="people-outline"></ion-icon>
                         </span>
                         <span class="title">Application</span>
                     </a>
@@ -97,7 +87,7 @@
                 <div class="search">
                     <label>
                         <input type="text" placeholder="Search here">
-                        <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                        <ion-icon name="search-outline"></ion-icon>
                     </label>
                 </div>
 
@@ -117,7 +107,10 @@
                     </div>
 
                 </div>
+
+
             </div>
+
             <div class="marg">
                 <div>
 
@@ -128,40 +121,38 @@
                                 <th>Date Applied</th>
                                 <th>Position</th>
                                 <th>Type</th>
-                                <th>Company</th>
+                                <th>Applicant</th>
                                 <th>Contact</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                            for ($i = 0; $i < 10; $i++) {
+                            for ($i = 0; $i < 4; $i++) {
                                 ?>
-                                <tr>
-                                    <td>APL#0001</td>
-                                    <td>February 25, 2023 8: 23 PM</td>
-                                    <td>UI/UX Designer</td>
-                                    <td>Online</td>
-                                    <td>Dribbble Holdings Ltd.
-                                        Technology Company</td>
-                                    <td>
-                                        <a href="#" class="none">
-                                            <img src="../images/call icon.png" alt="" class="contact-icon">
-                                        </a>
-                                        <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
-                                            <img src="../images/email icon.png" alt="" class="contact-icon">
-                                        </a>
-                                    </td>
-                                </tr>
+                            <tr>
+                                <td>APL#0001</td>
+                                <td>February 25, 2023 8: 23 PM</td>
+                                <td>UI/UX Designer</td>
+                                <td>Online</td>
+                                <td>Blake Lively</td>
+                                <td>
 
-                                <?php
+                                    <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
+                                        <img src="../images/email icon.png" alt="" class="contact-icon">
+                                    </a>
+                                </td>
+                            </tr>
+
+                            <?php
                             }
                             ?>
 
                         </tbody>
                     </table>
                 </div>
-
             </div>
+
+
 
         </div>
     </div>

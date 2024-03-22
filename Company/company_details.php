@@ -36,28 +36,38 @@
                 <div class="textboxsec">
                     <div class="tag">Company Name</div>
                     <div class="input-box">
-                        <input class="textbox" type="text" placeholder="Company Name" />
+                        <input class="textbox" type="text" placeholder="Company Name" required />
                     </div>
 
                     <div class="tag">Company Type</div>
                     <div class="input-box">
-                        <input class="textbox" type="text" placeholder="IT company / software company" />
+                        <input class="textbox" type="text" placeholder="IT company / software company" required />
                     </div>
 
                     <div class="tag">Location</div>
                     <div class="input-box">
-                        <input class="textbox" type="text" placeholder="Company Location" />
+                        <input class="textbox" type="text" placeholder="Company Location" required />
                     </div>
 
                     <div class="tag">Email Address</div>
                     <div class="input-box">
-                        <input class="textbox" type="text" placeholder="Company Email" />
+                        <input class="textbox" type="text" placeholder="Company Email" required />
                     </div>
 
                     <div class="tag">About</div>
                     <div class="input-box">
-                        <textarea class="textbox2" rows="8">
+                        <textarea class="textbox2" rows="8" required>
                         </textarea>
+                    </div>
+
+                    <div class="tag">LinkedIn Link</div>
+                    <div class="input-box">
+                        <input class="textbox" type="text" placeholder="Link" required />
+                    </div>
+
+                    <div class="tag">Twitter Link</div>
+                    <div class="input-box">
+                        <input class="textbox" type="text" placeholder="Link" required />
                     </div>
 
                     <div class="btn-sec">

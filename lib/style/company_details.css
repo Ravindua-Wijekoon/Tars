@@ -121,6 +121,7 @@ body {
   display: flex;
   width: 100%;
   justify-content: right;
+  margin-bottom: 20px;
 }
 
 .normalButtons01 {

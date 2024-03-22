@@ -19,6 +19,11 @@ body {
   width: 100%;
 }
 
+.container1 {
+  position: relative;
+  width: 100%;
+}
+
 .container2 {
   position: relative;
   width: 100%;
@@ -44,6 +49,7 @@ body {
   left: 0;
   width: 100%;
   margin-left: 18px;
+  padding: 0;
 }
 
 .navigation ul li {
@@ -479,4 +485,53 @@ input[type="radio"] {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+/* ############## company Application ################ */
+
+.marg {
+  width: 95%;
+  margin: 20px auto 0 auto;
+  height: auto;
+}
+.user {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.user img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-icon {
+  width: 30px;
+}
+
+.head {
+  background-color: #e7e5e5;
+  height: 20%;
+}
+
+.search-icon {
+  margin-top: 10px;
+}
+
+tbody tr:hover {
+  background-color: #164a25;
+}
+
+tbody tr:hover td {
+  color: white;
+}
+
+td {
+  max-width: 250px;
 }
