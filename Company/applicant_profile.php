@@ -137,6 +137,11 @@
                                 <span><b>LinkedIn |</b> <span> linkedin.com/in//blakelively</span></span>
 
                             </div>
+                            <div class="button-sec3">
+                                <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
+                                    <div>Send Email</div>
+                                </a>
+                            </div>
 
                         </div>
                     </div>

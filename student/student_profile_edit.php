@@ -128,8 +128,9 @@
                                 <h6>blakelively@gmail.com</h6>
 
                                 <h5>Bio</h5>
-                                <span>I am a Software Developer with critical thinking skills and also creative
-                                    skills.</span>
+                                <div class="bio">I am a Software Developer with critical thinking skills and also
+                                    creative
+                                    skills.</div>
                                 <br><br>
                                 <h5>Links</h5>
                                 <span class="links"><b>Github |</b> <span>github.com/blakelively</span></span><br>
@@ -151,7 +152,7 @@
                                 <div class="div2">
                                     <label>Full Name</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                        <input class="edit-input" type="text" value="Get old data from DB">
                                     </div>
 
                                 </div>
@@ -159,7 +160,7 @@
                                 <div class="div2">
                                     <label>Address</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                        <input class="edit-input" type="text" value="Get old data from DB">
                                     </div>
 
                                 </div>
@@ -167,20 +168,20 @@
                                 <div class="div1">
                                     <label>City/Town</label>
                                     <div>
-                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                        <input class="edit-input" type="text" value="Get old data from DB">
                                     </div>
                                 </div>
                                 <div class="div1">
                                     <label>Date of Birth</label>
                                     <div>
-                                        <input class="edit-input" type="date" placeholder="Get old data from DB">
+                                        <input class="edit-input" type="date" value="Get old data from DB">
                                     </div>
 
                                 </div>
                                 <div class="div1">
                                     <label>Email</label>
                                     <div>
-                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                        <input class="edit-input" type="text" value="Get old data from DB">
                                     </div>
                                 </div>
                                 <div class="div1">
@@ -190,13 +191,13 @@
                                 <div class="div2">
                                     <label>Education</label><br>
                                     <div>
-                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                        <input class="edit-input" type="text" value="Get old data from DB to below">
                                     </div>
                                     <div class="short">
-                                        <input class="edit-input" type="date" placeholder="Get">
+                                        <input class="edit-input" type="date">
                                     </div>
                                     <div class="short">
-                                        <input class="edit-input" type="date" placeholder="Get">
+                                        <input class="edit-input" type="date">
                                     </div>
                                     <div class="plus">
                                         <img src="../images/plus.svg" alt="" />
@@ -219,7 +220,7 @@
                                 <div class="div2">
                                     <label>Experience</label><br>
                                     <div>
-                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                        <input class="edit-input" type="text" value="Get old data from DB to below">
                                     </div>
                                     <div class="short">
                                         <input class="edit-input" type="date" placeholder="Get">
@@ -279,21 +280,21 @@
                                 <div class="div2">
                                     <label>GitHub</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                        <input class="edit-input" type="text" value="Get old data from DB">
                                     </div>
 
                                 </div>
                                 <div class="div2">
                                     <label>LinkedIn</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                        <input class="edit-input" type="text" value="Get old data from DB">
                                     </div>
 
                                 </div>
                                 <div class="div2">
                                     <label>Portfolio</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                        <input class="edit-input" type="text" value="Get old data from DB">
                                     </div>
 
                                 </div>

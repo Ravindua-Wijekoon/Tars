@@ -129,21 +129,21 @@
                             <?php
                             for ($i = 0; $i < 4; $i++) {
                                 ?>
-                            <tr>
-                                <td>APL#0001</td>
-                                <td>February 25, 2023 8: 23 PM</td>
-                                <td>UI/UX Designer</td>
-                                <td>Online</td>
-                                <td>Blake Lively</td>
-                                <td>
+                                <tr>
+                                    <td>APL#0001</td>
+                                    <td>February 25, 2023 8: 23 PM</td>
+                                    <td>UI/UX Designer</td>
+                                    <td>Online</td>
+                                    <td>Blake Lively</td>
+                                    <td>
 
-                                    <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
-                                        <img src="../images/email icon.png" alt="" class="contact-icon">
-                                    </a>
-                                </td>
-                            </tr>
+                                        <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
+                                            <img src="../images/email icon.png" alt="" class="contact-icon">
+                                        </a>
+                                    </td>
+                                </tr>
 
-                            <?php
+                                <?php
                             }
                             ?>
 

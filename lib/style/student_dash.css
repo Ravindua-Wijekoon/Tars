@@ -812,6 +812,11 @@ td {
   height: 25px;
 }
 
+.info .bio {
+  text-align: justify;
+  align-items: right;
+}
+
 .links {
   line-height: 25px;
 }
@@ -872,6 +877,26 @@ td {
   cursor: pointer;
 }
 
+.button-sec3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin: 40px 0px 0px 0px;
+}
+
+.button-sec3 div {
+  display: flex;
+  background-color: #559c56;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 150px;
+  height: 30px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 /* =============== Student Profile Edit =============== */
 
 .edit-sec {
@@ -923,6 +948,33 @@ label {
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 20px;
+}
+
+.div3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.div3 div {
+  background-color: #efefef;
+  width: 90%;
+  border-radius: 5px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.div3 textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  text-align: left;
 }
 
 .div2 div {

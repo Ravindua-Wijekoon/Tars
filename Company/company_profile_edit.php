@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Edit Profile</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="../lib/style/student_dash.css">
 
@@ -123,25 +123,21 @@
                                 <img src="../images/profile_photos/customer02.jpg" alt="">
                             </div>
                             <div class="info">
-                                <h3>Blake Lively</h3>
-                                <h5>Software Developer</h5>
-                                <h6>blakelively@gmail.com</h6>
+                                <h1>AR Communications</h1>
+                                <h3>Telecommunications compan</h3>
+                                <h6>intern@arcomms.com</h6>
 
-                                <h5>Bio</h5>
-                                <div class="bio">I am a Software Developer with critical thinking skills and also
-                                    creative
-                                    skills.</div>
+                                <h5>About us</h5>
+                                <div class="bio">Our company provides a wide range of communication services, including
+                                    voice,
+                                    video, and messaging solutions, as well as data and internet connectivity. Whether
+                                    you need to make a call, send a text, or attend a virtual meeting, we have the tools
+                                    and resources to keep you connected.</div>
                                 <br><br>
                                 <h5>Links</h5>
-                                <span><b>Github |</b> <span>github.com/blakelively</span></span><br>
-                                <span><b>Portfolio |</b> <span>gitlabs.com/blakelively</span></span><br>
-                                <span><b>LinkedIn |</b> <span> linkedin.com/in//blakelively</span></span>
+                                <span><b>LinkedIn |</b> <span>github.com/blakelively</span></span><br>
+                                <span><b>Twitte |</b> <span>gitlabs.com/blakelively</span></span>
 
-                            </div>
-                            <div class="button-sec3">
-                                <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
-                                    <div>Send Email</div>
-                                </a>
                             </div>
 
                         </div>
@@ -149,21 +145,67 @@
 
                     <div class="section2">
                         <div class="button-sec">
-                            <div>Edit</div>
+
                         </div>
-                        <div class="qual">
-                            <h3>Education</h3>
-                            <div>BSc. (Hons) Computer Science (Stanford University)</div>
-                            <h3>Experience</h3>
-                            <div>Millenium IT (2018 - 2022)</div>
-                            <h3>Skills</h3>
-                            <div>Python HTML CSS C React Bootstrap</div>
-                            <h3>Languages</h3>
-                            <div>English French Swedish</div>
-                            <h3>Birthday</h3>
-                            <div>date</div>
-                            <h3>Address</h3>
-                            <div>Colombo</div>
+                        <form action="">
+                            <div class="edit-sec">
+                                <div class="div2">
+                                    <label>Company Name</label>
+                                    <div class="input-full">
+                                        <input class="edit-input" type="text" value="Get old data from DB">
+                                    </div>
+
+                                </div>
+
+                                <div class="div2">
+                                    <label>Company Type</label>
+                                    <div class="input-full">
+                                        <input class="edit-input" type="text" value="Get old data from DB">
+                                    </div>
+
+                                </div>
+
+                                <div class="div2">
+                                    <label>Location</label>
+                                    <div class="input-full">
+                                        <input class="edit-input" type="text" value="Get old data from DB">
+                                    </div>
+
+                                </div>
+
+                                <div class="div2">
+                                    <label>Email Address</label>
+                                    <div class="input-full">
+                                        <input class="edit-input" type="text" value="Get old data from DB">
+                                    </div>
+
+                                </div>
+
+                                <div class="div3">
+                                    <label>About</label>
+                                    <div class="input-full">
+                                        <textarea class="edit-input" rows="8">Get old data from DB</textarea>
+                                    </div>
+                                </div>
+
+                                <div class="div2">
+                                    <label>LinkedIn</label>
+                                    <div class="input-full">
+                                        <input class="edit-input" type="text" value="Get old data from DB">
+                                    </div>
+
+                                </div>
+                                <div class="div2">
+                                    <label>Twitter</label>
+                                    <div class="input-full">
+                                        <input class="edit-input" type="text" value="Get old data from DB">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                        <div class="button-sec2">
+                            <div>Save</div>
                         </div>
 
                     </div>
