@@ -826,7 +826,7 @@ td {
 
 .qual h3 {
   color: #164a25;
-  line-height: 40px;
+  line-height: 25px;
 }
 
 .qual div {
@@ -848,6 +848,26 @@ td {
   margin-right: 10px;
   width: 100px;
   height: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.button-sec2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin: 00px 30px 30px 30px;
+}
+
+.button-sec2 div {
+  display: flex;
+  background-color: #559c56;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 150px;
+  height: 30px;
   border-radius: 15px;
   cursor: pointer;
 }
@@ -936,9 +956,9 @@ label {
   margin-top: 5px;
 }
 
-.div2 .short input {
-  color: #7b7676;
-}
+/* .div2 .short input {
+  color: #7b7676;ss
+} */
 
 .div2 .input-full {
   width: 90%;

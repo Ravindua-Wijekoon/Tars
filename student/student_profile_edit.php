@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Edit Profile</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="../lib/style/student_dash.css">
 
@@ -156,6 +156,14 @@
 
                                 </div>
 
+                                <div class="div2">
+                                    <label>Address</label>
+                                    <div class="input-full">
+                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                    </div>
+
+                                </div>
+
                                 <div class="div1">
                                     <label>City/Town</label>
                                     <div>
@@ -163,13 +171,11 @@
                                     </div>
                                 </div>
                                 <div class="div1">
-                                    <label>Experience</label>
+                                    <label>Date of Birth</label>
                                     <div>
-                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                        <input class="edit-input" type="date" placeholder="Get old data from DB">
                                     </div>
-                                    <div class="plus">
-                                        <img src="../images/plus.svg" alt="" />
-                                    </div>
+
                                 </div>
                                 <div class="div1">
                                     <label>Email</label>
@@ -227,6 +233,7 @@
 
                                 </div>
 
+
                                 <div class="preview">
                                     <?php
                                     for ($i = 0; $i < 5; $i++) {
@@ -241,6 +248,34 @@
                                     }
                                     ?>
                                 </div>
+
+                                <div class="div2">
+                                    <label>Language</label><br>
+                                    <div>
+                                        <input class="edit-input" type="text" placeholder="Get old data from DB">
+                                    </div>
+
+                                    <div class="plus">
+                                        <img src="../images/plus.svg" alt="" />
+                                    </div>
+
+                                </div>
+
+                                <div class="preview">
+                                    <?php
+                                    for ($i = 0; $i < 2; $i++) {
+                                        ?>
+                                        <div>
+                                            <label>Test</label>
+                                            <div>
+                                                <img src="../images/circle-xmark-regular.png" alt="">
+                                            </div>
+                                        </div>
+                                        <?php
+                                    }
+                                    ?>
+                                </div>
+
                                 <div class="div2">
                                     <label>GitHub</label>
                                     <div class="input-full">
@@ -264,6 +299,9 @@
                                 </div>
                             </div>
                         </form>
+                        <div class="button-sec2">
+                            <div>Save</div>
+                        </div>
 
                     </div>
                 </div>

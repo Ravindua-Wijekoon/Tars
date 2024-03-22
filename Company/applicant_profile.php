@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Applicant Profile</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="../lib/style/student_dash.css">
 
@@ -123,7 +123,7 @@
                                 <img src="../images/profile_photos/customer02.jpg" alt="">
                             </div>
                             <div class="info">
-                                <h1>Blake Lively</h1>
+                                <h3>Blake Lively</h3>
                                 <h5>Software Developer</h5>
                                 <h6>blakelively@gmail.com</h6>
 
@@ -132,11 +132,9 @@
                                     skills.</span>
                                 <br><br>
                                 <h5>Links</h5>
-                                <span class="links"><b>Github |</b> <span>github.com/blakelively</span></span><br>
-                                <span class="links"><b>Gitlabs |</b> <span>gitlabs.com/blakelively</span></span><br>
-                                <span class="links"><b>LinkedIn |</b> <span>
-                                        linkedin.com/in//blakelively</span></span><br>
-                                <span class="links"><b>Twitter |</b> <span>twitter.com/blakelively</span></span>
+                                <span><b>Github |</b> <span>github.com/blakelively</span></span><br>
+                                <span><b>Portfolio |</b> <span>gitlabs.com/blakelively</span></span><br>
+                                <span><b>LinkedIn |</b> <span> linkedin.com/in//blakelively</span></span>
 
                             </div>
 
@@ -145,8 +143,6 @@
 
                     <div class="section2">
                         <div class="button-sec">
-                            <div>About</div>
-                            <div>Edit</div>
                         </div>
                         <div class="qual">
                             <h3>Education</h3>
@@ -157,6 +153,10 @@
                             <div>Python HTML CSS C React Bootstrap</div>
                             <h3>Languages</h3>
                             <div>English French Swedish</div>
+                            <h3>Birthday</h3>
+                            <div>date</div>
+                            <h3>Address</h3>
+                            <div>Colombo</div>
                         </div>
 
                     </div>
