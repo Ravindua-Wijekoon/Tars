@@ -103,6 +103,10 @@ body {
   color: #949494;
 }
 
+tbody tr {
+  cursor: pointer;
+}
+
 tbody tr:hover {
   background-color: #164a25;
 }

@@ -36,69 +36,59 @@
 
             <!-- ======================= Cards ================== -->
             <div class="cardBox">
-                <div class="card">
-                    <div>
-                        <div class="cardName">Approved <br>Students</div>
-                        <div class="numbers">05</div>
-                    </div>
+                <a href="../admin/admin_approved_students.php" class="none">
+                    <div class="card">
+                        <div>
 
-                    <div>
-                        <img src="../images/icon _user_.png" alt="">
-                    </div>
-                </div>
+                            <div class="cardName">Approved <br>Students</div>
+                            <div class="numbers">05</div>
 
-                <div class="card">
-                    <div>
-                        <div class="cardName">Approved <br>Companies</div>
-                        <div class="numbers">05</div>
+                        </div>
+                        <div>
+                            <img src="../images/icon _user_.png" alt="">
+                        </div>
                     </div>
+                </a>
 
-                    <div>
-                        <img src="../images/icon _tick circle_.png" alt="">
-                    </div>
-                </div>
+                <a href="../admin/admin_approved_companies.php" class="none">
+                    <div class="card">
+                        <div>
+                            <div class="cardName">Approved <br>Companies</div>
+                            <div class="numbers">05</div>
+                        </div>
 
-                <div class="card">
-                    <div>
-                        <div class="cardName">Request Student<br>Approvals</div>
-                        <div class="numbers">03</div>
+                        <div>
+                            <img src="../images/icon _tick circle_.png" alt="">
+                        </div>
                     </div>
+                </a>
 
-                    <div>
-                        <img src="../images/briefcase.png" alt="">
-                    </div>
-                </div>
+                <a href="../admin/admin_student_req_list.php" class="none">
+                    <div class="card">
+                        <div>
+                            <div class="cardName">Request Student<br>Approvals</div>
+                            <div class="numbers">03</div>
+                        </div>
 
-                <div class="card">
-                    <div>
-                        <div class="cardName">Request Company<br>Approvals</div>
-                        <div class="numbers">08</div>
+                        <div>
+                            <img src="../images/briefcase.png" alt="">
+                        </div>
                     </div>
+                </a>
 
-                    <div>
-                        <img src="../images/briefcase.png" alt="">
-                    </div>
-                </div>
-                <!-- <div class="card">
-                    <div>
-                        <div class="cardName">Company Approvals <br> Request</div>
-                        <div class="numbers">08</div>
-                    </div>
+                <a href="../admin/admin_company_req_list.php" class="none">
+                    <div class="card">
+                        <div>
+                            <div class="cardName">Request Company<br>Approvals</div>
+                            <div class="numbers">08</div>
+                        </div>
 
-                    <div>
-                        <img src="../images/briefcase.png" alt="">
+                        <div>
+                            <img src="../images/briefcase.png" alt="">
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div>
-                        <div class="cardName">Messages <br><br></div>
-                        <div class="numbers">08</div>
-                    </div>
+                </a>
 
-                    <div>
-                        <img src="../images/briefcase.png" alt="">
-                    </div>
-                </div> -->
                 <div class="bt-height"></div>
             </div>
 

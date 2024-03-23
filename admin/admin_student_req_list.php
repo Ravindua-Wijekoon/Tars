@@ -41,11 +41,11 @@
                 </div>
             </div>
 
-            <div class="second-bar">
+            <!-- <div class="second-bar">
                 <div>All</div>
                 <div>Pending</div>
                 <div>Aprved</div>
-            </div>
+            </div> -->
 
             <div>
 
@@ -56,7 +56,7 @@
                             <th>Student</th>
                             <th>Address</th>
                             <th>Contact</th>
-                            <th></th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -72,12 +72,7 @@
                                     <img src="../images/email icon.png" alt="" class="contact-icon">
                                 </a>
                             </td>
-                            <td>
-                                <a href="#">
-                                    <img src="../images/circle-xmark-regular.png" alt="" class="contact-icon">
-                                </a>
 
-                            </td>
                         </tr>
 
                         <?php

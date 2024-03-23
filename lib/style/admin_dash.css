@@ -105,9 +105,14 @@ body {
   align-items: center;
 }
 
-.cardBox .card {
+.cardBox a {
   width: 47%;
   height: 45%;
+}
+
+.cardBox .card {
+  width: 100%;
+  height: 100%;
   background-color: #164a25;
   margin-bottom: 20px;
   padding: 30px;
@@ -201,7 +206,7 @@ body {
     align-items: center;
   }
 
-  .cardBox .card {
+  .cardBox a .card {
     width: 95%;
     height: 180px;
     background-color: #164a25;
@@ -215,7 +220,7 @@ body {
     box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   }
 
-  .cardBox .card .numbers {
+  .cardBox a .card .numbers {
     position: relative;
     font-weight: 500;
     font-size: 1.5rem;
@@ -223,7 +228,7 @@ body {
     margin-top: 5px;
   }
 
-  .cardBox .card .cardName {
+  .cardBox a .card .cardName {
     color: white;
     font-size: 2rem;
     margin-top: 5px;
@@ -235,7 +240,7 @@ body {
     display: inline;
   }
 
-  .cardBox .card img {
+  .cardBox a .card img {
     width: 70%;
   }
 }
