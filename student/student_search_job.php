@@ -52,7 +52,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="./student_application.php">
                         <span class="nav-icon">
                             <ion-icon name="document-text-outline"></ion-icon>
                         </span>
@@ -60,17 +60,17 @@
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="#">
                         <span class="nav-icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
                         <span class="title">Messages</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li>
-                    <a href="#">
+                    <a href="./student_profile.php">
                         <span class="nav-icon">
                             <ion-icon name="person-outline"></ion-icon>
                         </span>
