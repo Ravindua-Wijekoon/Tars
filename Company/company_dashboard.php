@@ -25,7 +25,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="./company_dashboard.php">
                         <span class="nav-icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -34,7 +34,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="./company_postjob.php">
                         <span class="nav-icon">
                             <ion-icon name="search-outline"></ion-icon>
                         </span>
@@ -43,7 +43,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="./company_applications.php">
                         <span class="nav-icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -51,17 +51,17 @@
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="#">
                         <span class="nav-icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
                         <span class="title">Messages</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li>
-                    <a href="#">
+                    <a href="./company_profile.php">
                         <span class="nav-icon">
                             <ion-icon name="person-outline"></ion-icon>
                         </span>
@@ -152,11 +152,11 @@
                 <?php
                 for ($i = 0; $i < 7; $i++) {
                     ?>
-                    <div class="item1">
-                        <h3>UI/UX Designer</h3><br>
-                        <h5>Applicant <span>20</span></h5>
-                    </div>
-                    <?php
+                <div class="item1">
+                    <h3>UI/UX Designer</h3><br>
+                    <h5>Applicant <span>20</span></h5>
+                </div>
+                <?php
                 }
                 ?>
             </div>

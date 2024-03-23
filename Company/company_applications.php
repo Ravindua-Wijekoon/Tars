@@ -29,7 +29,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="./company_dashboard.php">
                         <span class="nav-icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -38,7 +38,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="./company_postjob.php">
                         <span class="nav-icon">
                             <ion-icon name="search-outline"></ion-icon>
                         </span>
@@ -47,7 +47,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="./company_applications.php">
                         <span class="nav-icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
@@ -55,17 +55,17 @@
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="#">
                         <span class="nav-icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
                         <span class="title">Messages</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li>
-                    <a href="#">
+                    <a href="./company_profile.php">
                         <span class="nav-icon">
                             <ion-icon name="person-outline"></ion-icon>
                         </span>
@@ -129,21 +129,21 @@
                             <?php
                             for ($i = 0; $i < 4; $i++) {
                                 ?>
-                                <tr>
-                                    <td>APL#0001</td>
-                                    <td>February 25, 2023 8: 23 PM</td>
-                                    <td>UI/UX Designer</td>
-                                    <td>Online</td>
-                                    <td>Blake Lively</td>
-                                    <td>
+                            <tr>
+                                <td>APL#0001</td>
+                                <td>February 25, 2023 8: 23 PM</td>
+                                <td>UI/UX Designer</td>
+                                <td>Online</td>
+                                <td>Blake Lively</td>
+                                <td>
 
-                                        <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
-                                            <img src="../images/email icon.png" alt="" class="contact-icon">
-                                        </a>
-                                    </td>
-                                </tr>
+                                    <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
+                                        <img src="../images/email icon.png" alt="" class="contact-icon">
+                                    </a>
+                                </td>
+                            </tr>
 
-                                <?php
+                            <?php
                             }
                             ?>
 

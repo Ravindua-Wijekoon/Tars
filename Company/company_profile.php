@@ -26,7 +26,7 @@
                 </li>
 
                 <li>
-                    <a href="../Student/student_dashboard.php">
+                    <a href="./company_dashboard.php">
                         <span class="nav-icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -35,43 +35,34 @@
                 </li>
 
                 <li>
-                    <a href="../Student/student_search_job.php">
+                    <a href="./company_postjob.php">
                         <span class="nav-icon">
                             <ion-icon name="search-outline"></ion-icon>
                         </span>
-                        <span class="title">Search Job</span>
+                        <span class="title">Post Job</span>
                     </a>
                 </li>
 
                 <li>
-                    <a href="../Student/student_companies.php">
+                    <a href="./company_applications.php">
                         <span class="nav-icon">
                             <ion-icon name="people-outline"></ion-icon>
-                        </span>
-                        <span class="title">Companies</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <span class="nav-icon">
-                            <ion-icon name="document-text-outline"></ion-icon>
                         </span>
                         <span class="title">Application</span>
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="#">
                         <span class="nav-icon">
                             <ion-icon name="chatbubble-outline"></ion-icon>
                         </span>
                         <span class="title">Messages</span>
                     </a>
-                </li>
+                </li> -->
 
                 <li>
-                    <a href="#">
+                    <a href="./company_profile.php">
                         <span class="nav-icon">
                             <ion-icon name="person-outline"></ion-icon>
                         </span>
@@ -145,7 +136,10 @@
 
                     <div class="section2">
                         <div class="button-sec">
-                            <div>Edit</div>
+                            <a href="./company_profile_edit.php" class="none">
+                                <div>Edit</div>
+                            </a>
+
                         </div>
                         <div class="qual">
                             <h3>Location</h3>

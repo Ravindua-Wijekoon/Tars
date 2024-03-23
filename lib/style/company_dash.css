@@ -322,10 +322,16 @@ body {
   justify-content: space-between;
 }
 
-.card2 {
+.cardBox2 a {
   width: 32%;
-  background-color: #efefef;
   height: auto;
+  margin-bottom: 20px;
+}
+
+.card2 {
+  width: 100%;
+  background-color: #efefef;
+  height: 100%;
   padding: 20px;
   border-radius: 15px;
   display: flex;
@@ -472,6 +478,25 @@ input[type="radio"] {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.appbox2 a {
+  width: 60%;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.appbox2 a .button {
+  width: 100%;
+  height: 30px;
+  border-radius: 7px;
+  background-color: #4d774e;
+  margin-bottom: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .appbox2 .button {
