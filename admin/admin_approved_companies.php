@@ -64,28 +64,25 @@
                         <?php
                         for ($i = 0; $i < 10; $i++) {
                             ?>
-                            <tr>
-                                <td>CMP#0001</td>
-                                <td>CodeGen International</td>
-                                <td>Technology Company</td>
-                                <td>London, England.</td>
-                                <td>
-                                    <a href="#" class="none">
-                                        <img src="../images/call icon.png" alt="" class="contact-icon">
-                                    </a>
-                                    <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
-                                        <img src="../images/email icon.png" alt="" class="contact-icon">
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#">
-                                        <img src="../images/circle-xmark-regular.png" alt="" class="contact-icon">
-                                    </a>
+                        <tr>
+                            <td>CMP#0001</td>
+                            <td>CodeGen International</td>
+                            <td>Technology Company</td>
+                            <td>London, England.</td>
+                            <td>
+                                <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
+                                    <img src="../images/email icon.png" alt="" class="contact-icon">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="#">
+                                    <img src="../images/circle-xmark-regular.png" alt="" class="contact-icon">
+                                </a>
 
-                                </td>
-                            </tr>
+                            </td>
+                        </tr>
 
-                            <?php
+                        <?php
                         }
                         ?>
 

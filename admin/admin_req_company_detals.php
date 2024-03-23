@@ -25,7 +25,7 @@
         <div class="main p-2">
             <div class="topbar">
                 <div class="title">
-                    Request Approvals
+                    Request
                 </div>
                 <div class="messages">
                     <img src="../images/messages.png" alt="" />
@@ -40,52 +40,27 @@
                     <img src="../images/profile_photos/customer02.jpg" alt="" />
                 </div>
             </div>
+            <div class="main-div">
+                <div class="sub-div">
+                    <div class="qual">
+                        <h5>Company Name</h5>
+                        <span>Name</span>
+                        <h5>Company Type</h5>
+                        <span>type</span>
+                        <h5>Email Address</h5>
+                        <span>email</span>
+                        <h5>Location</h5>
+                        <span>address</span>
 
-            <div class="second-bar">
-                <div>All</div>
-                <div>Pending</div>
-                <div>Aprved</div>
-            </div>
 
-            <div>
+                    </div>
 
-                <table class="table">
-                    <thead>
-                        <tr class="head my-3">
-                            <th>ID</th>
-                            <th>Student</th>
-                            <th>Address</th>
-                            <th>Contact</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        for ($i = 0; $i < 10; $i++) {
-                            ?>
-                        <tr>
-                            <td>2021T01250</td>
-                            <td>Blake Lively</td>
-                            <td>Colombo</td>
-                            <td>
-                                <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
-                                    <img src="../images/email icon.png" alt="" class="contact-icon">
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#">
-                                    <img src="../images/circle-xmark-regular.png" alt="" class="contact-icon">
-                                </a>
+                    <div class="button-sec">
+                        <div class="accept">Accept</div>
+                        <div class="reject">Reject</div>
+                    </div>
+                </div>
 
-                            </td>
-                        </tr>
-
-                        <?php
-                        }
-                        ?>
-
-                    </tbody>
-                </table>
             </div>
 
 
