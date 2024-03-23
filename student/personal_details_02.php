@@ -32,7 +32,7 @@
         <div style="width: 100%">
             <div class="text-02"><b>Qualification Details</b></div>
             <br />
-            <form action="../lib/php/personal_details_02_BE.php" method="post">
+            <!-- <form action="../lib/php/personal_details_02_BE.php" method="post"> -->
                 <div class="textboxsec2">
                     <div class="tag">Education</div>
                     <div class="input-box4">
@@ -46,162 +46,182 @@
                     <div class="input-box5">
                         <input class="textbox2" id='endYear_edu' type="date" placeholder="End" name="end_edu" />
                     </div>
-                    <div class="plus" onclick="addEducation()">
+                    <div class="plus" onclick="addEducation('education');">
                         <img src="../images/plus.svg" alt="" />
                     </div>
-
-                   
-                    <div class="preview" id="educationList">
-
-                    </div>
-
-                    <script>
-                        let education = [];
-
-                        function addEducation() {
-                            //alert('ds')
-
-                            let institute = document.getElementById("institute_edu").value;
-                            let startYear = document.getElementById("startYear_edu").value;
-                            let endYear = document.getElementById("endYear_edu").value;
-                            //debugger
-                            let newItem = {
-                                key: education.length + 1,
-                                institute: institute,
-                                startYear: startYear,
-                                endYear: endYear
-                            };
-                            education.push(newItem);
-                            displayEducation();
-                        }
-
-                        function removeEducation(key) {
-                            education = education.filter(item => item.key !== key);
-                            displayEducation();
-                        }
-
-                        function displayEducation() {
-                            let list = document.getElementById("educationList");
-                            list.innerHTML = "";
-                            education.forEach(item => {
-                                let div = document.createElement("div");
-                                div.innerHTML = `
-                            <label> ${item.institute}</label>
-                            <div onclick="removeEducation(${item.key})">
-                                <img src="../images/circle-xmark-regular.png" alt="">
-                            </div>
-                            
-                            `;
-                                list.appendChild(div);
-                            });
-                        }
-                    </script>
+                    <div class="preview" id="educationList"> </div>
 
 
 
                     <div class="tag">Experience</div>
                     <div class="input-box4">
-                        <input class="textbox2" type="text" placeholder="Experience" name="institution_exp" />
+                        <input class="textbox2" type="text" id='institution_exp' placeholder="Experience" name="institution_exp" />
                     </div>
                     <div class="input-box5">
-                        <input class="textbox2" type="date" placeholder="Start" name="start_exp" />
+                        <input class="textbox2" type="date" id='start_exp' placeholder="Start" name="start_exp" />
                     </div>
                     <div class="input-box5">
-                        <input class="textbox2" type="date" placeholder="End" name="end_exp" />
+                        <input class="textbox2" type="date" id='end_exp' placeholder="End" name="end_exp" />
                     </div>
-                    <div class="plus">
+                    <div class="plus" onclick="addEducation('experience');">
                         <img src="../images/plus.svg" alt="" />
                     </div>
 
-                    <!--<div class="preview">
-                        <?php
-                        for ($i = 0; $i < 3; $i++) {
-                            ?>
-                            <div>
-                                <label>Test</label>
-                                <div>
-                                    <img src="../images/circle-xmark-regular.png" alt="">
-                                </div>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                    </div>-->
+                    <div class="preview" id="experienceList"> </div>
 
+
+                    
                     <div class="tag">Skills</div>
                     <div class="input-box4">
                         <input class="textbox2" type="text" name="skills" placeholder="Skills" />
                     </div>
-                    <div class="plus">
+                    <div class="plus" onclick="addEducation('skill');">
                         <img src="../images/plus.svg" alt="" />
                     </div>
                     <div style="width: 20%"></div>
-
-                    <!--<div class="preview">
-                        <?php
-                        for ($i = 0; $i < 3; $i++) {
-                            ?>
-                            <div>
-                                <label>Test</label>
-                                <div>
-                                    <img src="../images/circle-xmark-regular.png" alt="">
-                                </div>
-                            </div>
-                            <?php
-                        }
-                        ?>
-                    </div>-->
+                    <div class="preview" id="skillList"> </div>
 
                     <div class="tag">Languages</div>
                     <div class="input-box4">
                         <input class="textbox2" type="text" name="language" placeholder="Language" />
                     </div>
-                    <div class="plus">
+                    <div class="plus" onclick="addEducation('languages');">
                         <img src="../images/plus.svg" alt="" />
                     </div>
 
                     <div style="width: 20%"></div>
+                    <div class="preview" id="langaugeList"> </div>
+                </div>
+                    <form action="../lib/php/personal_details_02_BE.php" method="post">
+                        <input type="hidden" id="educationData" name="educationData" />
+                        <input type="hidden" id="experienceData" name="experienceData" />
+                        <input type="hidden" id="langauesData" name="langauesData" />
+                        <input type="hidden" id="skillsData" name="skillsData" />
+                        <div class="tag">GitHub Link</div>
+                        <div class="input-box6">
+                            <input class="textbox2" type="text" name="github" />
+                        </div>
 
-                    <!--<div class="preview">
-                        <?php
-                        for ($i = 0; $i < 3; $i++) {
-                            ?>
-                            <div>
-                                <label>Test</label>
-                                <div>
-                                    <img src="../images/circle-xmark-regular.png" alt="">
-                                </div>
+                        <div class="tag">LinkedIn Link</div>
+                        <div class="input-box6">
+                            <input class="textbox2" type="text" name="linkedin" />
+                        </div>
+
+                        <div class="tag">Portfolio Link</div>
+                        <div class="input-box6">
+                            <input class="textbox2" type="text" name="portfolio" />
+                        </div>
+
+                
+                        <div class="btn-sec">
+                            <div class="btn-box">
+                                <input type="submit" class="normalButtons01" value="Done" />
                             </div>
-                            <?php
-                        }
-                        ?>
-                    </div>-->
-
-                    <div class="tag">GitHub Link</div>
-                    <div class="input-box6">
-                        <input class="textbox2" type="text" name="github" />
-                    </div>
-
-                    <div class="tag">LinkedIn Link</div>
-                    <div class="input-box6">
-                        <input class="textbox2" type="text" name="linkedin" />
-                    </div>
-
-                    <div class="tag">Portfolio Link</div>
-                    <div class="input-box6">
-                        <input class="textbox2" type="text" name="portfolio" />
-                    </div>
-
-                </div>
-                <div class="btn-sec">
-                    <div class="btn-box">
-                        <input type="submit" class="normalButtons01" value="Done" />
-                    </div>
-                </div>
-                <div style="height:20px;"></div>
-            </form>
+                        </div>
+                        <div style="height:20px;"></div>
+                    </form>
         </div>
     </div>
+    <script>
+        let education = [];
+        let experiences = [];
+
+        function prepareEducationData(type) {
+
+            if(type=='education'){
+                let educationData = JSON.stringify(education);
+                let inputF = document.getElementById("educationData");
+                inputF.setAttribute('value', educationData);
+            }else if(type=='experience'){
+                let experienceData = JSON.stringify(experiences);
+                let inputF = document.getElementById("experienceData");
+                inputF.setAttribute('value', experienceData);
+            }
+                
+            }
+
+        function addEducation(type) {
+            //alert('ds')
+            if(type=='education'){
+                let institute = document.getElementById("institute_edu").value;
+                let startYear = document.getElementById("startYear_edu").value;
+                let endYear = document.getElementById("endYear_edu").value;
+                //debugger
+                let newItem = {
+                    key: education.length + 1,
+                    institute: institute,
+                    startYear: startYear,
+                    endYear: endYear
+                };
+                education.push(newItem);
+            }else if(type=='experience')
+            {
+                let experience = document.getElementById("institution_exp").value;
+                let startYearEx = document.getElementById("start_exp").value;
+                let endYearEx = document.getElementById("end_exp").value;
+                //debugger
+                let newItem = {
+                    key: experiences.length + 1,
+                    experience: experience,
+                    startYear: startYearEx,
+                    endYear: endYearEx
+                };
+                experiences.push(newItem);
+            }
+            
+            displayEducation(type);
+            prepareEducationData(type);
+        }
+
+        function removeEducation(key,type) {
+            if(type=='education'){
+                education = education.filter(item => item.key !== key);
+            }else if(type=='experience'){
+                experiences = experiences.filter(item => item.key !== key);
+            }
+            
+            displayEducation(type);
+            prepareEducationData(type);
+        }
+
+        function displayEducation(type) {
+            let list ;
+            if(type=='education'){
+                list = document.getElementById("educationList");
+                list.innerHTML = "";
+                education.forEach(item => {
+                    let div = document.createElement("div");
+                    div.innerHTML = `
+                <label> ${item.institute}</label>
+                <div onclick="removeEducation(${item.key},'education')">
+                    <img src="../images/circle-xmark-regular.png" alt="">
+                </div>
+                
+                `;
+                    list.appendChild(div);
+                });
+            }else if(type=='experience'){
+                list = document.getElementById("experienceList");
+                list.innerHTML = "";
+                experiences.forEach(item => {
+                    let div = document.createElement("div");
+                    div.innerHTML = `
+                <label> ${item.experience}</label>
+                <div onclick="removeEducation(${item.key},'experience')">
+                    <img src="../images/circle-xmark-regular.png" alt="">
+                </div>
+                
+                `;
+                    list.appendChild(div);
+                });
+            }
+            
+            
+
+            
+
+        }
+    </script>
 </body>
 
 </html>

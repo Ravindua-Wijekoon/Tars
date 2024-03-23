@@ -41,6 +41,50 @@ $uocindex = $_SESSION['uocindex'];
 // insert query eka gahanna ona for loop eka atule
 
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    //var_dump($_POST);
+    //echo $_POST['educationData'];
+
+    //exit(0)
+    //Education
+    $educationData = $_POST['educationData'];
+    $educationArray = json_decode($educationData, true);
+    $stmts = $con->prepare("INSERT INTO education_info (institution, sdate, edate, uocindex) VALUES (?, ?, ?, ?)");
+
+    $stmts->bind_param("sssi", $institute, $startYear, $endYear, $uocindex);
+    foreach ($educationArray as $edu) {
+        
+        $institute = $edu['institute'];
+        $startYear = $edu['startYear'];
+        $endYear = $edu['endYear'];
+
+       
+        $stmts->execute();
+
+    }
+    $stmts->close();
+    echo "Education records inserted successfully";
+
+    //Experience
+    
+
+
+    
+} else {
+    
+    echo 'form submission failure!';
+}
+
+
+
+
+
+
+
+
+
+
 if ($stmt = $con->prepare('UPDATE student_info SET fullname=?, nameinitials=?, bio=?, dob=?, address=?, city=?, zipcode=?, github=?, linkedin=?, portfolio=? WHERE uocindex=?')) {
     $stmt->bind_param('ssssssssssi', $full_name, $name_with_initials, $bio, $date_of_birth, $address, $city_town, $zip_code, $github, $linkedin, $portfolio, $uocindex);
     $stmt->execute();
