@@ -234,14 +234,13 @@ body {
 }
 
 .plus {
-  width: 25px;
-  margin-top: 5px;
+  width: 40px;
+  margin-bottom: 10px;
   margin-left: 15px;
   border: none;
   border-radius: 30px;
   text-decoration: none;
   background-color: white;
-  cursor: pointer;
 }
 
 .right-box3 {

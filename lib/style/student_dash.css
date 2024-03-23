@@ -44,6 +44,7 @@ body {
   left: 0;
   width: 100%;
   margin-left: 18px;
+  padding: 0;
 }
 
 .navigation ul li {
@@ -726,7 +727,7 @@ body {
   line-height: 30px;
 }
 
-/* =============== Student Companies Profile =============== */
+/* =============== Student Applications =============== */
 
 .contact-icon {
   width: 30px;
@@ -811,6 +812,11 @@ td {
   height: 25px;
 }
 
+.info .bio {
+  text-align: justify;
+  align-items: right;
+}
+
 .links {
   line-height: 25px;
 }
@@ -825,7 +831,7 @@ td {
 
 .qual h3 {
   color: #164a25;
-  line-height: 40px;
+  line-height: 25px;
 }
 
 .qual div {
@@ -848,6 +854,46 @@ td {
   width: 100px;
   height: 25px;
   border-radius: 15px;
+  cursor: pointer;
+}
+
+.button-sec2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin: 00px 30px 30px 30px;
+}
+
+.button-sec2 div {
+  display: flex;
+  background-color: #559c56;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 150px;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.button-sec3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin: 40px 0px 0px 0px;
+}
+
+.button-sec3 div {
+  display: flex;
+  background-color: #559c56;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  width: 150px;
+  height: 30px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -896,22 +942,39 @@ label {
   background-color: transparent;
 }
 
-.plus {
-  width: 20px;
-  border: none;
-  border-radius: 30px;
-  text-decoration: none;
-  background-color: transparent;
-  cursor: pointer;
-  margin: 5px 0 0 15px;
-}
-
 .div2 {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 20px;
+}
+
+.div3 {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.div3 div {
+  background-color: #efefef;
+  width: 90%;
+  border-radius: 5px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.div3 textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  text-align: left;
 }
 
 .div2 div {
@@ -945,12 +1008,39 @@ label {
   margin-top: 5px;
 }
 
-.div2 .short input {
-  color: #7b7676;
-}
+/* .div2 .short input {
+  color: #7b7676;ss
+} */
 
 .div2 .input-full {
   width: 90%;
+}
+
+.div1 .plus {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 5px 0 0 15px;
+  background-color: rgb(255, 255, 255);
+}
+
+.div2 .plus {
+  width: 30px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 5px 0 0 15px;
+  background-color: rgb(255, 255, 255);
+}
+
+.plus img {
+  width: 30px;
 }
 
 .preview {
