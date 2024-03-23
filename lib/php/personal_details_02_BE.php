@@ -30,6 +30,14 @@ $portfolio = $_SESSION['portfolio'];
 
 $uocindex = $_SESSION['uocindex'];
 
+if ($stmt = $con->prepare('UPDATE student_info SET fullname=?, nameinitials=?, bio=?, dob=?, address=?, city=?, zipcode=?, github=?, linkedin=?, portfolio=? WHERE uocindex=?')) {
+    $stmt->bind_param('ssssssssssi', $full_name, $name_with_initials, $bio, $date_of_birth, $address, $city_town, $zip_code, $github, $linkedin, $portfolio, $uocindex);
+    $stmt->execute();
+    echo 'Successfully updated';
+} else {
+    echo 'Could not prepare statement!';
+}
+
 //step 1  :insert initial data of students in student main table
 
 //step 2 :get latest student key
@@ -48,17 +56,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //exit(0)
     //Education
+    //echo $_POST['educationData'];
     $educationData = $_POST['educationData'];
     $educationArray = json_decode($educationData, true);
-    $stmts = $con->prepare("INSERT INTO education_info (institution, sdate, edate, uocindex) VALUES (?, ?, ?, ?)");
+    $stmts = $con->prepare("INSERT INTO education_info (institution, sdate, edate, std_id) VALUES (?, ?, ?, ?)");
 
-    $stmts->bind_param("sssi", $institute, $startYear, $endYear, $uocindex);
+    $stmts->bind_param("ssss", $institute, $startYear, $endYear, $uocindex);
+    echo $uocindex;
     foreach ($educationArray as $edu) {
         
         $institute = $edu['institute'];
         $startYear = $edu['startYear'];
         $endYear = $edu['endYear'];
-
        
         $stmts->execute();
 
@@ -85,13 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-if ($stmt = $con->prepare('UPDATE student_info SET fullname=?, nameinitials=?, bio=?, dob=?, address=?, city=?, zipcode=?, github=?, linkedin=?, portfolio=? WHERE uocindex=?')) {
-    $stmt->bind_param('ssssssssssi', $full_name, $name_with_initials, $bio, $date_of_birth, $address, $city_town, $zip_code, $github, $linkedin, $portfolio, $uocindex);
-    $stmt->execute();
-    echo 'Successfully updated';
-} else {
-    echo 'Could not prepare statement!';
-}
+
 
 
 
