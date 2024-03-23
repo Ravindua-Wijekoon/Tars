@@ -138,19 +138,22 @@
                                 <span><b>LinkedIn |</b> <span> linkedin.com/in//blakelively</span></span>
 
                             </div>
-                            <div class="button-sec3">
+                            <!-- <div class="button-sec3">
                                 <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
                                     <div>Send Email</div>
                                 </a>
-                            </div>
+                            </div> -->
 
                         </div>
                     </div>
 
                     <div class="section2">
-                        <div class="button-sec">
-                            <div>Edit</div>
-                        </div>
+                        <a href="./student_profile_edit.php" class="none">
+                            <div class="button-sec">
+                                <div>Edit</div>
+                            </div>
+                        </a>
+
                         <div class="qual">
                             <h3>Education</h3>
                             <div>BSc. (Hons) Computer Science (Stanford University)</div>
