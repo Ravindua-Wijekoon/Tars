@@ -31,7 +31,7 @@ $portfolio = $_SESSION['portfolio'];
 $uocindex = $_SESSION['uocindex'];
 
 if ($stmt = $con->prepare('UPDATE student_info_temp SET fullname=?, nameinitials=?, bio=?, dob=?, address=?, city=?, zipcode=?, github=?, linkedin=?, portfolio=? WHERE uocindex=?')) {
-    $stmt->bind_param('ssssssssssi', $full_name, $name_with_initials, $bio, $date_of_birth, $address, $city_town, $zip_code, $github, $linkedin, $portfolio, $uocindex);
+    $stmt->bind_param('sssssssssss', $full_name, $name_with_initials, $bio, $date_of_birth, $address, $city_town, $zip_code, $github, $linkedin, $portfolio, $uocindex);
     $stmt->execute();
     echo 'Successfully updated';
 } else {
