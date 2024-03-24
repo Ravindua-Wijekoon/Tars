@@ -76,6 +76,64 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Education records inserted successfully";
 
     //Experience
+
+    $experienceData = $_POST['experienceData'];
+    $experienceArray = json_decode($experienceData, true);
+    $stmtp = $con->prepare("INSERT INTO experience_info (experience, sdate, edate, std_id) VALUES (?, ?, ?, ?)");
+
+    $stmtp->bind_param("ssss", $experience, $startYearex, $endYearex, $uocindex);
+    echo $uocindex;
+    foreach ($experienceArray as $exp) {
+        
+        $experience = $exp['experience'];
+        $startYearex = $exp['startYearEx'];
+        $endYearex = $exp['endYearEx'];
+       
+        $stmtp->execute();
+
+    }
+    $stmtp->close();
+    echo "Education records inserted successfully";
+
+    //skills
+
+    $skillsData = $_POST['skillsData'];
+    $skillsArray = json_decode($skillsData, true);
+    $stmtq = $con->prepare("INSERT INTO skill_info (skill, std_id) VALUES (?, ?)");
+
+    $stmtq->bind_param("ss", $skillstu, $uocindex);
+    echo $uocindex;
+    foreach ($skillsArray as $exd) {
+        
+        $skillstu = $exd['skillstu'];
+       
+        $stmtq->execute();
+
+    }
+    $stmtq->close();
+    echo "Education records inserted successfully";
+
+    //languages
+
+    $langauesData = $_POST['langauesData'];
+    $languageArray = json_decode($langauesData, true);
+    $stmtm = $con->prepare("INSERT INTO language_info (language, std_id) VALUES (?, ?)");
+
+    $stmtm->bind_param("ss", $languagestudent, $uocindex);
+    echo $uocindex;
+    foreach ($languageArray as $exo) {
+        
+        $languagestudent = $exo['languagestudent'];
+       
+        $stmtm->execute();
+
+    }
+    $stmtm->close();
+    echo "Education records inserted successfully";
+
+
+
+
     
 
 

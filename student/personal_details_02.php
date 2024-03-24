@@ -73,7 +73,7 @@
                     
                     <div class="tag">Skills</div>
                     <div class="input-box4">
-                        <input class="textbox2" type="text" name="skills" placeholder="Skills" />
+                        <input class="textbox2" type="text" id="skillstudent" name="skills" placeholder="Skills" />
                     </div>
                     <div class="plus" onclick="addEducation('skill');">
                         <img src="../images/plus.svg" alt="" />
@@ -83,9 +83,9 @@
 
                     <div class="tag">Languages</div>
                     <div class="input-box4">
-                        <input class="textbox2" type="text" name="language" placeholder="Language" />
+                        <input class="textbox2" type="text" id="languagesstu" name="language" placeholder="Language" />
                     </div>
-                    <div class="plus" onclick="addEducation('languages');">
+                    <div class="plus" onclick="addEducation('languagestu');">
                         <img src="../images/plus.svg" alt="" />
                     </div>
 
@@ -125,6 +125,8 @@
     <script>
         let education = [];
         let experiences = [];
+        let skills = [];
+        let languages = [];
 
         function prepareEducationData(type) {
 
@@ -136,6 +138,14 @@
                 let experienceData = JSON.stringify(experiences);
                 let inputF = document.getElementById("experienceData");
                 inputF.setAttribute('value', experienceData);
+            }else if(type=='skill'){
+                let skillsData = JSON.stringify(skills);
+                let inputF = document.getElementById("skillsData");
+                inputF.setAttribute('value', skillsData);
+            }else if(type=='languagestu'){
+                let langauesData = JSON.stringify(languages);
+                let inputF = document.getElementById("langauesData");
+                inputF.setAttribute('value', langauesData);
             }
                 
             }
@@ -163,10 +173,28 @@
                 let newItem = {
                     key: experiences.length + 1,
                     experience: experience,
-                    startYear: startYearEx,
-                    endYear: endYearEx
+                    startYearEx: startYearEx,
+                    endYearEx: endYearEx
                 };
                 experiences.push(newItem);
+            }else if(type=='skill')
+            {
+                let skillstu = document.getElementById("skillstudent").value;
+                //debugger
+                let newItem = {
+                    key: skills.length + 1,
+                    skillstu: skillstu
+                };
+                skills.push(newItem);
+            }else if(type=='languagestu')
+            {
+                let languagestudent = document.getElementById("languagesstu").value;
+                //debugger
+                let newItem = {
+                    key: languages.length + 1,
+                    languagestudent: languagestudent
+                };
+                languages.push(newItem);
             }
             
             displayEducation(type);
@@ -178,6 +206,10 @@
                 education = education.filter(item => item.key !== key);
             }else if(type=='experience'){
                 experiences = experiences.filter(item => item.key !== key);
+            }else if(type=='skill'){
+                skills = skills.filter(item => item.key !== key);
+            }else if(type=='languagestu'){
+                languages = languages.filter(item => item.key !== key);
             }
             
             displayEducation(type);
@@ -208,6 +240,34 @@
                     div.innerHTML = `
                 <label> ${item.experience}</label>
                 <div onclick="removeEducation(${item.key},'experience')">
+                    <img src="../images/circle-xmark-regular.png" alt="">
+                </div>
+                
+                `;
+                    list.appendChild(div);
+                });
+            }else if(type=='skill'){
+                list = document.getElementById("skillList");
+                list.innerHTML = "";
+                skills.forEach(item => {
+                    let div = document.createElement("div");
+                    div.innerHTML = `
+                <label> ${item.skillstu}</label>
+                <div onclick="removeEducation(${item.key},'skill')">
+                    <img src="../images/circle-xmark-regular.png" alt="">
+                </div>
+                
+                `;
+                    list.appendChild(div);
+                });
+            }else if(type=='languagestu'){
+                list = document.getElementById("langaugeList");
+                list.innerHTML = "";
+                languages.forEach(item => {
+                    let div = document.createElement("div");
+                    div.innerHTML = `
+                <label> ${item.languagestudent}</label>
+                <div onclick="removeEducation(${item.key},'languagestu')">
                     <img src="../images/circle-xmark-regular.png" alt="">
                 </div>
                 
