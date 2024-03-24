@@ -28,7 +28,7 @@ if ($stmt = $con->prepare('SELECT id FROM student_info WHERE email = ?')) {
     if ($stmt->num_rows > 0) {
         echo 'Email exists, please choose another!';
     } else {
-        if ($stmt = $con->prepare('INSERT INTO student_info (email, password, uocindex) VALUES (?, ?, ?)')) {
+        if ($stmt = $con->prepare('INSERT INTO student_info_temp (email, password, uocindex) VALUES (?, ?, ?)')) {
             $stmt->bind_param('sss', $_POST['email'], $_POST['password'], $_POST['uocindex']);
             $stmt->execute();
             echo 'You have successfully registered, you can now login!';

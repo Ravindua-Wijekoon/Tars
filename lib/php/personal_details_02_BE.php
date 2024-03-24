@@ -30,7 +30,7 @@ $portfolio = $_SESSION['portfolio'];
 
 $uocindex = $_SESSION['uocindex'];
 
-if ($stmt = $con->prepare('UPDATE student_info SET fullname=?, nameinitials=?, bio=?, dob=?, address=?, city=?, zipcode=?, github=?, linkedin=?, portfolio=? WHERE uocindex=?')) {
+if ($stmt = $con->prepare('UPDATE student_info_temp SET fullname=?, nameinitials=?, bio=?, dob=?, address=?, city=?, zipcode=?, github=?, linkedin=?, portfolio=? WHERE uocindex=?')) {
     $stmt->bind_param('ssssssssssi', $full_name, $name_with_initials, $bio, $date_of_birth, $address, $city_town, $zip_code, $github, $linkedin, $portfolio, $uocindex);
     $stmt->execute();
     echo 'Successfully updated';
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //echo $_POST['educationData'];
     $educationData = $_POST['educationData'];
     $educationArray = json_decode($educationData, true);
-    $stmts = $con->prepare("INSERT INTO education_info (institution, sdate, edate, std_id) VALUES (?, ?, ?, ?)");
+    $stmts = $con->prepare("INSERT INTO education_info_temp (institution, sdate, edate, std_id) VALUES (?, ?, ?, ?)");
 
     $stmts->bind_param("ssss", $institute, $startYear, $endYear, $uocindex);
     echo $uocindex;
@@ -79,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $experienceData = $_POST['experienceData'];
     $experienceArray = json_decode($experienceData, true);
-    $stmtp = $con->prepare("INSERT INTO experience_info (experience, sdate, edate, std_id) VALUES (?, ?, ?, ?)");
+    $stmtp = $con->prepare("INSERT INTO experience_info_temp (experience, sdate, edate, std_id) VALUES (?, ?, ?, ?)");
 
     $stmtp->bind_param("ssss", $experience, $startYearex, $endYearex, $uocindex);
     echo $uocindex;
@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $skillsData = $_POST['skillsData'];
     $skillsArray = json_decode($skillsData, true);
-    $stmtq = $con->prepare("INSERT INTO skill_info (skill, std_id) VALUES (?, ?)");
+    $stmtq = $con->prepare("INSERT INTO skill_info_temp (skill, std_id) VALUES (?, ?)");
 
     $stmtq->bind_param("ss", $skillstu, $uocindex);
     echo $uocindex;
@@ -117,7 +117,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $langauesData = $_POST['langauesData'];
     $languageArray = json_decode($langauesData, true);
-    $stmtm = $con->prepare("INSERT INTO language_info (language, std_id) VALUES (?, ?)");
+    $stmtm = $con->prepare("INSERT INTO language_info_temp (language, std_id) VALUES (?, ?)");
 
     $stmtm->bind_param("ss", $languagestudent, $uocindex);
     echo $uocindex;
