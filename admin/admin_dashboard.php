@@ -1,3 +1,32 @@
+
+<?php
+session_start();
+
+$DATABASE_HOST = 'localhost';
+$DATABASE_USER = 'root';
+$DATABASE_PASS = '';
+$DATABASE_NAME = 'tars_db';
+
+$con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+if (mysqli_connect_errno()) {
+    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+}
+
+// Query to count the number of rows in the student_info_temp table
+$sql = "SELECT COUNT(*) AS total_students FROM student_info_temp";
+$result = mysqli_query($con, $sql);
+
+if ($result) {
+    $row = mysqli_fetch_assoc($result);
+    $total_students = $row['total_students'];
+} else {
+    $total_students = 0;
+}
+
+mysqli_close($con);
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +96,7 @@
                     <div class="card">
                         <div>
                             <div class="cardName">Request Student<br>Approvals</div>
-                            <div class="numbers">03</div>
+                            <div class="numbers"><?php echo $total_students; ?></div>
                         </div>
 
                         <div>
