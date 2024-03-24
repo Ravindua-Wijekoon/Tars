@@ -1,6 +1,6 @@
 
 <?php
-session_start();
+
 
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
@@ -12,7 +12,7 @@ if (mysqli_connect_errno()) {
     exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-// Query to count the number of rows in the student_info_temp table
+
 $sql = "SELECT COUNT(*) AS total_students FROM student_info_temp";
 $result = mysqli_query($con, $sql);
 
