@@ -145,9 +145,7 @@ if ($result_temp_exp && $result_temp_exp->num_rows > 0) {
         }
     }
 
-    // If all insertions are successful, redirect to some page or do further processing
-    header('Location: ../../admin/admin_student_req_list.php');
-    exit();
+
 } else {
     echo "No student found in temporary table with the provided ID.";
 }
@@ -155,6 +153,100 @@ $stmt_select_temp_exp->close();
 $stmt_insert_exp->close();
 $stmt_delete_temp_exp->close();
 
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+$sql_select_temp_lan = "SELECT * FROM language_info_temp WHERE std_id = ?";
+$stmt_select_temp_lan = $con->prepare($sql_select_temp_lan);
+$stmt_select_temp_lan->bind_param('s', $uocindex);
+$stmt_select_temp_lan->execute();
+$result_temp_lan = $stmt_select_temp_lan->get_result();
+
+// Check if student data is found in the temporary table
+if ($result_temp_lan && $result_temp_lan->num_rows > 0) {
+    // Use a loop to insert each row into the original table
+    while ($student_temp_lan = $result_temp_lan->fetch_assoc()) {
+        // Insert student data into the original table
+        $sql_insert_lan = "INSERT INTO language_info (language, std_id) VALUES (?, ?)";
+        $stmt_insert_lan = $con->prepare($sql_insert_lan);
+        $stmt_insert_lan->bind_param('ss', $student_temp_lan['language'], $student_temp_lan['std_id']);
+        $stmt_insert_lan->execute();
+
+        // Check if insertion is successfxp
+        if ($stmt_insert_lan->affected_rows > 0) {
+            // Delete the row from the temporary table
+            $sql_delete_temp_lan = "DELETE FROM language_info_temp WHERE std_id = ?";
+            $stmt_delete_temp_lan = $con->prepare($sql_delete_temp_lan);
+            $stmt_delete_temp_lan->bind_param('s', $uocindex);
+            $stmt_delete_temp_lan->execute();
+
+            if ($stmt_delete_temp_lan->affected_rows > 0) {
+                // If deletion is successful, continue to the next iteration
+                continue;
+            } else {
+                echo "Error deleting student from temporary table.";
+                break; // Exit the loop if deletion fails
+            }
+        } else {
+            echo "Error inserting student into original table.";
+            break; // Exit the loop if insertion fails
+        }
+    }
+
+} else {
+    echo "No student found in temporary table with the provided ID.";
+}
+$stmt_select_temp_lan->close();
+$stmt_insert_lan->close();
+$stmt_delete_temp_lan->close();
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+$sql_select_temp_ski = "SELECT * FROM skill_info_temp WHERE std_id = ?";
+$stmt_select_temp_ski = $con->prepare($sql_select_temp_ski);
+$stmt_select_temp_ski->bind_param('s', $uocindex);
+$stmt_select_temp_ski->execute();
+$result_temp_ski = $stmt_select_temp_ski->get_result();
+
+// Check if student data is found in the temporary table
+if ($result_temp_ski && $result_temp_ski->num_rows > 0) {
+    // Use a loop to insert each row into the original table
+    while ($student_temp_ski = $result_temp_ski->fetch_assoc()) {
+        // Insert student data into the original table
+        $sql_insert_ski = "INSERT INTO skill_info (skill, std_id) VALUES (?, ?)";
+        $stmt_insert_ski = $con->prepare($sql_insert_ski);
+        $stmt_insert_ski->bind_param('ss', $student_temp_ski['skill'], $student_temp_ski['std_id']);
+        $stmt_insert_ski->execute();
+
+        // Check if insertion is successfxp
+        if ($stmt_insert_ski->affected_rows > 0) {
+            // Delete the row from the temporary table
+            $sql_delete_temp_ski = "DELETE FROM skill_info_temp WHERE std_id = ?";
+            $stmt_delete_temp_ski = $con->prepare($sql_delete_temp_ski);
+            $stmt_delete_temp_ski->bind_param('s', $uocindex);
+            $stmt_delete_temp_ski->execute();
+
+            if ($stmt_delete_temp_ski->affected_rows > 0) {
+                // If deletion is successful, continue to the next iteration
+                continue;
+            } else {
+                echo "Error deleting student from temporary table.";
+                break; // Exit the loop if deletion fails
+            }
+        } else {
+            echo "Error inserting student into original table.";
+            break; // Exit the loop if insertion fails
+        }
+    }
+
+    // If all insertions are successful, redirect to some page or do further processing
+    header('Location: ../../admin/admin_student_req_list.php');
+    exit();
+} else {
+    echo "No student found in temporary table with the provided ID.";
+}
+$stmt_select_temp_ski->close();
+$stmt_insert_ski->close();
+$stmt_delete_temp_ski->close();
 
 
 
