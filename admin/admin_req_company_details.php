@@ -42,24 +42,72 @@
             </div>
             <div class="main-div">
                 <div class="sub-div">
-                    <div class="qual">
-                        <h5>Company Name</h5>
-                        <span>Name</span>
-                        <h5>Company Type</h5>
-                        <span>type</span>
-                        <h5>Email Address</h5>
-                        <span>email</span>
-                        <h5>Location</h5>
-                        <span>address</span>
+                    
+                <?php
 
+if(isset($_GET['email'])) {
+    
+    $email = $_GET['email'];
 
-                    </div>
+    
+    $DATABASE_HOST = 'localhost';
+    $DATABASE_USER = 'root';
+    $DATABASE_PASS = '';
+    $DATABASE_NAME = 'tars_db';
+
+    
+    $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+    if (mysqli_connect_errno()) {
+        exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+    }
+
+    
+    $sql = "SELECT * FROM company_info_temp WHERE email = ?";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param('s', $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    
+    if ($result && $result->num_rows > 0) {
+        
+        $student = $result->fetch_assoc();
+
+        
+        echo "<div class='qual'>";
+        echo "<h5>Company Name</h5>";
+        echo "<span>".$student['name']."</span>";
+        echo "<h5>Company Type</h5>";
+        echo "<span>". $student['type'] ."</span>";
+        echo "<h5>Emai Address</h5>";
+        echo "<span>". $student['com_email'] ."</span>";
+        echo "<h5>Location</h5>";
+        echo "<span>". $student['location'] ."</span>";
+        echo "</div>";
+    } else {
+        echo "<p>No student found with the provided ID.</p>";
+    }
+
+    
+    $stmt->close();
+    mysqli_close($con);
+} else {
+    echo "<p>No uocindex provided.</p>";
+}
+?>
 
                     <div class="button-sec">
-                        <div class="accept">Accept</div>
+                        <div class="accept" onclick="acceptStudent('<?php echo $student['email']; ?>')">Accept</div>
                         <div class="reject">Reject</div>
                     </div>
                 </div>
+
+                <script>
+    function acceptStudent(email) {
+        
+        window.location.href = '../lib/php/admin_accept_company.php?email=' + email;
+    }
+</script>
 
             </div>
 

@@ -23,6 +23,18 @@ if ($result) {
     $total_students = 0;
 }
 
+/////////////////////////////////////////////////////////////
+
+$sqlcom = "SELECT COUNT(*) AS total_company FROM company_info_temp";
+$resultcom = mysqli_query($con, $sqlcom);
+
+if ($resultcom) {
+    $row = mysqli_fetch_assoc($resultcom);
+    $total_company = $row['total_company'];
+} else {
+    $total_company = 0;
+}
+
 mysqli_close($con);
 ?>
 
@@ -109,7 +121,7 @@ mysqli_close($con);
                     <div class="card">
                         <div>
                             <div class="cardName">Request Company<br>Approvals</div>
-                            <div class="numbers">08</div>
+                            <div class="numbers"><?php echo $total_company; ?></div>
                         </div>
 
                         <div>

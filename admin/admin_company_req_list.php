@@ -61,29 +61,36 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php
-                        for ($i = 0; $i < 10; $i++) {
-                            ?>
-                        <a href="./admin_req_company_details.php">
-                            <tr>
+                    <?php
+                        
+                        $DATABASE_HOST = 'localhost';
+                        $DATABASE_USER = 'root';
+                        $DATABASE_PASS = '';
+                        $DATABASE_NAME = 'tars_db';
 
-                                <td>CMP#0001</td>
-                                <td>CodeGen International</td>
-                                <td>Technology Company</td>
-                                <td>London, England.</td>
-                                <td>
-                                    <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
-                                        <img src="../images/email icon.png" alt="" class="contact-icon">
-                                    </a>
-                                </td>
-
-
-                            </tr>
-                        </a>
-
-
-                        <?php
+                        $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                        if (mysqli_connect_errno()) {
+                            exit('Failed to connect to MySQL: ' . mysqli_connect_error());
                         }
+
+                        $sql = "SELECT * FROM company_info_temp";
+                        $result = mysqli_query($con, $sql);
+
+                        if ($result && mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo "<tr>";
+                                echo "<td> <a class='none' style='color: black;' href='admin_req_company_details.php?email=" . $row['email'] . "'>" . $row['email'] . "</a></td>";
+                                echo "<td>" . $row['name'] . "</td>";
+                                echo "<td>" . $row['type'] . "</td>";
+                                echo "<td>" . $row['location']. "</td>";
+                                echo "<td><a href='mailto:" . $row['com_email'] . "' class='none'><img src='../images/email icon.png' alt='' class='contact-icon'></a></td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='4'>No students found.</td></tr>";
+                        }
+
+                        mysqli_close($con);
                         ?>
 
                     </tbody>
