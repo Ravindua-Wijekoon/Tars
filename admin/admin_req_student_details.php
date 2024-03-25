@@ -42,20 +42,60 @@
             </div>
             <div class="main-div">
                 <div class="sub-div">
-                    <div class="qual">
-                        <h5>UOC Index</h5>
-                        <span>index</span>
-                        <h5>Full Name</h5>
-                        <span>Name</span>
-                        <h5>Email Address</h5>
-                        <span>email</span>
-                        <h5>Birthday</h5>
-                        <span>date</span>
-                        <h5>Address</h5>
-                        <span>Colombo</span>
+                <?php
+// Check if uocindex is provided in the URL
+if(isset($_GET['uocindex'])) {
+    // Get the uocindex from the URL
+    $uocindex = $_GET['uocindex'];
 
+    // Database connection details
+    $DATABASE_HOST = 'localhost';
+    $DATABASE_USER = 'root';
+    $DATABASE_PASS = '';
+    $DATABASE_NAME = 'tars_db';
 
-                    </div>
+    // Connect to the database
+    $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+    if (mysqli_connect_errno()) {
+        exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+    }
+
+    // Prepare and execute the query to fetch student details based on uocindex
+    $sql = "SELECT * FROM student_info_temp WHERE uocindex = ?";
+    $stmt = $con->prepare($sql);
+    $stmt->bind_param('s', $uocindex);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Check if student details are found
+    if ($result && $result->num_rows > 0) {
+        // Fetch student details
+        $student = $result->fetch_assoc();
+
+        // Display student details
+        echo "<div class='qual'>";
+        echo "<h5>UOC Index</h5>";
+        echo "<span>".$student['uocindex']."</span>";
+        echo "<h5>Full Name</h5>";
+        echo "<span>". $student['fullname'] ."</span>";
+        echo "<h5>Email Address</h5>";
+        echo "<span>". $student['email'] ."</span>";
+        echo "<h5>Birthday</h5>";
+        echo "<span>". $student['dob'] ."</span>";
+        echo "<h5>Address</h5>";
+        echo "<span>". $student['address'] ."</span>";
+        echo "</div>";
+    } else {
+        echo "<p>No student found with the provided ID.</p>";
+    }
+
+    // Close the database connection
+    $stmt->close();
+    mysqli_close($con);
+} else {
+    echo "<p>No uocindex provided.</p>";
+}
+?>
 
                     <div class="button-sec">
                         <div class="accept">Accept</div>
@@ -64,11 +104,6 @@
                 </div>
 
             </div>
-
-
-
-            <!-- =========== Scripts =========
-            <script src="assets/js/main.js"></script> -->
 
         </div>
     </div>

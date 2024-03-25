@@ -51,7 +51,7 @@
 
                 <table class="table">
                     <thead>
-                        <tr class="head my-3">
+                        <tr class="head my-3"  >
                             <th>ID</th>
                             <th>Student</th>
                             <th>Address</th>
@@ -78,7 +78,7 @@
                         if ($result && mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 echo "<tr>";
-                                echo "<td>" . $row['uocindex'] . "</td>";
+                                echo "<td> <a class='none' style='color: black;' href='admin_req_student_details.php?uocindex=" . $row['uocindex'] . "'>" . $row['uocindex'] . "</a></td>";
                                 echo "<td>" . $row['fullname'] . "</td>";
                                 echo "<td>" . $row['address'] . "</td>";
                                 echo "<td><a href='mailto:" . $row['email'] . "' class='none'><img src='../images/email icon.png' alt='' class='contact-icon'></a></td>";
@@ -90,7 +90,6 @@
 
                         mysqli_close($con);
                         ?>
-
                     </tbody>
                 </table>
             </div>
