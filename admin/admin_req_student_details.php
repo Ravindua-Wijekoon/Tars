@@ -43,36 +43,36 @@
             <div class="main-div">
                 <div class="sub-div">
                 <?php
-// Check if uocindex is provided in the URL
+
 if(isset($_GET['uocindex'])) {
-    // Get the uocindex from the URL
+    
     $uocindex = $_GET['uocindex'];
 
-    // Database connection details
+    
     $DATABASE_HOST = 'localhost';
     $DATABASE_USER = 'root';
     $DATABASE_PASS = '';
     $DATABASE_NAME = 'tars_db';
 
-    // Connect to the database
+    
     $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
     if (mysqli_connect_errno()) {
         exit('Failed to connect to MySQL: ' . mysqli_connect_error());
     }
 
-    // Prepare and execute the query to fetch student details based on uocindex
+    
     $sql = "SELECT * FROM student_info_temp WHERE uocindex = ?";
     $stmt = $con->prepare($sql);
     $stmt->bind_param('s', $uocindex);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Check if student details are found
+    
     if ($result && $result->num_rows > 0) {
-        // Fetch student details
+        
         $student = $result->fetch_assoc();
 
-        // Display student details
+        
         echo "<div class='qual'>";
         echo "<h5>UOC Index</h5>";
         echo "<span>".$student['uocindex']."</span>";
@@ -89,7 +89,7 @@ if(isset($_GET['uocindex'])) {
         echo "<p>No student found with the provided ID.</p>";
     }
 
-    // Close the database connection
+    
     $stmt->close();
     mysqli_close($con);
 } else {
@@ -98,10 +98,17 @@ if(isset($_GET['uocindex'])) {
 ?>
 
                     <div class="button-sec">
-                        <div class="accept">Accept</div>
+                        <div class="accept" onclick="acceptStudent('<?php echo $student['uocindex']; ?>')">Accept</div>
                         <div class="reject">Reject</div>
                     </div>
                 </div>
+
+                <script>
+    function acceptStudent(uocindex) {
+        
+        window.location.href = '../lib/php/admin_accept_student.php?uocindex=' + uocindex;
+    }
+</script>
 
             </div>
 
