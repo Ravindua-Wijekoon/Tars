@@ -32,42 +32,42 @@
         <div style="width: 100%">
             <div class="text-02"><b>Company Details</b></div>
             <br />
-            <form method="post">
+            <form action="../lib/php/company_details.php" method="post">
                 <div class="textboxsec">
                     <div class="tag">Company Name</div>
                     <div class="input-box">
-                        <input class="textbox" type="text" placeholder="Company Name" required />
+                        <input class="textbox" type="text" name="name" placeholder="Company Name" required />
                     </div>
 
                     <div class="tag">Company Type</div>
                     <div class="input-box">
-                        <input class="textbox" type="text" placeholder="IT company / software company" required />
+                        <input class="textbox" type="text" name="type" placeholder="IT company / software company" required />
                     </div>
 
                     <div class="tag">Location</div>
                     <div class="input-box">
-                        <input class="textbox" type="text" placeholder="Company Location" required />
+                        <input class="textbox" type="text" name="location" placeholder="Company Location" required />
                     </div>
 
                     <div class="tag">Email Address</div>
                     <div class="input-box">
-                        <input class="textbox" type="text" placeholder="Company Email" required />
+                        <input class="textbox" type="text" name="com_email" placeholder="Company Email" required />
                     </div>
 
                     <div class="tag">About</div>
                     <div class="input-box">
-                        <textarea class="textbox2" rows="8" required>
+                        <textarea class="textbox2" name="about" rows="8" required>
                         </textarea>
                     </div>
 
                     <div class="tag">LinkedIn Link</div>
                     <div class="input-box">
-                        <input class="textbox" type="text" placeholder="Link" required />
+                        <input class="textbox" type="text" name="linkedin" placeholder="Link" required />
                     </div>
 
                     <div class="tag">Twitter Link</div>
                     <div class="input-box">
-                        <input class="textbox" type="text" placeholder="Link" required />
+                        <input class="textbox" type="text" name="twitter" placeholder="Link" required />
                     </div>
 
                     <div class="btn-sec">
