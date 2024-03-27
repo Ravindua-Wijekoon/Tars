@@ -9,7 +9,7 @@ $DATABASE_NAME = 'tars_db';
 
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
-    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+    exit ('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
 $name = $_POST['name'];
@@ -27,6 +27,7 @@ if ($stmt = $con->prepare('UPDATE company_info_temp SET name=?, type=?, location
     $stmt->bind_param('ssssssss', $name, $type, $location, $com_email, $about, $linkedin, $twitter, $email);
     $stmt->execute();
     echo 'Successfully updated';
+    header("location: ../../login/login.php");
 } else {
     echo 'Could not prepare statement!';
 }

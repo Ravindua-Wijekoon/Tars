@@ -9,10 +9,10 @@ $DATABASE_NAME = 'tars_db';
 
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
-    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+    exit ('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
-if (empty($_POST['email']) || empty($_POST['password'])) {
+if (empty ($_POST['email']) || empty ($_POST['password'])) {
     echo '<script>alert("Please fill both the username and password fields!");</script>';
     exit();
 }
@@ -44,7 +44,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM student_info WHERE email = ?
 }
 
 
-if ($stmt = $con->prepare('SELECT id, password FROM company WHERE email = ?')) {
+if ($stmt = $con->prepare('SELECT email, password FROM company_info WHERE email = ?')) {
     $stmt->bind_param('s', $_POST['email']);
     $stmt->execute();
     $stmt->store_result();
@@ -59,6 +59,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM company WHERE email = ?')) {
             $_SESSION['name'] = $_POST['email'];
             $_SESSION['id'] = $id;
             echo 'Welcome to Company dashboard ' . $_SESSION['name'] . '!';
+            header("location: ../../company/company_dashboard.php");
             exit();
         } else {
             echo 'Incorrect username and/or password!';

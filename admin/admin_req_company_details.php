@@ -18,7 +18,9 @@
     <!-- =============== Left ================ -->
     <div>
         <div class="left-box">
-            <img src="../images/logo01.png" alt="">
+            <a href="./admin_dashboard.php">
+                <img src="../images/logo01.png" alt="">
+            </a>
         </div>
 
         <!-- ========================= Main ==================== -->
@@ -42,8 +44,8 @@
             </div>
             <div class="main-div">
                 <div class="sub-div">
-                    
-                <?php
+
+                    <?php
 
 if(isset($_GET['email'])) {
     
@@ -103,11 +105,11 @@ if(isset($_GET['email'])) {
                 </div>
 
                 <script>
-    function acceptStudent(email) {
-        
-        window.location.href = '../lib/php/admin_accept_company.php?email=' + email;
-    }
-</script>
+                function acceptStudent(email) {
+
+                    window.location.href = '../lib/php/admin_accept_company.php?email=' + email;
+                }
+                </script>
 
             </div>
 

@@ -159,6 +159,7 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .input-box2 {
@@ -234,7 +235,7 @@ body {
 }
 
 .plus {
-  width: 40px;
+  width: 30px;
   margin-bottom: 10px;
   margin-left: 15px;
   border: none;

@@ -9,7 +9,7 @@ $DATABASE_NAME = 'tars_db';
 
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if (mysqli_connect_errno()) {
-    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+    exit ('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
 $full_name = $_SESSION['full_name'];
@@ -34,6 +34,7 @@ if ($stmt = $con->prepare('UPDATE student_info_temp SET fullname=?, nameinitials
     $stmt->bind_param('sssssssssss', $full_name, $name_with_initials, $bio, $date_of_birth, $address, $city_town, $zip_code, $github, $linkedin, $portfolio, $uocindex);
     $stmt->execute();
     echo 'Successfully updated';
+    header("location: ../../login/login.php");
 } else {
     echo 'Could not prepare statement!';
 }
@@ -64,11 +65,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmts->bind_param("ssss", $institute, $startYear, $endYear, $uocindex);
     echo $uocindex;
     foreach ($educationArray as $edu) {
-        
+
         $institute = $edu['institute'];
         $startYear = $edu['startYear'];
         $endYear = $edu['endYear'];
-       
+
         $stmts->execute();
 
     }
@@ -84,11 +85,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmtp->bind_param("ssss", $experience, $startYearex, $endYearex, $uocindex);
     echo $uocindex;
     foreach ($experienceArray as $exp) {
-        
+
         $experience = $exp['experience'];
         $startYearex = $exp['startYearEx'];
         $endYearex = $exp['endYearEx'];
-       
+
         $stmtp->execute();
 
     }
@@ -104,9 +105,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmtq->bind_param("ss", $skillstu, $uocindex);
     echo $uocindex;
     foreach ($skillsArray as $exd) {
-        
+
         $skillstu = $exd['skillstu'];
-       
+
         $stmtq->execute();
 
     }
@@ -122,9 +123,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmtm->bind_param("ss", $languagestudent, $uocindex);
     echo $uocindex;
     foreach ($languageArray as $exo) {
-        
+
         $languagestudent = $exo['languagestudent'];
-       
+
         $stmtm->execute();
 
     }
@@ -134,12 +135,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-    
 
 
-    
+
+
 } else {
-    
+
     echo 'form submission failure!';
 }
 

@@ -18,7 +18,9 @@
     <!-- =============== Left ================ -->
     <div>
         <div class="left-box">
-            <img src="../images/logo01.png" alt="">
+            <a href="./admin_dashboard.php">
+                <img src="../images/logo01.png" alt="">
+            </a>
         </div>
 
         <!-- ========================= Main ==================== -->
@@ -61,7 +63,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php
+                        <?php
                         
                         $DATABASE_HOST = 'localhost';
                         $DATABASE_USER = 'root';

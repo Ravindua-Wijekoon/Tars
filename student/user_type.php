@@ -13,7 +13,7 @@
 <body class="background-01">
     <div class="main-box-01">
         <div class="logo">
-              <a href="../home1.php"><img src="../images/logo01.png" alt="logo" /></a>
+            <a href="../home1.php"><img src="../images/logo01.png" alt="logo" /></a>
         </div>
         <br /><br />
 
@@ -23,7 +23,7 @@
                     <img width="50px" src="../images/student.png" alt="student" />
                 </div>
             </a>
-            <a class="" href="#">
+            <a class="" href="../Company/company_signup.php">
                 <div class="icon">
                     <img width="50px" src="../images/company.png" alt="company" />
                 </div>

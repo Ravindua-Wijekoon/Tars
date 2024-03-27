@@ -1,4 +1,3 @@
-
 <?php
 
 
@@ -55,7 +54,9 @@ mysqli_close($con);
     <!-- =============== Left ================ -->
     <div class="container">
         <div class="left-box">
-            <img src="../images/logo01.png" alt="">
+            <a href="./admin_dashboard.php">
+                <img src="../images/logo01.png" alt="">
+            </a>
         </div>
 
         <!-- ========================= Main ==================== -->
