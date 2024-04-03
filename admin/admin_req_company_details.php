@@ -100,7 +100,7 @@ if(isset($_GET['email'])) {
 
                     <div class="button-sec">
                         <div class="accept" onclick="acceptStudent('<?php echo $student['email']; ?>')">Accept</div>
-                        <div class="reject">Reject</div>
+                        <div class="reject" onclick="rejectCompany('<?php echo $student['email']; ?>')">Reject</div>
                     </div>
                 </div>
 
@@ -108,6 +108,12 @@ if(isset($_GET['email'])) {
                 function acceptStudent(email) {
 
                     window.location.href = '../lib/php/admin_accept_company.php?email=' + email;
+                }
+
+                function rejectCompany(email){
+
+                    window.location.href = '../lib/php/admin_reject_company.php?email=' + email;
+
                 }
                 </script>
 
