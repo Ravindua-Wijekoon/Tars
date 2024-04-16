@@ -104,29 +104,29 @@
                 </div>
 
             </div>
-            <form action="">
+            <form action="../lib/php/company_job_post.php" method="post">
                 <div class="main-appbox">
                     <div class="appbox1">
                         <h2>Add Internship Details</h2>
 
                         <label class="label2 ">Add Internship Title</label>
                         <div class="outer-box">
-                            <input type="text" class="normal">
+                            <input type="text" class="normal" name="title">
                         </div>
 
-                        <label class="label2 ">Add Internship Title</label>
+                        <label class="label2 ">Add Internship Description</label>
                         <div class="outer-box2">
-                            <textarea class="normal2" rows="10">
+                            <textarea class="normal2" rows="10" name="description">
                         </textarea>
                         </div>
 
                         <label class="label2 ">Location</label>
                         <div class="outer-box">
-                            <input type="text" class="normal">
+                            <input type="text" class="normal" name="location">
                         </div>
                         <label class="label2 ">Expected Qualifications</label>
                         <div class="outer-box">
-                            <input type="text" class="normal">
+                            <input type="text" class="normal" name="qua">
                         </div>
                         <label class="label2 ">Internship Type</label>
                         <div class="outer-box3">
