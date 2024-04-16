@@ -101,7 +101,7 @@
 
                     <div class="button-sec">
                         <div class="accept" onclick="acceptStudent('<?php echo $student['uocindex']; ?>')">Accept</div>
-                        <div class="reject">Reject</div>
+                        <div class="reject" onclick="rejectStudent('<?php echo $student['uocindex']; ?>')">Reject</div>
                     </div>
                 </div>
 
@@ -109,6 +109,11 @@
                     function acceptStudent(uocindex) {
 
                         window.location.href = '../lib/php/admin_accept_student.php?uocindex=' + uocindex;
+                    }
+
+                    function rejectStudent(uocindex){
+
+                        window.location.href = '../lib/php/admin_reject_student.php?uocindex=' + uocindex;
                     }
                 </script>
 
