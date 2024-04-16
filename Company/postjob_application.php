@@ -104,58 +104,58 @@
                 </div>
 
             </div>
-            <div class="main-appbox">
-                <div class="appbox1">
-                    <h2>Add Internship Details</h2>
+            <form action="">
+                <div class="main-appbox">
+                    <div class="appbox1">
+                        <h2>Add Internship Details</h2>
 
-                    <label class="label2 ">Add Internship Title</label>
-                    <div class="outer-box">
-                        <input type="text" class="normal">
-                    </div>
+                        <label class="label2 ">Add Internship Title</label>
+                        <div class="outer-box">
+                            <input type="text" class="normal">
+                        </div>
 
-                    <label class="label2 ">Add Internship Title</label>
-                    <div class="outer-box2">
-                        <textarea class="normal2" rows="10">
+                        <label class="label2 ">Add Internship Title</label>
+                        <div class="outer-box2">
+                            <textarea class="normal2" rows="10">
                         </textarea>
-                    </div>
-
-                    <label class="label2 ">Location</label>
-                    <div class="outer-box">
-                        <input type="text" class="normal">
-                    </div>
-                    <label class="label2 ">Expected Qualifications</label>
-                    <div class="outer-box">
-                        <input type="text" class="normal">
-                    </div>
-                    <label class="label2 ">Internship Type</label>
-                    <div class="outer-box3">
-                        <div>
-                            <input type="radio" value="Remote" name="type">
-                            <label>Remote</label>
                         </div>
 
-                        <div>
-                            <input type="radio" value="Onsite" name="type">
-                            <label>Onsite</label>
+                        <label class="label2 ">Location</label>
+                        <div class="outer-box">
+                            <input type="text" class="normal">
+                        </div>
+                        <label class="label2 ">Expected Qualifications</label>
+                        <div class="outer-box">
+                            <input type="text" class="normal">
+                        </div>
+                        <label class="label2 ">Internship Type</label>
+                        <div class="outer-box3">
+                            <div>
+                                <input type="radio" value="Remote" name="type">
+                                <label>Remote</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" value="Onsite" name="type">
+                                <label>Onsite</label>
+                            </div>
+
+
                         </div>
 
-
                     </div>
-
-                </div>
-                <div class="appbox2">
-                    <a href="./company_postjob.php" class="none">
+                    <div class="appbox2">
+                        <a href="./company_postjob.php" class="none">
+                            <div class="button">
+                                Cancel
+                            </div>
+                        </a>
                         <div class="button">
-                            Cancel
+                            Publish
                         </div>
-                    </a>
-                    <div class="button">
-                        Publish
                     </div>
                 </div>
-
-
-            </div>
+            </form>
 
 
 
