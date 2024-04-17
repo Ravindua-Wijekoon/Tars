@@ -34,13 +34,13 @@
                 </li>
 
                 <li>
-                    <a href="../lib/php/jop_post_02.php">
+                    <a href="../lib/php/job_post_02.php">
                         <span class="nav-icon">
                             <ion-icon name="search-outline"></ion-icon>
                         </span>
                         <span class="title">Post Job</span>
                     </a>
-                        
+
                 </li>
 
                 <li>
@@ -153,11 +153,11 @@
                 <?php
                 for ($i = 0; $i < 7; $i++) {
                     ?>
-                <div class="item1">
-                    <h3>UI/UX Designer</h3><br>
-                    <h5>Applicant <span>20</span></h5>
-                </div>
-                <?php
+                    <div class="item1">
+                        <h3>UI/UX Designer</h3><br>
+                        <h5>Applicant <span>20</span></h5>
+                    </div>
+                    <?php
                 }
                 ?>
             </div>
