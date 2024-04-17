@@ -502,11 +502,13 @@ input[type="radio"] {
 .appbox2 .button {
   width: 60%;
   height: 30px;
+  border: none;
   border-radius: 7px;
   background-color: #4d774e;
   margin-bottom: 10px;
   color: white;
   display: flex;
+  font-size: 15px;
   align-items: center;
   justify-content: center;
   cursor: pointer;

@@ -150,9 +150,9 @@
                                 Cancel
                             </div>
                         </a>
-                        <div class="button">
+                        <button class="button" type="submit">
                             Publish
-                        </div>
+                        </button>
                     </div>
                 </div>
             </form>
