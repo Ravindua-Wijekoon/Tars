@@ -119,41 +119,44 @@
 
                 <?php
 
-                    session_start();
+                session_start();
 
-                    $user_id = $_SESSION['id'];
+                $user_id = $_SESSION['id'];
 
-                    $DATABASE_HOST = 'localhost';
-                    $DATABASE_USER = 'root';
-                    $DATABASE_PASS = '';
-                    $DATABASE_NAME = 'tars_db';
+                $DATABASE_HOST = 'localhost';
+                $DATABASE_USER = 'root';
+                $DATABASE_PASS = '';
+                $DATABASE_NAME = 'tars_db';
 
-                    $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-                    if (mysqli_connect_errno()) {
-                        exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                if (mysqli_connect_errno()) {
+                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                }
+
+                $sql = "SELECT * FROM company_post_job WHERE email = ?";
+                $stmt = $con->prepare($sql);
+                $stmt->bind_param('s', $user_id);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                if ($result && mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+
+                        echo "<div class='card3'>";
+                        echo "<h2>WordPress Developer</h2>";
+                        echo "<h4>Colombo, LK</h4>";
+                        echo "<div class='type'>Remote</div>";
+                        echo "<h6>Applied</h6>";
+                        echo "<h5>14</h5>";
+                        echo "</div>";
+
+
                     }
+                } else {
+                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                }
 
-                    $sql = "SELECT * FROM company_post_job WHERE email = ?";
-                    $stmt = $con->prepare($sql);
-                    $stmt->bind_param('s', $user_id);
-                    $stmt->execute();
-                    $result = $stmt->get_result();
-
-                    if ($result && mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) { ?>
-                <div class="card3">
-                    <h2>WordPress Developer</h2>
-                    <h4>Colombo, LK</h4>
-                    <div class="type">Remote</div>
-                    <h6>Applied</h6>
-                    <h5>14</h5>
-                </div>
-
-                <?php
-                        }
-                    } else {
-                        echo "<tr><td colspan='4'>No students found.</td></tr>";
-                    } ?>
+                ?>
 
             </div>
 
