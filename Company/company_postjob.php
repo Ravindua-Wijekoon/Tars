@@ -140,28 +140,21 @@
                     $result = $stmt->get_result();
 
                     if ($result && mysqli_num_rows($result) > 0) {
-                        while ($row = mysqli_fetch_assoc($result)) {
+                        while ($row = mysqli_fetch_assoc($result)) { ?>
+                <div class="card3">
+                    <h2>WordPress Developer</h2>
+                    <h4>Colombo, LK</h4>
+                    <div class="type">Remote</div>
+                    <h6>Applied</h6>
+                    <h5>14</h5>
+                </div>
 
-
+                <?php
                         }
                     } else {
                         echo "<tr><td colspan='4'>No students found.</td></tr>";
-                    }
+                    } ?>
 
-                for ($i = 0; $i < 7; $i++) {
-                    ?>
-
-                    <div class="card3">
-                        <h2>WordPress Developer</h2>
-                        <h4>Colombo, LK</h4>
-                        <div class="type">Remote</div>
-                        <h6>Applied</h6>
-                        <h5>14</h5>
-                    </div>
-
-                    <?php
-                }
-                ?>
             </div>
 
 
