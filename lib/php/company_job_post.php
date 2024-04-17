@@ -1,5 +1,9 @@
 <?php
 
+session_start();
+
+$user_id = $_SESSION['user_id'];
+
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
 $DATABASE_PASS = '';
@@ -11,8 +15,8 @@ if (mysqli_connect_errno()) {
 }
 
 
-$stmt = $con->prepare('INSERT INTO company_post_job (title, description, location, qualification, type) VALUES (?, ?, ?, ?, ?)');
-$stmt->bind_param('sssss', $_POST['title'], $_POST['description'], $_POST['location'], $_POST['qua'], $_POST['type']);
+$stmt = $con->prepare('INSERT INTO company_post_job (title, description, location, qualification, type, email) VALUES (?, ?, ?, ?, ?, ?)');
+$stmt->bind_param('ssssss', $_POST['title'], $_POST['description'], $_POST['location'], $_POST['qua'], $_POST['type'], $user_id);
 $stmt->execute();
 $stmt->close();
 

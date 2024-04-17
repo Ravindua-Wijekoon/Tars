@@ -34,12 +34,13 @@
                 </li>
 
                 <li>
-                    <a href="./company_postjob.php">
+                    <a href="../lib/php/jop_post_02.php">
                         <span class="nav-icon">
                             <ion-icon name="search-outline"></ion-icon>
                         </span>
                         <span class="title">Post Job</span>
                     </a>
+                        
                 </li>
 
                 <li>

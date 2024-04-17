@@ -59,7 +59,7 @@ if ($stmt = $con->prepare('SELECT email, password FROM company_info WHERE email 
             $_SESSION['name'] = $_POST['email'];
             $_SESSION['id'] = $id;
             echo 'Welcome to Company dashboard ' . $_SESSION['name'] . '!';
-            header("location: ../../company/company_dashboard.php");
+            header("location: job_post_01.php");
             exit();
         } else {
             echo 'Incorrect username and/or password!';
