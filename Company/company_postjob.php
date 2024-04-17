@@ -1,3 +1,17 @@
+
+<?php
+
+session_start();
+
+$user_id = $_SESSION['id'];
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -109,7 +123,7 @@
 
             <!-- ======================= Cards ================== -->
             <div class="cardBox2">
-                <a href="../lib/php/job_post_0.php" class="none">
+                <a href="../lib/php/job_post_03.php" class="none">
                     <div class="card2">
                         <img src="../images/plus.svg" alt="" />
                         <h6>Add New Intern</h6>
@@ -119,9 +133,6 @@
 
                 <?php
 
-                session_start();
-
-                $user_id = $_SESSION['id'];
 
                 $DATABASE_HOST = 'localhost';
                 $DATABASE_USER = 'root';
@@ -143,9 +154,9 @@
                     while ($row = mysqli_fetch_assoc($result)) {
 
                         echo "<div class='card3'>";
-                        echo "<h2>WordPress Developer</h2>";
-                        echo "<h4>Colombo, LK</h4>";
-                        echo "<div class='type'>Remote</div>";
+                        echo "<h2>". $row['title'] ."</h2>";
+                        echo "<h4>". $row['description'] ."</h4>";
+                        echo "<div class='type'>". $row['type'] ."</div>";
                         echo "<h6>Applied</h6>";
                         echo "<h5>14</h5>";
                         echo "</div>";
