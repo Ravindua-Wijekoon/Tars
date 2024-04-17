@@ -8,6 +8,6 @@ session_start();
 
 
 
-header("Location: ../../company/company_postjob.php");
+header("Location: ../../company/postjob_application.php");
 exit;
 ?>

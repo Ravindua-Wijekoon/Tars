@@ -2,7 +2,7 @@
 
 session_start();
 
-$user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['id'];
 
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
@@ -22,4 +22,6 @@ $stmt->close();
 
 
 $con->close();
+
+header("Location: ../../company/company_postjob.php");
 ?>

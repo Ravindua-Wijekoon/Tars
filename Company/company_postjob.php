@@ -109,7 +109,7 @@
 
             <!-- ======================= Cards ================== -->
             <div class="cardBox2">
-                <a href="./postjob_application.php" class="none">
+                <a href="../lib/php/job_post_03.php" class="none">
                     <div class="card2">
                         <img src="../images/plus.svg" alt="" />
                         <h6>Add New Intern</h6>
