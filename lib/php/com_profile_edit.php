@@ -1,8 +1,5 @@
 <?php
-
 session_start();
-
-
 
 $DATABASE_HOST = 'localhost';
 $DATABASE_USER = 'root';
@@ -15,17 +12,12 @@ if (mysqli_connect_errno()) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $user_id = $_POST['user_id'];
 
-$user_id = $_POST['user_id'];
-
-
-$stmt = $con->prepare('UPDATE company_info SET name=?, type=?, location=?, location=?, com_email=?, about=?, linkedin=?, twitter=? WHERE email=?');
-$stmt->bind_param('ssssssss', $_POST['comname'], $_POST['type'], $_POST['location'], $_POST['comemail'], $_POST['about'], $_POST['link'], $_POST['twitter'], $user_id);
-$stmt->execute();
-$stmt->close();
-
-
-
+    $stmt = $con->prepare('UPDATE company_info SET name=?, type=?, location=?, com_email=?, about=?, linkedin=?, twitter=? WHERE email=?');
+    $stmt->bind_param('ssssssss', $_POST['comname'], $_POST['type'], $_POST['location'], $_POST['comemail'], $_POST['about'], $_POST['link'], $_POST['twitter'], $user_id);
+    $stmt->execute();
+    $stmt->close();
 }
 
 $con->close();

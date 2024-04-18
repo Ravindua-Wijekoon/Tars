@@ -232,9 +232,9 @@ $user_id = $_SESSION['id'];
                                 </div>
                             </div>
                         
-                        <div class="button-sec2" type="submit">
+                        <button class="button-sec2" type="submit">
                             <div>Save</div>
-                        </div>
+                        </button>
                         </form>
                     </div>
                 </div>
