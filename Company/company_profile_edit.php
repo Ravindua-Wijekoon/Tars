@@ -1,3 +1,14 @@
+
+<?php
+
+session_start();
+
+$user_id = $_SESSION['id'];
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,23 +124,48 @@
                             <div class="profile-pic">
                                 <img src="../images/profile_photos/customer02.jpg" alt="">
                             </div>
-                            <div class="info">
-                                <h1>AR Communications</h1>
-                                <h3>Telecommunications compan</h3>
-                                <h6>intern@arcomms.com</h6>
+                            <?php
 
-                                <h5>About us</h5>
-                                <div class="bio">Our company provides a wide range of communication services, including
-                                    voice,
-                                    video, and messaging solutions, as well as data and internet connectivity. Whether
-                                    you need to make a call, send a text, or attend a virtual meeting, we have the tools
-                                    and resources to keep you connected.</div>
-                                <br><br>
-                                <h5>Links</h5>
-                                <span><b>LinkedIn |</b> <span>github.com/blakelively</span></span><br>
-                                <span><b>Twitte |</b> <span>gitlabs.com/blakelively</span></span>
 
-                            </div>
+                                $DATABASE_HOST = 'localhost';
+                                $DATABASE_USER = 'root';
+                                $DATABASE_PASS = '';
+                                $DATABASE_NAME = 'tars_db';
+
+                                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                                if (mysqli_connect_errno()) {
+                                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                                }
+                                
+                                $sql = "SELECT * FROM company_info WHERE email = ?";
+                                $stmt = $con->prepare($sql);
+                                $stmt->bind_param('s', $user_id);
+                                $stmt->execute();
+                                $result = $stmt->get_result();
+
+                                if ($result && mysqli_num_rows($result) > 0) {
+                                    $row = $result->fetch_assoc();
+
+                                    echo '<div class="info">';
+                                    echo '<h1>' . $row['name'] . '</h1>';
+                                    echo '<h3>' . $row['type'] . '</h3>';
+                                    echo '<h6>' . $row['com_email'] . '</h6>';
+                                    echo '<h5>About us</h5>';
+                                    echo '<div class="bio">' . $row['about'] . '</div>';
+                                    echo '<br><br>';
+                                    echo '<h5>Links</h5>';
+                                    echo '<span><b>LinkedIn |</b> <span>' . $row['linkedin'] . '</span></span><br>';
+                                    echo '<span><b>Twitter |</b> <span>' . $row['twitter'] . '</span></span>';
+                                    echo '</div>';
+
+
+
+
+                                } else {
+                                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                                }
+                                
+                                ?>
 
                         </div>
                     </div>
@@ -138,12 +174,12 @@
                         <div class="button-sec">
 
                         </div>
-                        <form action="">
+                        <form action="../lib/php/com_profile_edit.php" method="POST">
                             <div class="edit-sec">
                                 <div class="div2">
                                     <label>Company Name</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB">
+                                        <input class="edit-input" type="text" name="comname" value="Get old data from DB">
                                     </div>
 
                                 </div>
@@ -151,7 +187,7 @@
                                 <div class="div2">
                                     <label>Company Type</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB">
+                                        <input class="edit-input" type="text" name="type" value="Get old data from DB">
                                     </div>
 
                                 </div>
@@ -159,7 +195,7 @@
                                 <div class="div2">
                                     <label>Location</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB">
+                                        <input class="edit-input" type="text" name="location" value="Get old data from DB">
                                     </div>
 
                                 </div>
@@ -167,7 +203,7 @@
                                 <div class="div2">
                                     <label>Email Address</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB">
+                                        <input class="edit-input" type="text" name="comemail" value="Get old data from DB">
                                     </div>
 
                                 </div>
@@ -175,30 +211,31 @@
                                 <div class="div3">
                                     <label>About</label>
                                     <div class="input-full">
-                                        <textarea class="edit-input" rows="8">Get old data from DB</textarea>
+                                        <textarea class="edit-input" name="about" rows="8">Get old data from DB</textarea>
                                     </div>
                                 </div>
 
                                 <div class="div2">
                                     <label>LinkedIn</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB">
+                                        <input class="edit-input" type="text" name="link" value="Get old data from DB">
                                     </div>
 
                                 </div>
                                 <div class="div2">
                                     <label>Twitter</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB">
+                                        <input class="edit-input" type="text" name="twitter" value="Get old data from DB">
                                     </div>
+                                    <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($user_id); ?>">
 
                                 </div>
                             </div>
-                        </form>
-                        <div class="button-sec2">
+                        
+                        <div class="button-sec2" type="submit">
                             <div>Save</div>
                         </div>
-
+                        </form>
                     </div>
                 </div>
 

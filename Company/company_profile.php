@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+
+$user_id = $_SESSION['id'];
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -113,23 +125,49 @@
                             <div class="profile-pic">
                                 <img src="../images/Group 105.png" alt="">
                             </div>
-                            <div class="info">
-                                <h1>AR Communications</h1>
-                                <h3>Telecommunications compan</h3>
-                                <h6>intern@arcomms.com</h6>
+                               <?php
 
-                                <h5>About us</h5>
-                                <div class="bio">Our company provides a wide range of communication services, including
-                                    voice,
-                                    video, and messaging solutions, as well as data and internet connectivity. Whether
-                                    you need to make a call, send a text, or attend a virtual meeting, we have the tools
-                                    and resources to keep you connected.</div>
-                                <br><br>
-                                <h5>Links</h5>
-                                <span><b>LinkedIn |</b> <span>github.com/blakelively</span></span><br>
-                                <span><b>Twitte |</b> <span>gitlabs.com/blakelively</span></span>
 
-                            </div>
+                                $DATABASE_HOST = 'localhost';
+                                $DATABASE_USER = 'root';
+                                $DATABASE_PASS = '';
+                                $DATABASE_NAME = 'tars_db';
+
+                                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                                if (mysqli_connect_errno()) {
+                                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                                }
+                                
+                                $sql = "SELECT * FROM company_info WHERE email = ?";
+                                $stmt = $con->prepare($sql);
+                                $stmt->bind_param('s', $user_id);
+                                $stmt->execute();
+                                $result = $stmt->get_result();
+
+                                if ($result && mysqli_num_rows($result) > 0) {
+                                    $row = $result->fetch_assoc();
+
+                                    echo '<div class="info">';
+                                    echo '<h1>' . $row['name'] . '</h1>';
+                                    echo '<h3>' . $row['type'] . '</h3>';
+                                    echo '<h6>' . $row['com_email'] . '</h6>';
+                                    echo '<h5>About us</h5>';
+                                    echo '<div class="bio">' . $row['about'] . '</div>';
+                                    echo '<br><br>';
+                                    echo '<h5>Links</h5>';
+                                    echo '<span><b>LinkedIn |</b> <span>' . $row['linkedin'] . '</span></span><br>';
+                                    echo '<span><b>Twitter |</b> <span>' . $row['twitter'] . '</span></span>';
+                                    echo '</div>';
+
+
+
+
+                                } else {
+                                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                                }
+                                
+                                ?>
+                            
 
                         </div>
                     </div>
@@ -141,11 +179,41 @@
                             </a>
 
                         </div>
-                        <div class="qual">
-                            <h3>Location</h3>
-                            <div>Colombo</div>
+                        <?php
 
-                        </div>
+
+                                $DATABASE_HOST = 'localhost';
+                                $DATABASE_USER = 'root';
+                                $DATABASE_PASS = '';
+                                $DATABASE_NAME = 'tars_db';
+
+                                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                                if (mysqli_connect_errno()) {
+                                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                                }
+                                
+                                $sql = "SELECT * FROM company_info WHERE email = ?";
+                                $stmt = $con->prepare($sql);
+                                $stmt->bind_param('s', $user_id);
+                                $stmt->execute();
+                                $result = $stmt->get_result();
+
+                                if ($result && mysqli_num_rows($result) > 0) {
+                                    $row = $result->fetch_assoc();
+
+                                    echo '<div class="qual">';
+                                    echo '<h3>Location</h3>';
+                                    echo '<div>' . $row['location'] . '<div>';
+                                    echo '</div>';
+
+
+
+
+                                } else {
+                                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                                }
+                                
+                                ?>
 
                     </div>
                 </div>
