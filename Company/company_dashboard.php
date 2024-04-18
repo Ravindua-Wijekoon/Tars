@@ -1,3 +1,13 @@
+
+<?php
+
+session_start();
+
+$user_id = $_SESSION['id'];
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -111,15 +121,53 @@
             <!-- ======================= Cards ================== -->
             <div class="cardBox">
                 <div class="card">
-                    <div>
-                        <div class="cardName">Internships</div>
-                        <div class="numbers">20</div>
+                <?php
 
-                    </div>
+                        $DATABASE_HOST = 'localhost';
+                        $DATABASE_USER = 'root';
+                        $DATABASE_PASS = '';
+                        $DATABASE_NAME = 'tars_db';
 
-                    <div class="image">
-                        <img src="../images/briefcase.png" alt="">
-                    </div>
+                        $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                        if (mysqli_connect_errno()) {
+                            exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                        }
+
+                        
+                        $sql_count = "SELECT COUNT(*) AS internship_count FROM company_post_job WHERE email = ?";
+                        $stmt_count = $con->prepare($sql_count);
+                        $stmt_count->bind_param('s', $user_id);
+                        $stmt_count->execute();
+                        $result_count = $stmt_count->get_result();
+
+                        if ($result_count && $result_count->num_rows > 0) {
+                            $row_count = $result_count->fetch_assoc();
+                            $internship_count = $row_count['internship_count'];
+
+                           
+                            echo '<div>';
+                            echo '<div class="cardName">Internships</div>';
+                            echo '<div class="numbers">' . $internship_count . '</div>';
+                            echo '</div>';
+
+                            echo '<div class="image">';
+                            echo '<img src="../images/briefcase.png" alt="">';
+                            echo '</div>';
+                        } else {
+                            
+                            echo '<div>';
+                            echo '<div class="cardName">Internships</div>';
+                            echo '<div class="numbers">0</div>'; 
+                            echo '</div>';
+
+                            echo '<div class="image">';
+                            echo '<img src="../images/briefcase.png" alt="">';
+                            echo '</div>';
+                        }
+
+                        mysqli_close($con);
+                    ?>
+
                 </div>
 
                 <div class="card">
@@ -150,16 +198,38 @@
 
             <!-- ================ Company list ================= -->
             <div class="cont-box">
-                <?php
-                for ($i = 0; $i < 7; $i++) {
-                    ?>
-                    <div class="item1">
-                        <h3>UI/UX Designer</h3><br>
-                        <h5>Applicant <span>20</span></h5>
-                    </div>
-                    <?php
+            <?php
+
+                $DATABASE_HOST = 'localhost';
+                $DATABASE_USER = 'root';
+                $DATABASE_PASS = '';
+                $DATABASE_NAME = 'tars_db';
+
+                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                if (mysqli_connect_errno()) {
+                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
                 }
-                ?>
+
+                $sql = "SELECT * FROM company_post_job WHERE email = ? ORDER BY id DESC LIMIT 9";
+                $stmt = $con->prepare($sql);
+                $stmt->bind_param('s', $user_id);
+                $stmt->execute();
+                $result = $stmt->get_result();
+
+                if ($result && mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+
+                    echo '<div class="item1">';
+                    echo '<h3>' . $row['title'] . '</h3><br>';
+                    echo ' <h5>Applicant<span>20</span></h5>';
+                    echo '</div>';
+                    }
+
+                } else {
+                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                }
+
+            ?>
             </div>
 
         </div>
