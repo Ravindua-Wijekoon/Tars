@@ -137,17 +137,28 @@
                     <?php
                     for ($i = 0; $i < 6; $i++) {
                         ?>
-                        <div class="intern-card">
-                            <div class="int-name">
-                                <h3>Product UI/UX Engineers</h3><br>
-                                <h4>Colombo, LK</h4>
-                            </div>
-                            <div class="int-button">
-                                <div>Details</div>
-                                <div>Apply</div>
-                            </div>
+                    <div class="intern-card">
+                        <div class="int-name">
+                            <h3>Product UI/UX Engineers</h3><br>
+                            <h4>Colombo, LK</h4>
                         </div>
-                        <?php
+                        <div class="int-button">
+                            <button id="myBtn">Details</button>
+                            <button>Apply</button>
+                        </div>
+                    </div>
+
+                    <!-- The Modal -->
+                    <!-- <div id="myModal" class="modal"> -->
+
+                    <!-- Modal content -->
+                    <!-- <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <p>Some text in the Modal..</p>
+                            </div>
+
+                        </div> -->
+                    <?php
                     }
                     ?>
 
@@ -158,7 +169,33 @@
     </div>
 
     <!-- =========== Scripts =========  -->
-    <script src="../lib/js/main.js"></script>
+    <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
 
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
