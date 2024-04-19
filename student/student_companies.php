@@ -135,7 +135,7 @@
                 <?php
                 for ($i = 0; $i < 7; $i++) {
                     ?>
-                    <div class="company-card">
+                    <a class="company-card none" href="./student_companies_profile.php">
                         <img src="../images/Group 105.png" alt="">
                         <div class="company-name">
                             Apple Inc.
@@ -144,7 +144,7 @@
                             Technology Company
                         </div>
 
-                    </div>
+                    </a>
                     <?php
                 }
                 ?>
