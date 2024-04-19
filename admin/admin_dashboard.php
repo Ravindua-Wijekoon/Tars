@@ -12,14 +12,14 @@ if (mysqli_connect_errno()) {
 }
 
 
-$sql = "SELECT COUNT(*) AS total_students FROM student_info_temp";
+$sql = "SELECT COUNT(*) AS total_students_req FROM student_info_temp";
 $result = mysqli_query($con, $sql);
 
 if ($result) {
     $row = mysqli_fetch_assoc($result);
-    $total_students = $row['total_students'];
+    $total_students_req = $row['total_students_req'];
 } else {
-    $total_students = 0;
+    $total_students_req = 0;
 }
 
 /////////////////////////////////////////////////////////////
@@ -80,28 +80,73 @@ mysqli_close($con);
             <div class="cardBox">
                 <a href="../admin/admin_approved_students.php" class="none">
                     <div class="card">
-                        <div>
 
-                            <div class="cardName">Approved <br>Students</div>
-                            <div class="numbers">05</div>
+                    <?php
+                        $DATABASE_HOST = 'localhost';
+                        $DATABASE_USER = 'root';
+                        $DATABASE_PASS = '';
+                        $DATABASE_NAME = 'tars_db';
 
-                        </div>
-                        <div>
-                            <img src="../images/icon _user_.png" alt="">
-                        </div>
+                        $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                        if (mysqli_connect_errno()) {
+                            exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                        }
+
+                        $sql = "SELECT COUNT(*) AS total_students FROM student_info";
+                        $result = mysqli_query($con, $sql);
+
+                        $total_students = 0;
+                        if ($result && mysqli_num_rows($result) > 0) {
+                            $row = mysqli_fetch_assoc($result);
+                            $total_students = $row['total_students'];
+                        }
+
+                        echo '<div>';
+                        echo '<div class="cardName">Approved <br>Students</div>';
+                        echo '<div class="numbers">' . $total_students . '</div>';
+                        echo '</div>';
+                        echo '<div>';
+                        echo '<img src="../images/icon _tick circle_.png" alt="">';
+                        echo '</div>';
+
+
+                        ?>
+                        
                     </div>
                 </a>
 
                 <a href="../admin/admin_approved_companies.php" class="none">
                     <div class="card">
-                        <div>
-                            <div class="cardName">Approved <br>Companies</div>
-                            <div class="numbers">05</div>
-                        </div>
+                    <?php
+                        $DATABASE_HOST = 'localhost';
+                        $DATABASE_USER = 'root';
+                        $DATABASE_PASS = '';
+                        $DATABASE_NAME = 'tars_db';
 
-                        <div>
-                            <img src="../images/icon _tick circle_.png" alt="">
-                        </div>
+                        $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                        if (mysqli_connect_errno()) {
+                            exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                        }
+
+                        $sql = "SELECT COUNT(*) AS total_students_com FROM company_info";
+                        $result = mysqli_query($con, $sql);
+
+                        $total_students_com = 0;
+                        if ($result && mysqli_num_rows($result) > 0) {
+                            $row = mysqli_fetch_assoc($result);
+                            $total_students_com = $row['total_students_com'];
+                        }
+
+                        echo '<div>';
+                        echo '<div class="cardName">Approved <br>Companies</div>';
+                        echo '<div class="numbers">' . $total_students_com . '</div>';
+                        echo '</div>';
+                        echo '<div>';
+                        echo '<img src="../images/icon _tick circle_.png" alt="">';
+                        echo '</div>';
+
+
+                        ?>
                     </div>
                 </a>
 
@@ -109,7 +154,7 @@ mysqli_close($con);
                     <div class="card">
                         <div>
                             <div class="cardName">Request Student<br>Approvals</div>
-                            <div class="numbers"><?php echo $total_students; ?></div>
+                            <div class="numbers"><?php echo $total_students_req; ?></div>
                         </div>
 
                         <div>

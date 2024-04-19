@@ -64,29 +64,33 @@
                     </thead>
                     <tbody>
                         <?php
-                        for ($i = 0; $i < 10; $i++) {
-                            ?>
-                        <tr>
-                            <td>2021T01250</td>
-                            <td>Blake Lively</td>
-                            <td>ICT</td>
-                            <td>N/A</td>
-                            <td>
+                        $DATABASE_HOST = 'localhost';
+                        $DATABASE_USER = 'root';
+                        $DATABASE_PASS = '';
+                        $DATABASE_NAME = 'tars_db';
 
-                                <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
-                                    <img src="../images/email icon.png" alt="" class="contact-icon">
-                                </a>
-                            </td>
-                            <td>
-                                <a href="#">
-                                    <img src="../images/circle-xmark-regular.png" alt="" class="contact-icon">
-                                </a>
-
-                            </td>
-                        </tr>
-
-                        <?php
+                        $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                        if (mysqli_connect_errno()) {
+                            exit('Failed to connect to MySQL: ' . mysqli_connect_error());
                         }
+
+                        $sql = "SELECT * FROM student_info";
+                        $result = mysqli_query($con, $sql);
+
+                        if ($result && mysqli_num_rows($result) > 0) {
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo "<tr>";
+                                echo "<td>". $row['uocindex'] ."</td>";
+                                echo "<td>" . $row['fullname'] . "</td>";
+                                echo "<td>" . $row['address'] . "</td>";
+                                echo "<td><a href='mailto:" . $row['email'] . "' class='none'><img src='../images/email icon.png' alt='' class='contact-icon'></a></td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='4'>No students found.</td></tr>";
+                        }
+
+                        mysqli_close($con);
                         ?>
 
                     </tbody>
