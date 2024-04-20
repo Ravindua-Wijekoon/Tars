@@ -131,23 +131,48 @@ $uocindex = $_SESSION['id'];
                             <div class="profile-pic">
                                 <img src="../images/profile_photos/customer02.jpg" alt="">
                             </div>
-                            <div class="info">
-                                <h1>Blake Lively</h1>
-                                <h5>Software Developer</h5>
-                                <h6>blakelively@gmail.com</h6>
+                            <?php
 
-                                <h5>Bio</h5>
-                                <div class="bio">I am a Software Developer with critical thinking skills and also
-                                    creative
-                                    skills.</div>
-                                <br><br>
-                                <h5>Links</h5>
-                                <span class="links"><b>Github |</b> <span>github.com/blakelively</span></span><br>
-                                <span class="links"><b>LinkedIn |</b> <span>
-                                        linkedin.com/in//blakelively</span></span><br>
-                                <span class="links"><b>Portfolio |</b> <span>twitter.com/blakelively</span></span>
 
-                            </div>
+                                $DATABASE_HOST = 'localhost';
+                                $DATABASE_USER = 'root';
+                                $DATABASE_PASS = '';
+                                $DATABASE_NAME = 'tars_db';
+
+                                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                                if (mysqli_connect_errno()) {
+                                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                                }
+
+                                $sql = "SELECT * FROM student_info WHERE uocindex = ?";
+                                $stmt = $con->prepare($sql);
+                                $stmt->bind_param('s', $uocindex);
+                                $stmt->execute();
+                                $result = $stmt->get_result();
+
+                                if ($result && mysqli_num_rows($result) > 0) {
+                                    $row = $result->fetch_assoc();
+
+                                    echo '<div class="info">';
+                                    echo '<h3>' . $row['fullname'] . '</h3>';
+                                    echo '<h6>' . $row['email'] . '</h6>';
+                                    echo '<h5>Bio</h5>';
+                                    echo '<div class="bio">' . $row['bio'] . '</div>';
+                                    echo '<br><br>';
+                                    echo '<h5>Links</h5>';
+                                    echo '<span><b>Github |</b> <span>' . $row['github'] . '</span></span><br>';
+                                    echo '<span><b>LinkedIn |</b> <span>' . $row['linkedin'] . '</span></span><br>';
+                                    echo '<span><b>Twitter |</b> <span>' . $row['portfolio'] . '</span></span>';
+                                    echo '</div>';
+
+
+
+
+                                } else {
+                                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                                }
+
+                                ?>
 
                         </div>
                     </div>
