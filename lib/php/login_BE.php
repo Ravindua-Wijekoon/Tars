@@ -18,7 +18,7 @@ if (empty ($_POST['email']) || empty ($_POST['password'])) {
 }
 
 
-if ($stmt = $con->prepare('SELECT id, password FROM student_info WHERE email = ?')) {
+if ($stmt = $con->prepare('SELECT uocindex, password FROM student_info WHERE email = ?')) {
     $stmt->bind_param('s', $_POST['email']);
     $stmt->execute();
     $stmt->store_result();
@@ -32,7 +32,7 @@ if ($stmt = $con->prepare('SELECT id, password FROM student_info WHERE email = ?
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['email'];
             $_SESSION['id'] = $id;
-            header("Location: ../../student/student_dashboard.php");
+            header("Location: student_profile_edit_01.php");
             exit;
         } else {
             echo 'Incorrect username and/or password!';
