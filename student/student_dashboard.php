@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+$uocindex = $_SESSION['id'];
+//echo $uocindex;
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

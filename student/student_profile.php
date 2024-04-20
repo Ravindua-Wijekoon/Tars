@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+$uocindex = $_SESSION['id'];
+
+//echo $uocindex;
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -122,22 +133,48 @@
                             <div class="profile-pic">
                                 <img src="../images/profile_photos/customer02.jpg" alt="">
                             </div>
-                            <div class="info">
-                                <h3>Blake Lively</h3>
-                                <h5>Software Developer</h5>
-                                <h6>blakelively@gmail.com</h6>
+                            <?php
 
-                                <h5>Bio</h5>
-                                <div class="bio">I am a Software Developer with critical thinking skills and also
-                                    creative
-                                    skills.</div>
-                                <br><br>
-                                <h5>Links</h5>
-                                <span><b>Github |</b> <span>github.com/blakelively</span></span><br>
-                                <span><b>Portfolio |</b> <span>gitlabs.com/blakelively</span></span><br>
-                                <span><b>LinkedIn |</b> <span> linkedin.com/in//blakelively</span></span>
 
-                            </div>
+                                $DATABASE_HOST = 'localhost';
+                                $DATABASE_USER = 'root';
+                                $DATABASE_PASS = '';
+                                $DATABASE_NAME = 'tars_db';
+
+                                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                                if (mysqli_connect_errno()) {
+                                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                                }
+                                
+                                $sql = "SELECT * FROM student_info WHERE uocindex = ?";
+                                $stmt = $con->prepare($sql);
+                                $stmt->bind_param('s', $uocindex);
+                                $stmt->execute();
+                                $result = $stmt->get_result();
+
+                                if ($result && mysqli_num_rows($result) > 0) {
+                                    $row = $result->fetch_assoc();
+
+                                    echo '<div class="info">';
+                                    echo '<h3>' . $row['fullname'] . '</h3>';
+                                    echo '<h6>' . $row['email'] . '</h6>';
+                                    echo '<h5>Bio</h5>';
+                                    echo '<div class="bio">' . $row['bio'] . '</div>';
+                                    echo '<br><br>';
+                                    echo '<h5>Links</h5>';
+                                    echo '<span><b>Github |</b> <span>' . $row['github'] . '</span></span><br>';
+                                    echo '<span><b>LinkedIn |</b> <span>' . $row['linkedin'] . '</span></span><br>';
+                                    echo '<span><b>Twitter |</b> <span>' . $row['portfolio'] . '</span></span>';
+                                    echo '</div>';
+
+
+
+
+                                } else {
+                                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                                }
+                                
+                                ?>
                             <!-- <div class="button-sec3">
                                 <a href="mailto:ravinduwijekoon123@gmail.com" class="none">
                                     <div>Send Email</div>
@@ -154,19 +191,123 @@
                             </div>
                         </a>
 
-                        <div class="qual">
-                            <h3>Education</h3>
-                            <div>BSc. (Hons) Computer Science (Stanford University)</div>
-                            <h3>Experience</h3>
-                            <div>Millenium IT (2018 - 2022)</div>
-                            <h3>Skills</h3>
-                            <div>Python HTML CSS C React Bootstrap</div>
-                            <h3>Languages</h3>
-                            <div>English French Swedish</div>
-                            <h3>Birthday</h3>
-                            <div>date</div>
-                            <h3>Address</h3>
-                            <div>Colombo</div>
+                        <?php
+
+
+                                $DATABASE_HOST = 'localhost';
+                                $DATABASE_USER = 'root';
+                                $DATABASE_PASS = '';
+                                $DATABASE_NAME = 'tars_db';
+
+                                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                                if (mysqli_connect_errno()) {
+                                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                                }
+                                
+                                $sql1 = "SELECT * FROM education_info WHERE std_id = ?";
+                                $stmt_edu = $con->prepare($sql1);
+                                $stmt_edu->bind_param('s', $uocindex);
+                                $stmt_edu->execute();
+                                $result_edu = $stmt_edu->get_result();
+
+                                $sql2 = "SELECT * FROM experience_info WHERE std_id = ?";
+                                $stmt_exp = $con->prepare($sql2);
+                                $stmt_exp->bind_param('s', $uocindex);
+                                $stmt_exp->execute();
+                                $result_exp = $stmt_exp->get_result();
+
+                                $sql3 = "SELECT * FROM skill_info WHERE std_id = ?";
+                                $stmt_skill = $con->prepare($sql3);
+                                $stmt_skill->bind_param('s', $uocindex);
+                                $stmt_skill->execute();
+                                $result_skill = $stmt_skill->get_result();
+
+                                $sql4 = "SELECT * FROM language_info WHERE std_id = ?";
+                                $stmt_lan = $con->prepare($sql4);
+                                $stmt_lan->bind_param('s', $uocindex);
+                                $stmt_lan->execute();
+                                $result_lan = $stmt_lan->get_result();
+
+                                echo '<div class="qual">';
+                                echo '<h3>Education</h3>';
+
+                                if ($result_edu && mysqli_num_rows($result_edu) > 0) {
+                                    while ($row = mysqli_fetch_assoc($result_edu)) {
+
+                                    
+                                    
+                                    echo '<div>' . $row['institution'] . '</div>';
+                                    }
+
+                                } else {
+                                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                                }
+                                    echo '<h3>Experience</h3>';
+                                if ($result_exp && mysqli_num_rows($result_exp) > 0) {
+                                    while ($row = mysqli_fetch_assoc($result_exp)) {
+
+                                   
+                                    echo '<div>' . $row['experience'] . '</div>';
+                                    }
+
+                                } else {
+                                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                                }
+
+                                echo '<h3>Skills</h3>';
+                                if ($result_skill && mysqli_num_rows($result_skill) > 0) {
+                                    while ($row = mysqli_fetch_assoc($result_skill)) {
+
+                                   
+                                    echo '<div>' . $row['skill'] . '</div>';
+                                    }
+
+                                } else {
+                                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                                }
+
+                                echo '<h3>Languages</h3>';
+                                if ($result_lan && mysqli_num_rows($result_lan) > 0) {
+                                    while ($row = mysqli_fetch_assoc($result_lan)) {
+
+                                   
+                                    echo '<div>' . $row['language'] . '</div>';
+                                    }
+
+                                } else {
+                                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                                }
+
+                                $sql5 = "SELECT * FROM student_info WHERE uocindex = ?";
+                                $stmt_under = $con->prepare($sql5);
+                                $stmt_under->bind_param('s', $uocindex);
+                                $stmt_under->execute();
+                                $result_under = $stmt_under->get_result();
+
+                                if ($result_under && mysqli_num_rows($result_under) > 0) {
+                                    $row = $result_under->fetch_assoc();
+
+                               
+                                    echo '<h3>Birthday</h3>';
+                                    echo '<div>' . $row['dob'] . '</div>';
+                                    echo '<h3>Address</h3>';
+                                    echo '<div>' . $row['address'] . '</div>';
+                                    
+                                    echo '</div>';
+
+
+
+
+                                } else {
+                                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                                }
+
+
+
+
+                                
+                                ?>
+                        
                         </div>
 
                     </div>
