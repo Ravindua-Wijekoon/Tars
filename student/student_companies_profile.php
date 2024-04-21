@@ -117,80 +117,115 @@
                 </div>
             </div>
             <div class="marg">
-                <div class="company-det">
-                    <img src="../images/Group 105.png" alt="comp logo">
-                    <div class="comp-name">
-                        <h1>CodeGen International</h1>
-                        <h6>Information Technology Company (1999)</h6>
-                        <h3>HQ: London, England</h3>
-                    </div>
-                    <div class="comp-about">
-                        <h4>About Company</h4>
-                        <h6>We are an extraordinary technology company taking you beyond, with purpose-built proprietary
-                            innovations to move the world forward. TravelBox™ our flagship travel software solution
-                            along with CodeGen's multidisciplinary product portfolio is globally acclaimed for our
-                            precision delivery and business transformation capabilities.</h6>
-                    </div>
+            <?php
+                if (isset($_GET['email'])) {
+                    $emailget = $_GET['email'];
+                    //echo "Email: " . $email;
+                } else {
+                    echo "Email parameter is missing.";
+                }
 
-                </div>
+                $DATABASE_HOST = 'localhost';
+                $DATABASE_USER = 'root';
+                $DATABASE_PASS = '';
+                $DATABASE_NAME = 'tars_db';
 
-                <h2>Internships</h2>
+                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                if (mysqli_connect_errno()) {
+                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                }
 
-                <div class="intern-sec">
-                    <?php
-                    for ($i = 0; $i < 6; $i++) {
-                        ?>
-                    <div class="intern-card">
-                        <div class="int-name">
-                            <h3>Product UI/UX Engineers</h3><br>
-                            <h4>Colombo, LK</h4>
-                        </div>
-                        <div class="int-button">
-                            <button type="button" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop">Details</button>
-                            <a class="md-none" type="button" href="mailto:ravinduwijekoon123@gmail.com">Apply</a>
-                        </div>
-                    </div>
+                // Query to fetch company information
+                $sql2 = "SELECT * FROM company_info WHERE email = ?";
+                $stmt2 = $con->prepare($sql2);
+                $stmt2->bind_param('s', $emailget);
+                $stmt2->execute();
+                $result2 = $stmt2->get_result();
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog ">
-                            <div class=" modal-content">
-                                <div class="md-div1">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="md-div2">
-                                    <div class="mt-title" id="staticBackdropLabel">UI/UX Designer</div>
-                                    <h6>Dribbble Holdings Ltd.</h6>
+                if ($result2 && mysqli_num_rows($result2) > 0) {
+                    $row1 = mysqli_fetch_assoc($result2);
 
-                                    <div class="md-price">LKR 50,000 - LKR 80,000</div>
-                                </div>
-                                <div class="md-div3">
-                                    UI/UX Designer of Dribbble Holdings Ltd. is a job that challenges the creativity
-                                    of a person.
-                                    Dribbble Holdings Ltd. is known for the quality products among customers. The goal
-                                    of
-                                    the job is
-                                    to
-                                    design efficient UI/UX designs to the web developers.
-                                </div>
-                                <div class="md-lable-bar">
-                                    <div>Online</div>
-                                    <div>Los Angeles, USA</div>
-                                </div>
-                                <div class="md-div4">
-                                    <button type="button" class="md-button" data-bs-dismiss="modal">Close</button>
-                                    <a class="md-button md-none" type="button"
-                                        href="mailto:ravinduwijekoon123@gmail.com">Apply</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
+                    echo '<div class="company-det">';
+                    echo '<img src="../images/Group 105.png" alt="comp logo">';
+                    echo '<div class="comp-name">';
+                    echo '<h1>' . $row1['name'] . '</h1>';
+                    echo '<h3>HQ: ' . $row1['location'] . '</h3>';
+                    echo '</div>';
+                    echo '<div class="comp-about">';
+                    echo '<h4>About Company</h4>';
+                    echo '<h6>' . $row1['about'] . '</h6>';
+                    echo '</div>';
+                    echo '</div>';
+                } else {
+                    echo "<tr><td colspan='4'>No company found for the provided email.</td></tr>";
+                }
+
+                // Query to fetch job postings for the company
+                $sql3 = "SELECT * FROM company_post_job WHERE email = ?";
+                $stmt3 = $con->prepare($sql3);
+                $stmt3->bind_param('s', $emailget);
+                $stmt3->execute();
+                $result3 = $stmt3->get_result();
+
+                if ($result3 && mysqli_num_rows($result3) > 0) {
+                    while ($row = mysqli_fetch_assoc($result3)) {
+                        // Query to fetch company information again to get 'contact_email'
+                        $sql5 = "SELECT * FROM company_info WHERE email = ?";
+                        $stmt5 = $con->prepare($sql5);
+                        $stmt5->bind_param('s', $emailget);
+                        $stmt5->execute();
+                        $result5 = $stmt5->get_result();
+                        $row5 = mysqli_fetch_assoc($result5); // Fetch the row
+
+                        echo '<div class="intern-card">';
+                        echo '<div class="int-name">';
+                        echo '<h3>' . $row['title'] . '</h3><br>';
+                        echo '<h4>' . $row['location'] . '</h4>';
+                        echo '</div>';
+                        echo '<div class="int-button">';
+                        echo '<button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Details</button>';
+                        echo '<a class="md-none" type="button" href="mailto:' . $row5['com_email'] . '">Apply</a>';
+                        echo '</div>';
+                        echo '</div>';
+
+                        //////////////////////////////////////////////////////////
+
+                        echo '<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">';
+                        echo '<div class="modal-dialog">';
+                        echo '<div class="modal-content">';
+                        echo '<div class="md-div1">';
+                        echo '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
+                        echo '</div>';
+                        echo '<div class="md-div2">';
+                        echo '<div class="mt-title" id="staticBackdropLabel">' . $row['title'] . '</div>';
+                        echo '<h6>' . $row5['name'] . '</h6>';
+                        //echo '<div class="md-price">LKR 50,000 - LKR 80,000</div>';
+                        echo '</div>';
+                        echo '<div class="md-div3">' . $row['description'] . '</div>';
+                        echo '<div class="md-lable-bar">';
+                        echo '<div>' . $row['type'] . '</div>';
+                        echo '<div>' . $row['location'] . '</div>';
+                        echo '</div>';
+                        echo '<div class="md-div4">';
+                        echo '<button type="button" class="md-button" data-bs-dismiss="modal">Close</button>';
+                        echo '<a class="md-button md-none" type="button" href="mailto:' . $row5['com_email'] . '">Apply</a>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
                     }
-                    ?>
+                } else {
+                    echo "<tr><td colspan='4'>No job postings found for the company.</td></tr>";
+                }
+                ?>
+
+             
+            
+
+
+                <!-- Modal -->
+                    
+                    
 
                 </div>
             </div>

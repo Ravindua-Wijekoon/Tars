@@ -132,21 +132,47 @@
 
             <div class="card-sec">
 
-                <?php
-                for ($i = 0; $i < 7; $i++) {
-                    ?>
-                    <a class="com-none company-card" href="./student_companies_profile.php">
-                        <img src="../images/Group 105.png" alt="">
-                        <div class="company-name">
-                            Apple Inc.
-                        </div>
-                        <div class="company-type">
-                            Technology Company
-                        </div>
+            <?php
 
-                    </a>
-                    <?php
+                $DATABASE_HOST = 'localhost';
+                $DATABASE_USER = 'root';
+                $DATABASE_PASS = '';
+                $DATABASE_NAME = 'tars_db';
+
+                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                if (mysqli_connect_errno()) {
+                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
                 }
+
+                $sql2 = "SELECT * FROM company_info";
+                $stmt2 = $con->prepare($sql2);
+                $stmt2->execute();
+                $result2 = $stmt2->get_result();
+
+
+
+
+                if ($result2 && mysqli_num_rows($result2) > 0) {
+                    while ($row = mysqli_fetch_assoc($result2)) {
+
+                    
+                        echo '<a class="com-none company-card" href="./student_companies_profile.php?email=' . urlencode($row['email']) . '">';
+                        echo '<img src="../images/Group 105.png" alt="">';
+                        echo '<div class="company-name">';
+                        echo ''. $row['name'] .'';
+                        echo '</div>';
+                        echo '<div class="company-type">';
+                        echo ''. $row['about'] .'';
+                        echo '</div>';
+                        
+                    
+                    
+                    }
+
+                } else {
+                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                }
+
                 ?>
             </div>
 

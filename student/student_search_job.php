@@ -140,74 +140,95 @@
             <!-- ========================= Cards ==================== -->
 
             <div class="job-card-sec">
-                <?php
-                for ($i = 0; $i < 23; $i++) {
-                    ?>
-                    <div class="job-card" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                        <div class="sec">
-                            <span class="card-name">
-                                Dribbble Holdings Ltd. <br>
-                                <span class="card-topic">UI/UX Designer</span>
-                            </span>
-                            <div class="image">
-                                <img src="../images/Group 105.png" alt="">
-                            </div>
+            <?php
 
-                        </div>
+                $DATABASE_HOST = 'localhost';
+                $DATABASE_USER = 'root';
+                $DATABASE_PASS = '';
+                $DATABASE_NAME = 'tars_db';
 
-                        <div class="price-tag">LKR 50,000 - LKR 80,000</div><br>
-                        <div class="about">UI/UX Designer of Dribbble Holdings Ltd. is a job that challenges the creativity
-                            of a person.
-                            Dribbble Holdings Ltd. is known for the quality products among customers. The goal of the job is
-                            to
-                            design efficient UI/UX designs to the web developers.
-                        </div>
-                        <div class="lable-bar">
-                            <div>Online</div>
-                            <div class="none">Los Angeles, USA</div>
-                        </div>
-                    </div>
-
-
-                    <!-- Modal -->
-                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog ">
-                            <div class=" modal-content">
-                                <div class="md-div1">
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="md-div2">
-                                    <div class="mt-title" id="staticBackdropLabel">UI/UX Designer</div>
-                                    <h6>Dribbble Holdings Ltd.</h6>
-
-                                    <div class="md-price">LKR 50,000 - LKR 80,000</div>
-                                </div>
-                                <div class="md-div3">
-                                    UI/UX Designer of Dribbble Holdings Ltd. is a job that challenges the creativity
-                                    of a person.
-                                    Dribbble Holdings Ltd. is known for the quality products among customers. The goal of
-                                    the job is
-                                    to
-                                    design efficient UI/UX designs to the web developers.
-                                </div>
-                                <div class="md-lable-bar">
-                                    <div>Online</div>
-                                    <div>Los Angeles, USA</div>
-                                </div>
-                                <div class="md-div4">
-                                    <button type="button" class="md-button" data-bs-dismiss="modal">Close</button>
-                                    <a class="md-button md-none" type="button"
-                                        href="mailto:ravinduwijekoon123@gmail.com">Apply</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <?php
+                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                if (mysqli_connect_errno()) {
+                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
                 }
+
+                $sql2 = "SELECT * FROM company_post_job";
+                $stmt2 = $con->prepare($sql2);
+                $stmt2->execute();
+                $result2 = $stmt2->get_result();
+
+
+
+
+                if ($result2 && mysqli_num_rows($result2) > 0) {
+                    while ($row = mysqli_fetch_assoc($result2)) {
+
+                    $email= $row['email'];
+                    $name= $row['title'];
+                    $des = $row['description'];
+                    $loc = $row['location'];
+                    $type = $row['type'];
+                    $quali = $row['qualification'];
+
+                    
+                    $sql3 = "SELECT * FROM company_info WHERE email = ?";
+                    $stmt3 = $con->prepare($sql3);
+                    $stmt3->bind_param('s', $email);
+                    $stmt3->execute();
+                    $result3 = $stmt3->get_result();
+                    $row3 = $result3->fetch_assoc();
+
+                    echo '<div class="job-card" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">';
+                    echo '<div class="sec">';
+                    echo '<span class="card-name">';
+                    echo ''. $row3['name'] .'<br>';
+                    echo '<span class="card-topic">' . $name .'</span>';
+                    echo '</span>';
+                    echo '<div class="image">';
+                    echo '<img src="../images/Group 105.png" alt="">';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '<div class="price-tag">' . $quali .'</div><br>';
+                    echo '<div class="about">'. $des .'</div>';
+                    echo '<div class="lable-bar">';
+                    echo '<div>'. $type .'</div>';
+                    echo '<div class="none">'. $loc .'</div>';
+                    echo '</div>';
+                    echo '</div>';
+
+                    /////////////////////////////////////////
+
+                    echo '<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">';
+                    echo '<div class="modal-dialog ">';
+                    echo '<div class=" modal-content">';
+                    echo '<div class="md-div1">';
+                    echo '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
+                    echo '</div>';
+                    echo '<div class="md-div2">';
+                    echo '<div class="mt-title" id="staticBackdropLabel">' . $name .'</div>';
+                    echo '<h6>'. $row3['name'] .'</h6>';
+                    echo '<div class="md-price">' . $quali .'</div>';
+                    echo '</div>';
+                    echo '<div class="md-div3">'. $des .'</div>';
+                    echo '<div class="md-lable-bar">';
+                    echo '<div>'. $type .'</div>';
+                    echo '<div>'. $loc .'</div>';
+                    echo '</div>';
+                    echo '<div class="md-div4">';
+                    echo '<button type="button" class="md-button" data-bs-dismiss="modal">Close</button>';
+                    echo '<a class="md-button md-none" type="button" href="mailto:'. $row3['com_email'] .'">Apply</a>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+
+                    
+                    }
+
+                } else {
+                    echo "<tr><td colspan='4'>No students found.</td></tr>";
+                }
+
                 ?>
             </div>
 
