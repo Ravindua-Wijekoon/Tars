@@ -60,14 +60,14 @@ $uocindex = $_SESSION['id'];
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="./student_application.php">
                         <span class="nav-icon">
                             <ion-icon name="document-text-outline"></ion-icon>
                         </span>
                         <span class="title">Application</span>
                     </a>
-                </li>
+                </li> -->
 
                 <!-- <li>
                     <a href="#">
@@ -100,18 +100,18 @@ $uocindex = $_SESSION['id'];
                     Dashboard
                 </div>
                 <div class="search">
-                    <label>
+                    <!-- <label>
                         <input type="text" placeholder="Search here">
                         <ion-icon name="search-outline"></ion-icon>
-                    </label>
+                    </label> -->
                 </div>
 
                 <div class="sec-1">
                     <div class="messages">
-                        <img src="../images/messages.png" alt="" />
+                        <!-- <img src="../images/messages.png" alt="" /> -->
                     </div>
                     <div class="notification">
-                        <img src="../images/notification.png" alt="" />
+                        <!-- <img src="../images/notification.png" alt="" /> -->
                     </div>
                     <div class="logout">
                         <a class="none" href="#">Logout</a>
@@ -127,7 +127,7 @@ $uocindex = $_SESSION['id'];
             </div>
 
             <!-- ======================= Cards ================== -->
-            <div class="cardBox">
+            <!-- <div class="cardBox">
                 <div class="card">
                     <div>
                         <div class="cardName">Applied</div>
@@ -164,15 +164,15 @@ $uocindex = $_SESSION['id'];
                     </div>
                 </div>
 
-            </div>
+            </div> -->
 
             <!-- ================ Company list ================= -->
             <div class="grid-container">
                 <div class="item1">
                     <span class="title">Featured Companies</span>
                     <div class="card-sec">
-                        
-                    <?php
+
+                        <?php
 
                         $DATABASE_HOST = 'localhost';
                         $DATABASE_USER = 'root';
@@ -189,28 +189,28 @@ $uocindex = $_SESSION['id'];
                         $stmt->execute();
                         $result = $stmt->get_result();
 
-                        
+
 
 
                         if ($result && mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
 
-                            $email= $row['email'];
+                                $email = $row['email'];
 
-                            
-                            $sql1 = "SELECT COUNT(*) AS email_count FROM company_post_job WHERE email = ?";
-                            $stmt1 = $con->prepare($sql1);
-                            $stmt1->bind_param('s', $email);
-                            $stmt1->execute();
-                            $result1 = $stmt1->get_result();
-                            $row1 = $result1->fetch_assoc();
-                            $email_count = $row1['email_count'];
 
-                            echo '<div class="c-card">';
-                            echo '<img src="../images/Group 105.png" alt="">';
-                            echo '<span>' . $row['name'] . '</span>';
-                            echo '<span class="int-no">' . $email_count . ' Internships</span>';
-                            echo '</div>';
+                                $sql1 = "SELECT COUNT(*) AS email_count FROM company_post_job WHERE email = ?";
+                                $stmt1 = $con->prepare($sql1);
+                                $stmt1->bind_param('s', $email);
+                                $stmt1->execute();
+                                $result1 = $stmt1->get_result();
+                                $row1 = $result1->fetch_assoc();
+                                $email_count = $row1['email_count'];
+
+                                echo '<div class="c-card">';
+                                echo '<img src="../images/Group 105.png" alt="" >';
+                                echo '<span>' . $row['name'] . '</span>';
+                                echo '<span class="int-no">' . $email_count . ' Internships</span>';
+                                echo '</div>';
                             }
 
                         } else {
@@ -218,8 +218,8 @@ $uocindex = $_SESSION['id'];
                         }
 
                         ?>
-                           
                     </div>
+
                 </div>
 
                 <!-- ================ Internship list ================= -->
@@ -227,59 +227,59 @@ $uocindex = $_SESSION['id'];
                 <div class="item2">
                     <span class="title">Recommended Internships</span>
                     <div class="int-sec">
-                        
-                    <?php
 
-                    $DATABASE_HOST = 'localhost';
-                    $DATABASE_USER = 'root';
-                    $DATABASE_PASS = '';
-                    $DATABASE_NAME = 'tars_db';
+                        <?php
 
-                    $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-                    if (mysqli_connect_errno()) {
-                        exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-                    }
+                        $DATABASE_HOST = 'localhost';
+                        $DATABASE_USER = 'root';
+                        $DATABASE_PASS = '';
+                        $DATABASE_NAME = 'tars_db';
 
-                    $sql2 = "SELECT * FROM company_info ORDER BY id DESC LIMIT 3";
-                    $stmt2 = $con->prepare($sql2);
-                    $stmt2->execute();
-                    $result2 = $stmt2->get_result();
-
-
-
-
-                    if ($result2 && mysqli_num_rows($result2) > 0) {
-                        while ($row = mysqli_fetch_assoc($result2)) {
-
-                        $email= $row['email'];
-                        $name= $row['name'];
-
-                        
-                        $sql3 = "SELECT title FROM company_post_job WHERE email = ?";
-                        $stmt3 = $con->prepare($sql3);
-                        $stmt3->bind_param('s', $email);
-                        $stmt3->execute();
-                        $result3 = $stmt3->get_result();
-                        $row3 = $result3->fetch_assoc();
-
-                        echo '<div class="int-card">';
-                        echo '<img src="../images/Group 105.png" alt="">';
-                        echo '<div class="text1">';
-                        echo '<span>' . $row3['title'] . '</span>'; 
-                        echo '<span>' . $name . '</span>';
-                        echo '</div>';
-                        echo '</div>';
-
-                        /////////////////////////////////////////
-                        
+                        $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                        if (mysqli_connect_errno()) {
+                            exit('Failed to connect to MySQL: ' . mysqli_connect_error());
                         }
 
-                    } else {
-                        echo "<tr><td colspan='4'>No students found.</td></tr>";
-                    }
+                        $sql2 = "SELECT * FROM company_info ORDER BY id DESC LIMIT 3";
+                        $stmt2 = $con->prepare($sql2);
+                        $stmt2->execute();
+                        $result2 = $stmt2->get_result();
 
-                    ?>
- 
+
+
+
+                        if ($result2 && mysqli_num_rows($result2) > 0) {
+                            while ($row = mysqli_fetch_assoc($result2)) {
+
+                                $email = $row['email'];
+                                $name = $row['name'];
+
+
+                                $sql3 = "SELECT title FROM company_post_job WHERE email = ?";
+                                $stmt3 = $con->prepare($sql3);
+                                $stmt3->bind_param('s', $email);
+                                $stmt3->execute();
+                                $result3 = $stmt3->get_result();
+                                $row3 = $result3->fetch_assoc();
+
+                                echo '<div class="int-card">';
+                                echo '<img src="../images/Group 105.png" alt="">';
+                                echo '<div class="text1">';
+                                echo '<span class="text2" >' . $row3['title'] . '</span>';
+                                echo '<span>' . $name . '</span>';
+                                echo '</div>';
+                                echo '</div>';
+
+                                /////////////////////////////////////////
+                        
+                            }
+
+                        } else {
+                            echo "<tr><td colspan='4'>No students found.</td></tr>";
+                        }
+
+                        ?>
+
                     </div>
                 </div>
                 <div class="item3">

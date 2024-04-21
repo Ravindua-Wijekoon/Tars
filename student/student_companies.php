@@ -51,14 +51,14 @@
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="./student_application.php">
                         <span class="nav-icon">
                             <ion-icon name="document-text-outline"></ion-icon>
                         </span>
                         <span class="title">Application</span>
                     </a>
-                </li>
+                </li> -->
 
                 <!-- <li>
                     <a href="#">
@@ -91,18 +91,18 @@
                     Companies
                 </div>
                 <div class="search">
-                    <label>
+                    <!-- <label>
                         <input type="text" placeholder="Search here">
                         <ion-icon name="search-outline"></ion-icon>
-                    </label>
+                    </label> -->
                 </div>
 
                 <div class="sec-1">
                     <div class="messages">
-                        <img src="../images/messages.png" alt="" />
+                        <!-- <img src="../images/messages.png" alt="" /> -->
                     </div>
                     <div class="notification">
-                        <img src="../images/notification.png" alt="" />
+                        <!-- <img src="../images/notification.png" alt="" /> -->
                     </div>
                     <div class="logout">
                         <a class="none" href="#">Logout</a>
@@ -113,7 +113,10 @@
                     </div>
 
                 </div>
+
+
             </div>
+
 
             <div class="search-sec">
                 <div class="search-bar">
@@ -132,7 +135,7 @@
 
             <div class="card-sec">
 
-            <?php
+                <?php
 
                 $DATABASE_HOST = 'localhost';
                 $DATABASE_USER = 'root';
@@ -149,13 +152,9 @@
                 $stmt2->execute();
                 $result2 = $stmt2->get_result();
 
-
-
-
                 if ($result2 && mysqli_num_rows($result2) > 0) {
                     while ($row = mysqli_fetch_assoc($result2)) {
 
-                    
                         echo '<a class="com-none company-card" href="./student_companies_profile.php?email=' . urlencode($row['email']) . '">';
                         echo '<img src="../images/Group 105.png" alt="">';
                         echo '<div class="company-name">';
@@ -164,9 +163,7 @@
                         echo '<div class="company-type">';
                         echo ''. $row['about'] .'';
                         echo '</div>';
-                        
-                    
-                    
+        
                     }
 
                 } else {

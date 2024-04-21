@@ -61,14 +61,14 @@ $uocindex = $_SESSION['id'];
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="./student_application.php">
                         <span class="nav-icon">
                             <ion-icon name="document-text-outline"></ion-icon>
                         </span>
                         <span class="title">Application</span>
                     </a>
-                </li>
+                </li> -->
 
                 <!-- <li>
                     <a href="#">
@@ -100,18 +100,18 @@ $uocindex = $_SESSION['id'];
                     Profile
                 </div>
                 <div class="search">
-                    <label>
+                    <!-- <label>
                         <input type="text" placeholder="Search here">
                         <ion-icon name="search-outline"></ion-icon>
-                    </label>
+                    </label> -->
                 </div>
 
                 <div class="sec-1">
                     <div class="messages">
-                        <img src="../images/messages.png" alt="" />
+                        <!-- <img src="../images/messages.png" alt="" /> -->
                     </div>
                     <div class="notification">
-                        <img src="../images/notification.png" alt="" />
+                        <!-- <img src="../images/notification.png" alt="" /> -->
                     </div>
                     <div class="logout">
                         <a class="none" href="#">Logout</a>
@@ -122,7 +122,10 @@ $uocindex = $_SESSION['id'];
                     </div>
 
                 </div>
+
+
             </div>
+
             <div class="marg">
                 <div class="card-sec2">
 
@@ -134,61 +137,62 @@ $uocindex = $_SESSION['id'];
                             <?php
 
 
-                                $DATABASE_HOST = 'localhost';
-                                $DATABASE_USER = 'root';
-                                $DATABASE_PASS = '';
-                                $DATABASE_NAME = 'tars_db';
+                            $DATABASE_HOST = 'localhost';
+                            $DATABASE_USER = 'root';
+                            $DATABASE_PASS = '';
+                            $DATABASE_NAME = 'tars_db';
 
-                                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-                                if (mysqli_connect_errno()) {
-                                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-                                }
+                            $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                            if (mysqli_connect_errno()) {
+                                exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                            }
 
-                                $sql = "SELECT * FROM student_info WHERE uocindex = ?";
-                                $stmt = $con->prepare($sql);
-                                $stmt->bind_param('s', $uocindex);
-                                $stmt->execute();
-                                $result = $stmt->get_result();
+                            $sql = "SELECT * FROM student_info WHERE uocindex = ?";
+                            $stmt = $con->prepare($sql);
+                            $stmt->bind_param('s', $uocindex);
+                            $stmt->execute();
+                            $result = $stmt->get_result();
 
-                                if ($result && mysqli_num_rows($result) > 0) {
-                                    $row = $result->fetch_assoc();
+                            if ($result && mysqli_num_rows($result) > 0) {
+                                $row = $result->fetch_assoc();
 
-                                    echo '<div class="info">';
-                                    echo '<h3>' . $row['fullname'] . '</h3>';
-                                    echo '<h6>' . $row['email'] . '</h6>';
-                                    echo '<h5>Bio</h5>';
-                                    echo '<div class="bio">' . $row['bio'] . '</div>';
-                                    echo '<br><br>';
-                                    echo '<h5>Links</h5>';
-                                    echo '<span><b>Github |</b> <span>' . $row['github'] . '</span></span><br>';
-                                    echo '<span><b>LinkedIn |</b> <span>' . $row['linkedin'] . '</span></span><br>';
-                                    echo '<span><b>Twitter |</b> <span>' . $row['portfolio'] . '</span></span>';
-                                    echo '</div>';
-
-
+                                echo '<div class="info">';
+                                echo '<h3>' . $row['fullname'] . '</h3>';
+                                echo '<h6>' . $row['email'] . '</h6>';
+                                echo '<h5>Bio</h5>';
+                                echo '<div class="bio">' . $row['bio'] . '</div>';
+                                echo '<br><br>';
+                                echo '<h5>Links</h5>';
+                                echo '<span><b>Github |</b> <span>' . $row['github'] . '</span></span><br>';
+                                echo '<span><b>LinkedIn |</b> <span>' . $row['linkedin'] . '</span></span><br>';
+                                echo '<span><b>Twitter |</b> <span>' . $row['portfolio'] . '</span></span>';
+                                echo '</div>';
 
 
-                                } else {
-                                    echo "<tr><td colspan='4'>No students found.</td></tr>";
-                                }
 
-                                ?>
+
+                            } else {
+                                echo "<tr><td colspan='4'>No students found.</td></tr>";
+                            }
+
+                            ?>
 
                         </div>
                     </div>
 
-                    <form action="../lib/php/student_profile_edit_02.php" method="post">
+                    <form class="sd-form" action="../lib/php/student_profile_edit_02.php" method="post">
 
-                    <div class="section2">
-                        <div class="button-sec">
+                        <div class="section2">
+                            <div class="button-sec">
 
-                        </div>
-                        
+                            </div>
+
                             <div class="edit-sec">
                                 <div class="div2">
                                     <label>Full Name</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB" name="fullname">
+                                        <input class="edit-input" type="text" value="Get old data from DB"
+                                            name="fullname">
                                     </div>
 
                                 </div>
@@ -196,7 +200,8 @@ $uocindex = $_SESSION['id'];
                                 <div class="div2">
                                     <label>Address</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB" name="address">
+                                        <input class="edit-input" type="text" value="Get old data from DB"
+                                            name="address">
                                     </div>
 
                                 </div>
@@ -227,7 +232,8 @@ $uocindex = $_SESSION['id'];
                                 <div class="div2">
                                     <label>Education</label><br>
                                     <div>
-                                        <input class="edit-input" id='institute_edu' name="institution_edu" type="text" value="Get old data from DB to below">
+                                        <input class="edit-input" id='institute_edu' name="institution_edu" type="text"
+                                            value="Get old data from DB to below">
                                     </div>
                                     <div class="short">
                                         <input class="edit-input" id='startYear_edu' name="start_edu" type="date">
@@ -240,18 +246,21 @@ $uocindex = $_SESSION['id'];
                                     </div>
                                 </div>
                                 <div class="preview" id="educationList">
-                                    
+
                                 </div>
                                 <div class="div2">
                                     <label>Experience</label><br>
                                     <div>
-                                        <input class="edit-input" type="text" id='institution_exp' name="institution_exp" value="Get old data from DB to below">
+                                        <input class="edit-input" type="text" id='institution_exp'
+                                            name="institution_exp" value="Get old data from DB to below">
                                     </div>
                                     <div class="short">
-                                        <input class="edit-input" id='start_exp' name="start_exp" type="date" placeholder="Get">
+                                        <input class="edit-input" id='start_exp' name="start_exp" type="date"
+                                            placeholder="Get">
                                     </div>
                                     <div class="short">
-                                        <input class="edit-input" id='end_exp' name="end_exp" type="date" placeholder="Get">
+                                        <input class="edit-input" id='end_exp' name="end_exp" type="date"
+                                            placeholder="Get">
                                     </div>
                                     <div class="plus" onclick="addEducation('experience');">
                                         <img src="../images/plus.svg" alt="" />
@@ -261,14 +270,15 @@ $uocindex = $_SESSION['id'];
 
 
                                 <div class="preview" id="experienceList">
-                                   
+
                                 </div>
 
 
                                 <div class="div2">
                                     <label>Skills</label><br>
                                     <div>
-                                        <input class="edit-input" type="text" id="skillstudent" name="skills" placeholder="Get old data from DB">
+                                        <input class="edit-input" type="text" id="skillstudent" name="skills"
+                                            placeholder="Get old data from DB">
                                     </div>
 
                                     <div class="plus" onclick="addEducation('skill');">
@@ -278,13 +288,14 @@ $uocindex = $_SESSION['id'];
                                 </div>
 
                                 <div class="preview" id="skillList">
-                                    
+
                                 </div>
 
                                 <div class="div2">
                                     <label>Language</label><br>
                                     <div>
-                                        <input class="edit-input" type="text" id="languagesstu" name="language" placeholder="Get old data from DB">
+                                        <input class="edit-input" type="text" id="languagesstu" name="language"
+                                            placeholder="Get old data from DB">
                                     </div>
 
                                     <div class="plus" onclick="addEducation('languagestu');">
@@ -294,15 +305,16 @@ $uocindex = $_SESSION['id'];
                                 </div>
 
                                 <div class="preview" id="langaugeList">
-                                    
+
                                 </div>
 
-                                
+
 
                                 <div class="div2">
                                     <label>GitHub</label>
                                     <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB" name="github">
+                                        <input class="edit-input" type="text" value="Get old data from DB"
+                                            name="github">
                                     </div>
 
                                 </div>
@@ -325,23 +337,23 @@ $uocindex = $_SESSION['id'];
                                 <input type="hidden" id="experienceData" name="experienceData" />
                                 <input type="hidden" id="langauesData" name="langauesData" />
                                 <input type="hidden" id="skillsData" name="skillsData" />
-                        
+
 
                             </div>
-                        
-                        <button class="button-sec2" type="submit">
-                            <div>Save</div>
-                        </button>
 
-                        </form>
+                            <button class="button-sec2" type="submit">
+                                <div>Save</div>
+                            </button>
 
-                    </div>
+                    </form>
+
                 </div>
-
-
             </div>
 
+
         </div>
+
+    </div>
     </div>
 
     <script>

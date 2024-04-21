@@ -54,14 +54,14 @@
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="./student_application.php">
                         <span class="nav-icon">
                             <ion-icon name="document-text-outline"></ion-icon>
                         </span>
                         <span class="title">Application</span>
                     </a>
-                </li>
+                </li> -->
 
                 <!-- <li>
                     <a href="#">
@@ -93,18 +93,18 @@
                     Search Job
                 </div>
                 <div class="search">
-                    <label>
+                    <!-- <label>
                         <input type="text" placeholder="Search here">
                         <ion-icon name="search-outline"></ion-icon>
-                    </label>
+                    </label> -->
                 </div>
 
                 <div class="sec-1">
                     <div class="messages">
-                        <img src="../images/messages.png" alt="" />
+                        <!-- <img src="../images/messages.png" alt="" /> -->
                     </div>
                     <div class="notification">
-                        <img src="../images/notification.png" alt="" />
+                        <!-- <img src="../images/notification.png" alt="" /> -->
                     </div>
                     <div class="logout">
                         <a class="none" href="#">Logout</a>
@@ -115,7 +115,10 @@
                     </div>
 
                 </div>
+
+
             </div>
+
 
             <div class="search-sec">
                 <div class="search-bar">
@@ -140,7 +143,7 @@
             <!-- ========================= Cards ==================== -->
 
             <div class="job-card-sec">
-            <?php
+                <?php
 
                 $DATABASE_HOST = 'localhost';
                 $DATABASE_USER = 'root';
@@ -239,11 +242,11 @@
     <script src="../lib/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-        </script>
+    </script>
     <script>
-        $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus')
-        })
+    $('#myModal').on('shown.bs.modal', function() {
+        $('#myInput').trigger('focus')
+    })
     </script>
 
     <!-- ====== ionicons ======= -->

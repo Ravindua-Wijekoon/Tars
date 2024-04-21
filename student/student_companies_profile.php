@@ -54,14 +54,14 @@
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="./student_application.php">
                         <span class="nav-icon">
                             <ion-icon name="document-text-outline"></ion-icon>
                         </span>
                         <span class="title">Application</span>
                     </a>
-                </li>
+                </li> -->
 
                 <!-- <li>
                     <a href="#">
@@ -85,6 +85,7 @@
 
         <!-- ========================= Main ==================== -->
         <div class="main">
+
             <div class="topbar">
                 <div class="toggle">
                     <ion-icon name="menu-outline"></ion-icon>
@@ -93,18 +94,18 @@
                     Companies
                 </div>
                 <div class="search">
-                    <label>
+                    <!-- <label>
                         <input type="text" placeholder="Search here">
                         <ion-icon name="search-outline"></ion-icon>
-                    </label>
+                    </label> -->
                 </div>
 
                 <div class="sec-1">
                     <div class="messages">
-                        <img src="../images/messages.png" alt="" />
+                        <!-- <img src="../images/messages.png" alt="" /> -->
                     </div>
                     <div class="notification">
-                        <img src="../images/notification.png" alt="" />
+                        <!-- <img src="../images/notification.png" alt="" /> -->
                     </div>
                     <div class="logout">
                         <a class="none" href="#">Logout</a>
@@ -115,9 +116,14 @@
                     </div>
 
                 </div>
+
+
             </div>
+
+
+
             <div class="marg">
-            <?php
+                <?php
                 if (isset($_GET['email'])) {
                     $emailget = $_GET['email'];
                     //echo "Email: " . $email;
@@ -219,18 +225,18 @@
                 }
                 ?>
 
-             
-            
+
+
 
 
                 <!-- Modal -->
-                    
-                    
 
-                </div>
+
+
             </div>
-
         </div>
+
+    </div>
     </div>
 
     <!-- =========== Scripts =========  -->
