@@ -127,96 +127,99 @@ $user_id = $_SESSION['id'];
                             <div class="profile-pic">
                                 <img src="../images/Group 105.png" alt="">
                             </div>
-                               <?php
+                            <?php
 
 
-                                $DATABASE_HOST = 'localhost';
-                                $DATABASE_USER = 'root';
-                                $DATABASE_PASS = '';
-                                $DATABASE_NAME = 'tars_db';
+                            $DATABASE_HOST = 'localhost';
+                            $DATABASE_USER = 'root';
+                            $DATABASE_PASS = '';
+                            $DATABASE_NAME = 'tars_db';
 
-                                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-                                if (mysqli_connect_errno()) {
-                                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-                                }
-                                
-                                $sql = "SELECT * FROM company_info WHERE email = ?";
-                                $stmt = $con->prepare($sql);
-                                $stmt->bind_param('s', $user_id);
-                                $stmt->execute();
-                                $result = $stmt->get_result();
+                            $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                            if (mysqli_connect_errno()) {
+                                exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                            }
 
-                                if ($result && mysqli_num_rows($result) > 0) {
-                                    $row = $result->fetch_assoc();
+                            $sql = "SELECT * FROM company_info WHERE email = ?";
+                            $stmt = $con->prepare($sql);
+                            $stmt->bind_param('s', $user_id);
+                            $stmt->execute();
+                            $result = $stmt->get_result();
 
-                                    echo '<div class="info">';
-                                    echo '<h1>' . $row['name'] . '</h1>';
-                                    echo '<h3>' . $row['type'] . '</h3>';
-                                    echo '<h6>' . $row['com_email'] . '</h6>';
-                                    echo '<h5>About us</h5>';
-                                    echo '<div class="bio">' . $row['about'] . '</div>';
-                                    echo '<br><br>';
-                                    echo '<h5>Links</h5>';
-                                    echo '<span><b>LinkedIn |</b> <span>' . $row['linkedin'] . '</span></span><br>';
-                                    echo '<span><b>Twitter |</b> <span>' . $row['twitter'] . '</span></span>';
-                                    echo '</div>';
+                            if ($result && mysqli_num_rows($result) > 0) {
+                                $row = $result->fetch_assoc();
 
-
+                                echo '<div class="info">';
+                                echo '<h1>' . $row['name'] . '</h1>';
+                                echo '<h3>' . $row['type'] . '</h3>';
+                                echo '<h6>' . $row['com_email'] . '</h6>';
+                                echo '<h5>About us</h5>';
+                                echo '<div class="bio">' . $row['about'] . '</div>';
+                                echo '<br><br>';
+                                echo '<h5>Links</h5>';
+                                echo '<span><b>LinkedIn |</b> <span>' . $row['linkedin'] . '</span></span><br>';
+                                echo '<span><b>Twitter |</b> <span>' . $row['twitter'] . '</span></span>';
+                                echo '</div>';
 
 
-                                } else {
-                                    echo "<tr><td colspan='4'>No students found.</td></tr>";
-                                }
-                                
-                                ?>
-                            
+
+
+                            } else {
+                                echo "<tr><td colspan='4'>No students found.</td></tr>";
+                            }
+
+                            ?>
+
 
                         </div>
                     </div>
 
-                    <div class="section2">
-                        <div class="button-sec">
-                            <a href="./company_profile_edit.php" class="none">
-                                <div>Edit</div>
-                            </a>
+                    <div class="sd-form">
+
+                        <div class="section2">
+                            <div class="button-sec">
+                                <a href="./company_profile_edit.php" class="none">
+                                    <div>Edit</div>
+                                </a>
+
+                            </div>
+                            <?php
+
+
+                            $DATABASE_HOST = 'localhost';
+                            $DATABASE_USER = 'root';
+                            $DATABASE_PASS = '';
+                            $DATABASE_NAME = 'tars_db';
+
+                            $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                            if (mysqli_connect_errno()) {
+                                exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                            }
+
+                            $sql = "SELECT * FROM company_info WHERE email = ?";
+                            $stmt = $con->prepare($sql);
+                            $stmt->bind_param('s', $user_id);
+                            $stmt->execute();
+                            $result = $stmt->get_result();
+
+                            if ($result && mysqli_num_rows($result) > 0) {
+                                $row = $result->fetch_assoc();
+
+                                echo '<div class="qual">';
+                                echo '<h3>Location</h3>';
+                                echo '<div>' . $row['location'] . '<div>';
+                                echo '</div>';
+
+
+
+
+                            } else {
+                                echo "<tr><td colspan='4'>No students found.</td></tr>";
+                            }
+
+                            ?>
 
                         </div>
-                        <?php
-
-
-                                $DATABASE_HOST = 'localhost';
-                                $DATABASE_USER = 'root';
-                                $DATABASE_PASS = '';
-                                $DATABASE_NAME = 'tars_db';
-
-                                $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-                                if (mysqli_connect_errno()) {
-                                    exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-                                }
-                                
-                                $sql = "SELECT * FROM company_info WHERE email = ?";
-                                $stmt = $con->prepare($sql);
-                                $stmt->bind_param('s', $user_id);
-                                $stmt->execute();
-                                $result = $stmt->get_result();
-
-                                if ($result && mysqli_num_rows($result) > 0) {
-                                    $row = $result->fetch_assoc();
-
-                                    echo '<div class="qual">';
-                                    echo '<h3>Location</h3>';
-                                    echo '<div>' . $row['location'] . '<div>';
-                                    echo '</div>';
-
-
-
-
-                                } else {
-                                    echo "<tr><td colspan='4'>No students found.</td></tr>";
-                                }
-                                
-                                ?>
-
                     </div>
                 </div>
 
