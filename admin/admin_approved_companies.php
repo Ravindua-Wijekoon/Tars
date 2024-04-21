@@ -29,12 +29,12 @@
                 <div class="title">
                     Approved Company
                 </div>
-                <div class="messages">
+                <!-- <div class="messages">
                     <img src="../images/messages.png" alt="" />
                 </div>
                 <div class="notification">
                     <img src="../images/notification.png" alt="" />
-                </div>
+                </div> -->
                 <div class="logout">
                     <a class="none" href="#">Logout</a>
                 </div>

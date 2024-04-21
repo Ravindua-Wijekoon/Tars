@@ -1,4 +1,3 @@
-
 <?php
 
 session_start();
@@ -56,14 +55,14 @@ $user_id = $_SESSION['id'];
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="./company_applications.php">
                         <span class="nav-icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
                         <span class="title">Application</span>
                     </a>
-                </li>
+                </li> -->
 
                 <!-- <li>
                     <a href="#">
@@ -95,18 +94,18 @@ $user_id = $_SESSION['id'];
                     Post Job
                 </div>
                 <div class="search">
-                    <label>
+                    <!-- <label>
                         <input type="text" placeholder="Search here">
                         <ion-icon name="search-outline"></ion-icon>
-                    </label>
+                    </label> -->
                 </div>
 
                 <div class="sec-1">
                     <div class="messages">
-                        <img src="../images/messages.png" alt="" />
+                        <!-- <img src="../images/messages.png" alt="" /> -->
                     </div>
                     <div class="notification">
-                        <img src="../images/notification.png" alt="" />
+                        <!-- <img src="../images/notification.png" alt="" /> -->
                     </div>
                     <div class="logout">
                         <a class="none" href="#">Logout</a>
@@ -120,6 +119,9 @@ $user_id = $_SESSION['id'];
 
 
             </div>
+
+
+
 
             <!-- ======================= Cards ================== -->
             <div class="cardBox2">
@@ -154,9 +156,9 @@ $user_id = $_SESSION['id'];
                     while ($row = mysqli_fetch_assoc($result)) {
 
                         echo "<div class='card3'>";
-                        echo "<h2>". $row['title'] ."</h2>";
-                        echo "<h4>". $row['description'] ."</h4>";
-                        echo "<div class='type'>". $row['type'] ."</div>";
+                        echo "<h2>" . $row['title'] . "</h2>";
+                        echo "<h4>" . $row['description'] . "</h4>";
+                        echo "<div class='type'>" . $row['type'] . "</div>";
                         echo "<h6>Applied</h6>";
                         echo "<h5>14</h5>";
                         echo "</div>";

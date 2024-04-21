@@ -161,7 +161,7 @@ body {
 
 .search {
   position: relative;
-  width: 400px;
+  width: 500px;
   margin: 0 10px;
 }
 
@@ -191,10 +191,14 @@ body {
 
 .sec-1 {
   display: flex;
+  justify-content: right;
   width: 300px;
+  margin-right: 20px;
 }
 
 .logout {
+  display: flex;
+  align-items: center;
   margin-right: 30px;
   font-size: 20px;
 }
@@ -239,6 +243,7 @@ body {
   padding: 20px;
   display: flex;
   justify-content: space-around;
+  justify-content: left;
 }
 
 .cardBox .card {
@@ -508,7 +513,7 @@ input[type="radio"] {
   margin-bottom: 10px;
   color: white;
   display: flex;
-  font-size: 15px;
+  font-size: 15Fpx;
   align-items: center;
   justify-content: center;
   cursor: pointer;

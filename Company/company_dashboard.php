@@ -1,4 +1,3 @@
-
 <?php
 
 session_start();
@@ -53,14 +52,14 @@ $user_id = $_SESSION['id'];
 
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="./company_applications.php">
                         <span class="nav-icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
                         <span class="title">Application</span>
                     </a>
-                </li>
+                </li> -->
 
                 <!-- <li>
                     <a href="#">
@@ -92,18 +91,18 @@ $user_id = $_SESSION['id'];
                     Dashboard
                 </div>
                 <div class="search">
-                    <label>
+                    <!-- <label>
                         <input type="text" placeholder="Search here">
                         <ion-icon name="search-outline"></ion-icon>
-                    </label>
+                    </label> -->
                 </div>
 
                 <div class="sec-1">
                     <div class="messages">
-                        <img src="../images/messages.png" alt="" />
+                        <!-- <img src="../images/messages.png" alt="" /> -->
                     </div>
                     <div class="notification">
-                        <img src="../images/notification.png" alt="" />
+                        <!-- <img src="../images/notification.png" alt="" /> -->
                     </div>
                     <div class="logout">
                         <a class="none" href="#">Logout</a>
@@ -118,59 +117,62 @@ $user_id = $_SESSION['id'];
 
             </div>
 
+
+
+
             <!-- ======================= Cards ================== -->
             <div class="cardBox">
                 <div class="card">
-                <?php
+                    <?php
 
-                        $DATABASE_HOST = 'localhost';
-                        $DATABASE_USER = 'root';
-                        $DATABASE_PASS = '';
-                        $DATABASE_NAME = 'tars_db';
+                    $DATABASE_HOST = 'localhost';
+                    $DATABASE_USER = 'root';
+                    $DATABASE_PASS = '';
+                    $DATABASE_NAME = 'tars_db';
 
-                        $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-                        if (mysqli_connect_errno()) {
-                            exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-                        }
+                    $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                    if (mysqli_connect_errno()) {
+                        exit('Failed to connect to MySQL: ' . mysqli_connect_error());
+                    }
 
-                        
-                        $sql_count = "SELECT COUNT(*) AS internship_count FROM company_post_job WHERE email = ?";
-                        $stmt_count = $con->prepare($sql_count);
-                        $stmt_count->bind_param('s', $user_id);
-                        $stmt_count->execute();
-                        $result_count = $stmt_count->get_result();
 
-                        if ($result_count && $result_count->num_rows > 0) {
-                            $row_count = $result_count->fetch_assoc();
-                            $internship_count = $row_count['internship_count'];
+                    $sql_count = "SELECT COUNT(*) AS internship_count FROM company_post_job WHERE email = ?";
+                    $stmt_count = $con->prepare($sql_count);
+                    $stmt_count->bind_param('s', $user_id);
+                    $stmt_count->execute();
+                    $result_count = $stmt_count->get_result();
 
-                           
-                            echo '<div>';
-                            echo '<div class="cardName">Internships</div>';
-                            echo '<div class="numbers">' . $internship_count . '</div>';
-                            echo '</div>';
+                    if ($result_count && $result_count->num_rows > 0) {
+                        $row_count = $result_count->fetch_assoc();
+                        $internship_count = $row_count['internship_count'];
 
-                            echo '<div class="image">';
-                            echo '<img src="../images/briefcase.png" alt="">';
-                            echo '</div>';
-                        } else {
-                            
-                            echo '<div>';
-                            echo '<div class="cardName">Internships</div>';
-                            echo '<div class="numbers">0</div>'; 
-                            echo '</div>';
 
-                            echo '<div class="image">';
-                            echo '<img src="../images/briefcase.png" alt="">';
-                            echo '</div>';
-                        }
+                        echo '<div>';
+                        echo '<div class="cardName">Internships</div>';
+                        echo '<div class="numbers">' . $internship_count . '</div>';
+                        echo '</div>';
 
-                        mysqli_close($con);
+                        echo '<div class="image">';
+                        echo '<img src="../images/briefcase.png" alt="">';
+                        echo '</div>';
+                    } else {
+
+                        echo '<div>';
+                        echo '<div class="cardName">Internships</div>';
+                        echo '<div class="numbers">0</div>';
+                        echo '</div>';
+
+                        echo '<div class="image">';
+                        echo '<img src="../images/briefcase.png" alt="">';
+                        echo '</div>';
+                    }
+
+                    mysqli_close($con);
                     ?>
 
                 </div>
 
-                <div class="card">
+                <!-- <div class="card">
                     <div>
                         <div class="cardName">Applications</div>
                         <div class="numbers">10</div>
@@ -180,9 +182,9 @@ $user_id = $_SESSION['id'];
                     <div class="image">
                         <img src="../images/calendar.png" alt="">
                     </div>
-                </div>
+                </div> -->
 
-                <div class="card">
+                <!-- <div class="card">
                     <div>
                         <div class="cardName">Messages</div>
                         <div class="numbers">08</div>
@@ -192,13 +194,13 @@ $user_id = $_SESSION['id'];
                     <div class="image">
                         <img src="../images/messagetext1.png" alt="">
                     </div>
-                </div>
+                </div> -->
 
             </div>
 
             <!-- ================ Company list ================= -->
             <div class="cont-box">
-            <?php
+                <?php
 
                 $DATABASE_HOST = 'localhost';
                 $DATABASE_USER = 'root';
@@ -219,17 +221,17 @@ $user_id = $_SESSION['id'];
                 if ($result && mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
 
-                    echo '<div class="item1">';
-                    echo '<h3>' . $row['title'] . '</h3><br>';
-                    echo ' <h5>Applicant<span>20</span></h5>';
-                    echo '</div>';
+                        echo '<div class="item1">';
+                        echo '<h3>' . $row['title'] . '</h3><br>';
+                        echo ' <h5>Applicant<span>20</span></h5>';
+                        echo '</div>';
                     }
 
                 } else {
                     echo "<tr><td colspan='4'>No students found.</td></tr>";
                 }
 
-            ?>
+                ?>
             </div>
 
         </div>

@@ -29,12 +29,12 @@
                 <div class="title">
                     Request
                 </div>
-                <div class="messages">
+                <!-- <div class="messages">
                     <img src="../images/messages.png" alt="" />
                 </div>
                 <div class="notification">
                     <img src="../images/notification.png" alt="" />
-                </div>
+                </div> -->
                 <div class="logout">
                     <a class="none" href="#">Logout</a>
                 </div>
@@ -46,7 +46,7 @@
                 <div class="sub-div">
                     <?php
 
-                    if (isset ($_GET['uocindex'])) {
+                    if (isset($_GET['uocindex'])) {
 
                         $uocindex = $_GET['uocindex'];
 
@@ -59,7 +59,7 @@
 
                         $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
                         if (mysqli_connect_errno()) {
-                            exit ('Failed to connect to MySQL: ' . mysqli_connect_error());
+                            exit('Failed to connect to MySQL: ' . mysqli_connect_error());
                         }
 
 
@@ -111,7 +111,7 @@
                         window.location.href = '../lib/php/admin_accept_student.php?uocindex=' + uocindex;
                     }
 
-                    function rejectStudent(uocindex){
+                    function rejectStudent(uocindex) {
 
                         window.location.href = '../lib/php/admin_reject_student.php?uocindex=' + uocindex;
                     }

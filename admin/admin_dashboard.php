@@ -62,12 +62,12 @@ mysqli_close($con);
         <!-- ========================= Main ==================== -->
         <div class="main">
             <div class="topbar">
-                <div class="messages">
+                <!-- <div class="messages">
                     <img src="../images/messages.png" alt="" />
                 </div>
                 <div class="notification">
                     <img src="../images/notification.png" alt="" />
-                </div>
+                </div> -->
                 <div class="logout">
                     <a class="none" href="#">Logout</a>
                 </div>
@@ -81,7 +81,7 @@ mysqli_close($con);
                 <a href="../admin/admin_approved_students.php" class="none">
                     <div class="card">
 
-                    <?php
+                        <?php
                         $DATABASE_HOST = 'localhost';
                         $DATABASE_USER = 'root';
                         $DATABASE_PASS = '';
@@ -111,13 +111,13 @@ mysqli_close($con);
 
 
                         ?>
-                        
+
                     </div>
                 </a>
 
                 <a href="../admin/admin_approved_companies.php" class="none">
                     <div class="card">
-                    <?php
+                        <?php
                         $DATABASE_HOST = 'localhost';
                         $DATABASE_USER = 'root';
                         $DATABASE_PASS = '';

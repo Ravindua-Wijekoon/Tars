@@ -42,14 +42,14 @@
                     </a>
                 </li>
 
-                <li>
+                <!-- <li>
                     <a href="./company_applications.php">
                         <span class="nav-icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
                         <span class="title">Application</span>
                     </a>
-                </li>
+                </li> -->
 
                 <!-- <li>
                     <a href="#">
@@ -81,18 +81,18 @@
                     Post Job
                 </div>
                 <div class="search">
-                    <label>
+                    <!-- <label>
                         <input type="text" placeholder="Search here">
                         <ion-icon name="search-outline"></ion-icon>
-                    </label>
+                    </label> -->
                 </div>
 
                 <div class="sec-1">
                     <div class="messages">
-                        <img src="../images/messages.png" alt="" />
+                        <!-- <img src="../images/messages.png" alt="" /> -->
                     </div>
                     <div class="notification">
-                        <img src="../images/notification.png" alt="" />
+                        <!-- <img src="../images/notification.png" alt="" /> -->
                     </div>
                     <div class="logout">
                         <a class="none" href="#">Logout</a>
@@ -101,9 +101,14 @@
                     <div class="user">
                         <img src="../images/profile_photos/customer02.jpg" alt="">
                     </div>
+
                 </div>
 
+
             </div>
+
+
+
             <form action="../lib/php/company_job_post.php" method="post">
                 <div class="main-appbox">
                     <div class="appbox1">
