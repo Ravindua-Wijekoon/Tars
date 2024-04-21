@@ -223,20 +223,22 @@ $user_id = $_SESSION['id'];
                                 echo '<div class="input-full">';
                                 echo '<input class="edit-input" type="text" name="twitter" value="' . $row['twitter'] . '">';
                                 echo '</div>';
-                                echo '<input type="hidden" name="user_id" value="<?php echo htmlspecialchars($user_id); ?>">';
+                                echo '<input type="hidden" name="user_id" value="' . htmlspecialchars($user_id) . '">';
                                 echo '</div>';
 
                                 echo '</div>';
                                 echo '</form>';
                                 echo '</div>';
 
-                                ?>
+                                
 
                         
-                        <button class="button-sec2" type="submit">
-                            <div>Save</div>
-                        </button>
-                        </form>
+echo '<form action="../lib/php/com_profile_edit.php" method="POST">';
+echo '<button class="button-sec2" type="submit">';
+echo '<div>Save</div>';
+echo '</button>';
+echo '</form>';
+?>
                     </div>
                 </div>
 
