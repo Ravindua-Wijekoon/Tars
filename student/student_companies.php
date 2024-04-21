@@ -105,7 +105,7 @@
                         <!-- <img src="../images/notification.png" alt="" /> -->
                     </div>
                     <div class="logout">
-                        <a class="none" href="#">Logout</a>
+                        <a class="none" href="../login/login.php">Logout</a>
                     </div>
 
                     <div class="user">
@@ -158,12 +158,12 @@
                         echo '<a class="com-none company-card" href="./student_companies_profile.php?email=' . urlencode($row['email']) . '">';
                         echo '<img src="../images/Group 105.png" alt="">';
                         echo '<div class="company-name">';
-                        echo ''. $row['name'] .'';
+                        echo '' . $row['name'] . '';
                         echo '</div>';
                         echo '<div class="company-type">';
-                        echo ''. $row['about'] .'';
+                        echo '' . $row['about'] . '';
                         echo '</div>';
-        
+
                     }
 
                 } else {

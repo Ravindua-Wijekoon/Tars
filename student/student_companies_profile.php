@@ -108,7 +108,7 @@
                         <!-- <img src="../images/notification.png" alt="" /> -->
                     </div>
                     <div class="logout">
-                        <a class="none" href="#">Logout</a>
+                        <a class="none" href="../login/login.php">Logout</a>
                     </div>
 
                     <div class="user">

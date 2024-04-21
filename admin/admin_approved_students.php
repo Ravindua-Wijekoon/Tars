@@ -57,7 +57,6 @@
                             <th>ID</th>
                             <th>Student</th>
                             <th>Department</th>
-                            <th>Company</th>
                             <th>Contact</th>
                             <th></th>
                         </tr>
@@ -80,7 +79,7 @@
                         if ($result && mysqli_num_rows($result) > 0) {
                             while ($row = mysqli_fetch_assoc($result)) {
                                 echo "<tr>";
-                                echo "<td>". $row['uocindex'] ."</td>";
+                                echo "<td>" . $row['uocindex'] . "</td>";
                                 echo "<td>" . $row['fullname'] . "</td>";
                                 echo "<td>" . $row['address'] . "</td>";
                                 echo "<td><a href='mailto:" . $row['email'] . "' class='none'><img src='../images/email icon.png' alt='' class='contact-icon'></a></td>";

@@ -116,7 +116,7 @@ $uocindex = $_SESSION['id'];
                         <!-- <img src="../images/notification.png" alt="" /> -->
                     </div>
                     <div class="logout">
-                        <a class="none" href="#">Logout</a>
+                        <a class="none" href="../login/login.php">Logout</a>
                     </div>
 
                     <div class="user">
@@ -198,119 +198,119 @@ $uocindex = $_SESSION['id'];
                             <?php
 
 
-                        $DATABASE_HOST = 'localhost';
-                        $DATABASE_USER = 'root';
-                        $DATABASE_PASS = '';
-                        $DATABASE_NAME = 'tars_db';
+                            $DATABASE_HOST = 'localhost';
+                            $DATABASE_USER = 'root';
+                            $DATABASE_PASS = '';
+                            $DATABASE_NAME = 'tars_db';
 
-                        $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
-                        if (mysqli_connect_errno()) {
-                            exit('Failed to connect to MySQL: ' . mysqli_connect_error());
-                        }
-
-                        $sql1 = "SELECT * FROM education_info WHERE std_id = ?";
-                        $stmt_edu = $con->prepare($sql1);
-                        $stmt_edu->bind_param('s', $uocindex);
-                        $stmt_edu->execute();
-                        $result_edu = $stmt_edu->get_result();
-
-                        $sql2 = "SELECT * FROM experience_info WHERE std_id = ?";
-                        $stmt_exp = $con->prepare($sql2);
-                        $stmt_exp->bind_param('s', $uocindex);
-                        $stmt_exp->execute();
-                        $result_exp = $stmt_exp->get_result();
-
-                        $sql3 = "SELECT * FROM skill_info WHERE std_id = ?";
-                        $stmt_skill = $con->prepare($sql3);
-                        $stmt_skill->bind_param('s', $uocindex);
-                        $stmt_skill->execute();
-                        $result_skill = $stmt_skill->get_result();
-
-                        $sql4 = "SELECT * FROM language_info WHERE std_id = ?";
-                        $stmt_lan = $con->prepare($sql4);
-                        $stmt_lan->bind_param('s', $uocindex);
-                        $stmt_lan->execute();
-                        $result_lan = $stmt_lan->get_result();
-
-                        echo '<div class="qual">';
-                        echo '<h3>Education</h3>';
-
-                        if ($result_edu && mysqli_num_rows($result_edu) > 0) {
-                            while ($row = mysqli_fetch_assoc($result_edu)) {
-
-
-
-                                echo '<div>' . $row['institution'] . '</div>';
+                            $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
+                            if (mysqli_connect_errno()) {
+                                exit('Failed to connect to MySQL: ' . mysqli_connect_error());
                             }
 
-                        } else {
-                            echo "<tr><td colspan='4'>No students found.</td></tr>";
-                        }
-                        echo '<h3>Experience</h3>';
-                        if ($result_exp && mysqli_num_rows($result_exp) > 0) {
-                            while ($row = mysqli_fetch_assoc($result_exp)) {
+                            $sql1 = "SELECT * FROM education_info WHERE std_id = ?";
+                            $stmt_edu = $con->prepare($sql1);
+                            $stmt_edu->bind_param('s', $uocindex);
+                            $stmt_edu->execute();
+                            $result_edu = $stmt_edu->get_result();
+
+                            $sql2 = "SELECT * FROM experience_info WHERE std_id = ?";
+                            $stmt_exp = $con->prepare($sql2);
+                            $stmt_exp->bind_param('s', $uocindex);
+                            $stmt_exp->execute();
+                            $result_exp = $stmt_exp->get_result();
+
+                            $sql3 = "SELECT * FROM skill_info WHERE std_id = ?";
+                            $stmt_skill = $con->prepare($sql3);
+                            $stmt_skill->bind_param('s', $uocindex);
+                            $stmt_skill->execute();
+                            $result_skill = $stmt_skill->get_result();
+
+                            $sql4 = "SELECT * FROM language_info WHERE std_id = ?";
+                            $stmt_lan = $con->prepare($sql4);
+                            $stmt_lan->bind_param('s', $uocindex);
+                            $stmt_lan->execute();
+                            $result_lan = $stmt_lan->get_result();
+
+                            echo '<div class="qual">';
+                            echo '<h3>Education</h3>';
+
+                            if ($result_edu && mysqli_num_rows($result_edu) > 0) {
+                                while ($row = mysqli_fetch_assoc($result_edu)) {
 
 
-                                echo '<div>' . $row['experience'] . '</div>';
+
+                                    echo '<div>' . $row['institution'] . '</div>';
+                                }
+
+                            } else {
+                                echo "<tr><td colspan='4'>No students found.</td></tr>";
+                            }
+                            echo '<h3>Experience</h3>';
+                            if ($result_exp && mysqli_num_rows($result_exp) > 0) {
+                                while ($row = mysqli_fetch_assoc($result_exp)) {
+
+
+                                    echo '<div>' . $row['experience'] . '</div>';
+                                }
+
+                            } else {
+                                echo "<tr><td colspan='4'>No students found.</td></tr>";
                             }
 
-                        } else {
-                            echo "<tr><td colspan='4'>No students found.</td></tr>";
-                        }
-
-                        echo '<h3>Skills</h3>';
-                        if ($result_skill && mysqli_num_rows($result_skill) > 0) {
-                            while ($row = mysqli_fetch_assoc($result_skill)) {
+                            echo '<h3>Skills</h3>';
+                            if ($result_skill && mysqli_num_rows($result_skill) > 0) {
+                                while ($row = mysqli_fetch_assoc($result_skill)) {
 
 
-                                echo '<div>' . $row['skill'] . '</div>';
+                                    echo '<div>' . $row['skill'] . '</div>';
+                                }
+
+                            } else {
+                                echo "<tr><td colspan='4'>No students found.</td></tr>";
                             }
 
-                        } else {
-                            echo "<tr><td colspan='4'>No students found.</td></tr>";
-                        }
-
-                        echo '<h3>Languages</h3>';
-                        if ($result_lan && mysqli_num_rows($result_lan) > 0) {
-                            while ($row = mysqli_fetch_assoc($result_lan)) {
+                            echo '<h3>Languages</h3>';
+                            if ($result_lan && mysqli_num_rows($result_lan) > 0) {
+                                while ($row = mysqli_fetch_assoc($result_lan)) {
 
 
-                                echo '<div>' . $row['language'] . '</div>';
+                                    echo '<div>' . $row['language'] . '</div>';
+                                }
+
+                            } else {
+                                echo "<tr><td colspan='4'>No students found.</td></tr>";
                             }
 
-                        } else {
-                            echo "<tr><td colspan='4'>No students found.</td></tr>";
-                        }
+                            $sql5 = "SELECT * FROM student_info WHERE uocindex = ?";
+                            $stmt_under = $con->prepare($sql5);
+                            $stmt_under->bind_param('s', $uocindex);
+                            $stmt_under->execute();
+                            $result_under = $stmt_under->get_result();
 
-                        $sql5 = "SELECT * FROM student_info WHERE uocindex = ?";
-                        $stmt_under = $con->prepare($sql5);
-                        $stmt_under->bind_param('s', $uocindex);
-                        $stmt_under->execute();
-                        $result_under = $stmt_under->get_result();
-
-                        if ($result_under && mysqli_num_rows($result_under) > 0) {
-                            $row = $result_under->fetch_assoc();
+                            if ($result_under && mysqli_num_rows($result_under) > 0) {
+                                $row = $result_under->fetch_assoc();
 
 
-                            echo '<h3>Birthday</h3>';
-                            echo '<div>' . $row['dob'] . '</div>';
-                            echo '<h3>Address</h3>';
-                            echo '<div>' . $row['address'] . '</div>';
+                                echo '<h3>Birthday</h3>';
+                                echo '<div>' . $row['dob'] . '</div>';
+                                echo '<h3>Address</h3>';
+                                echo '<div>' . $row['address'] . '</div>';
 
-                            echo '</div>';
+                                echo '</div>';
 
 
 
 
-                        } else {
-                            echo "<tr><td colspan='4'>No students found.</td></tr>";
-                        }
+                            } else {
+                                echo "<tr><td colspan='4'>No students found.</td></tr>";
+                            }
 
 
 
 
 
-                        ?>
+                            ?>
 
                         </div>
                     </div>

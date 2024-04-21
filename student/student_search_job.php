@@ -107,7 +107,7 @@
                         <!-- <img src="../images/notification.png" alt="" /> -->
                     </div>
                     <div class="logout">
-                        <a class="none" href="#">Logout</a>
+                        <a class="none" href="../login/login.php">Logout</a>
                     </div>
 
                     <div class="user">
@@ -166,66 +166,66 @@
                 if ($result2 && mysqli_num_rows($result2) > 0) {
                     while ($row = mysqli_fetch_assoc($result2)) {
 
-                    $email= $row['email'];
-                    $name= $row['title'];
-                    $des = $row['description'];
-                    $loc = $row['location'];
-                    $type = $row['type'];
-                    $quali = $row['qualification'];
+                        $email = $row['email'];
+                        $name = $row['title'];
+                        $des = $row['description'];
+                        $loc = $row['location'];
+                        $type = $row['type'];
+                        $quali = $row['qualification'];
 
-                    
-                    $sql3 = "SELECT * FROM company_info WHERE email = ?";
-                    $stmt3 = $con->prepare($sql3);
-                    $stmt3->bind_param('s', $email);
-                    $stmt3->execute();
-                    $result3 = $stmt3->get_result();
-                    $row3 = $result3->fetch_assoc();
 
-                    echo '<div class="job-card" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">';
-                    echo '<div class="sec">';
-                    echo '<span class="card-name">';
-                    echo ''. $row3['name'] .'<br>';
-                    echo '<span class="card-topic">' . $name .'</span>';
-                    echo '</span>';
-                    echo '<div class="image">';
-                    echo '<img src="../images/Group 105.png" alt="">';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '<div class="price-tag">' . $quali .'</div><br>';
-                    echo '<div class="about">'. $des .'</div>';
-                    echo '<div class="lable-bar">';
-                    echo '<div>'. $type .'</div>';
-                    echo '<div class="none">'. $loc .'</div>';
-                    echo '</div>';
-                    echo '</div>';
+                        $sql3 = "SELECT * FROM company_info WHERE email = ?";
+                        $stmt3 = $con->prepare($sql3);
+                        $stmt3->bind_param('s', $email);
+                        $stmt3->execute();
+                        $result3 = $stmt3->get_result();
+                        $row3 = $result3->fetch_assoc();
 
-                    /////////////////////////////////////////
+                        echo '<div class="job-card" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">';
+                        echo '<div class="sec">';
+                        echo '<span class="card-name">';
+                        echo '' . $row3['name'] . '<br>';
+                        echo '<span class="card-topic">' . $name . '</span>';
+                        echo '</span>';
+                        echo '<div class="image">';
+                        echo '<img src="../images/Group 105.png" alt="">';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '<div class="price-tag">' . $quali . '</div><br>';
+                        echo '<div class="about">' . $des . '</div>';
+                        echo '<div class="lable-bar">';
+                        echo '<div>' . $type . '</div>';
+                        echo '<div class="none">' . $loc . '</div>';
+                        echo '</div>';
+                        echo '</div>';
 
-                    echo '<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">';
-                    echo '<div class="modal-dialog ">';
-                    echo '<div class=" modal-content">';
-                    echo '<div class="md-div1">';
-                    echo '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
-                    echo '</div>';
-                    echo '<div class="md-div2">';
-                    echo '<div class="mt-title" id="staticBackdropLabel">' . $name .'</div>';
-                    echo '<h6>'. $row3['name'] .'</h6>';
-                    echo '<div class="md-price">' . $quali .'</div>';
-                    echo '</div>';
-                    echo '<div class="md-div3">'. $des .'</div>';
-                    echo '<div class="md-lable-bar">';
-                    echo '<div>'. $type .'</div>';
-                    echo '<div>'. $loc .'</div>';
-                    echo '</div>';
-                    echo '<div class="md-div4">';
-                    echo '<button type="button" class="md-button" data-bs-dismiss="modal">Close</button>';
-                    echo '<a class="md-button md-none" type="button" href="mailto:'. $row3['com_email'] .'">Apply</a>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</div>';
+                        /////////////////////////////////////////
+                
+                        echo '<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">';
+                        echo '<div class="modal-dialog ">';
+                        echo '<div class=" modal-content">';
+                        echo '<div class="md-div1">';
+                        echo '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
+                        echo '</div>';
+                        echo '<div class="md-div2">';
+                        echo '<div class="mt-title" id="staticBackdropLabel">' . $name . '</div>';
+                        echo '<h6>' . $row3['name'] . '</h6>';
+                        echo '<div class="md-price">' . $quali . '</div>';
+                        echo '</div>';
+                        echo '<div class="md-div3">' . $des . '</div>';
+                        echo '<div class="md-lable-bar">';
+                        echo '<div>' . $type . '</div>';
+                        echo '<div>' . $loc . '</div>';
+                        echo '</div>';
+                        echo '<div class="md-div4">';
+                        echo '<button type="button" class="md-button" data-bs-dismiss="modal">Close</button>';
+                        echo '<a class="md-button md-none" type="button" href="mailto:' . $row3['com_email'] . '">Apply</a>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
 
-                    
+
                     }
 
                 } else {
@@ -242,11 +242,11 @@
     <script src="../lib/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+        </script>
     <script>
-    $('#myModal').on('shown.bs.modal', function() {
-        $('#myInput').trigger('focus')
-    })
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').trigger('focus')
+        })
     </script>
 
     <!-- ====== ionicons ======= -->
