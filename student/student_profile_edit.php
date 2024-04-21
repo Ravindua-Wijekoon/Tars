@@ -233,7 +233,7 @@ $uocindex = $_SESSION['id'];
                                     <label>Education</label><br>
                                     <div>
                                         <input class="edit-input" id='institute_edu' name="institution_edu" type="text"
-                                            value="Get old data from DB to below">
+                                            placeholder="Enter New Education">
                                     </div>
                                     <div class="short">
                                         <input class="edit-input" id='startYear_edu' name="start_edu" type="date">
@@ -252,7 +252,7 @@ $uocindex = $_SESSION['id'];
                                     <label>Experience</label><br>
                                     <div>
                                         <input class="edit-input" type="text" id='institution_exp'
-                                            name="institution_exp" value="Get old data from DB to below">
+                                            name="institution_exp" placeholder="Enter New Experience">
                                     </div>
                                     <div class="short">
                                         <input class="edit-input" id='start_exp' name="start_exp" type="date"
@@ -278,7 +278,7 @@ $uocindex = $_SESSION['id'];
                                     <label>Skills</label><br>
                                     <div>
                                         <input class="edit-input" type="text" id="skillstudent" name="skills"
-                                            placeholder="Get old data from DB">
+                                            placeholder="Enter New Skills">
                                     </div>
 
                                     <div class="plus" onclick="addEducation('skill');">
@@ -295,7 +295,7 @@ $uocindex = $_SESSION['id'];
                                     <label>Language</label><br>
                                     <div>
                                         <input class="edit-input" type="text" id="languagesstu" name="language"
-                                            placeholder="Get old data from DB">
+                                            placeholder="Enter New Language">
                                     </div>
 
                                     <div class="plus" onclick="addEducation('languagestu');">
@@ -357,161 +357,161 @@ $uocindex = $_SESSION['id'];
     </div>
 
     <script>
-        let education = [];
-        let experiences = [];
-        let skills = [];
-        let languages = [];
+    let education = [];
+    let experiences = [];
+    let skills = [];
+    let languages = [];
 
-        function prepareEducationData(type) {
+    function prepareEducationData(type) {
 
-            if (type == 'education') {
-                let educationData = JSON.stringify(education);
-                let inputF = document.getElementById("educationData");
-                inputF.setAttribute('value', educationData);
-            } else if (type == 'experience') {
-                let experienceData = JSON.stringify(experiences);
-                let inputF = document.getElementById("experienceData");
-                inputF.setAttribute('value', experienceData);
-            } else if (type == 'skill') {
-                let skillsData = JSON.stringify(skills);
-                let inputF = document.getElementById("skillsData");
-                inputF.setAttribute('value', skillsData);
-            } else if (type == 'languagestu') {
-                let langauesData = JSON.stringify(languages);
-                let inputF = document.getElementById("langauesData");
-                inputF.setAttribute('value', langauesData);
-            }
-
+        if (type == 'education') {
+            let educationData = JSON.stringify(education);
+            let inputF = document.getElementById("educationData");
+            inputF.setAttribute('value', educationData);
+        } else if (type == 'experience') {
+            let experienceData = JSON.stringify(experiences);
+            let inputF = document.getElementById("experienceData");
+            inputF.setAttribute('value', experienceData);
+        } else if (type == 'skill') {
+            let skillsData = JSON.stringify(skills);
+            let inputF = document.getElementById("skillsData");
+            inputF.setAttribute('value', skillsData);
+        } else if (type == 'languagestu') {
+            let langauesData = JSON.stringify(languages);
+            let inputF = document.getElementById("langauesData");
+            inputF.setAttribute('value', langauesData);
         }
 
-        function addEducation(type) {
-            //alert('ds')
-            if (type == 'education') {
-                let institute = document.getElementById("institute_edu").value;
-                let startYear = document.getElementById("startYear_edu").value;
-                let endYear = document.getElementById("endYear_edu").value;
-                //debugger
-                let newItem = {
-                    key: education.length + 1,
-                    institute: institute,
-                    startYear: startYear,
-                    endYear: endYear
-                };
-                education.push(newItem);
-            } else if (type == 'experience') {
-                let experience = document.getElementById("institution_exp").value;
-                let startYearEx = document.getElementById("start_exp").value;
-                let endYearEx = document.getElementById("end_exp").value;
-                //debugger
-                let newItem = {
-                    key: experiences.length + 1,
-                    experience: experience,
-                    startYearEx: startYearEx,
-                    endYearEx: endYearEx
-                };
-                experiences.push(newItem);
-            } else if (type == 'skill') {
-                let skillstu = document.getElementById("skillstudent").value;
-                //debugger
-                let newItem = {
-                    key: skills.length + 1,
-                    skillstu: skillstu
-                };
-                skills.push(newItem);
-            } else if (type == 'languagestu') {
-                let languagestudent = document.getElementById("languagesstu").value;
-                //debugger
-                let newItem = {
-                    key: languages.length + 1,
-                    languagestudent: languagestudent
-                };
-                languages.push(newItem);
-            }
+    }
 
-            displayEducation(type);
-            prepareEducationData(type);
+    function addEducation(type) {
+        //alert('ds')
+        if (type == 'education') {
+            let institute = document.getElementById("institute_edu").value;
+            let startYear = document.getElementById("startYear_edu").value;
+            let endYear = document.getElementById("endYear_edu").value;
+            //debugger
+            let newItem = {
+                key: education.length + 1,
+                institute: institute,
+                startYear: startYear,
+                endYear: endYear
+            };
+            education.push(newItem);
+        } else if (type == 'experience') {
+            let experience = document.getElementById("institution_exp").value;
+            let startYearEx = document.getElementById("start_exp").value;
+            let endYearEx = document.getElementById("end_exp").value;
+            //debugger
+            let newItem = {
+                key: experiences.length + 1,
+                experience: experience,
+                startYearEx: startYearEx,
+                endYearEx: endYearEx
+            };
+            experiences.push(newItem);
+        } else if (type == 'skill') {
+            let skillstu = document.getElementById("skillstudent").value;
+            //debugger
+            let newItem = {
+                key: skills.length + 1,
+                skillstu: skillstu
+            };
+            skills.push(newItem);
+        } else if (type == 'languagestu') {
+            let languagestudent = document.getElementById("languagesstu").value;
+            //debugger
+            let newItem = {
+                key: languages.length + 1,
+                languagestudent: languagestudent
+            };
+            languages.push(newItem);
         }
 
-        function removeEducation(key, type) {
-            if (type == 'education') {
-                education = education.filter(item => item.key !== key);
-            } else if (type == 'experience') {
-                experiences = experiences.filter(item => item.key !== key);
-            } else if (type == 'skill') {
-                skills = skills.filter(item => item.key !== key);
-            } else if (type == 'languagestu') {
-                languages = languages.filter(item => item.key !== key);
-            }
+        displayEducation(type);
+        prepareEducationData(type);
+    }
 
-            displayEducation(type);
-            prepareEducationData(type);
+    function removeEducation(key, type) {
+        if (type == 'education') {
+            education = education.filter(item => item.key !== key);
+        } else if (type == 'experience') {
+            experiences = experiences.filter(item => item.key !== key);
+        } else if (type == 'skill') {
+            skills = skills.filter(item => item.key !== key);
+        } else if (type == 'languagestu') {
+            languages = languages.filter(item => item.key !== key);
         }
 
-        function displayEducation(type) {
-            let list;
-            if (type == 'education') {
-                list = document.getElementById("educationList");
-                list.innerHTML = "";
-                education.forEach(item => {
-                    let div = document.createElement("div");
-                    div.innerHTML = `
+        displayEducation(type);
+        prepareEducationData(type);
+    }
+
+    function displayEducation(type) {
+        let list;
+        if (type == 'education') {
+            list = document.getElementById("educationList");
+            list.innerHTML = "";
+            education.forEach(item => {
+                let div = document.createElement("div");
+                div.innerHTML = `
                 <label> ${item.institute}</label>
                 <div onclick="removeEducation(${item.key},'education')">
                     <img src="../images/circle-xmark-regular.png" alt="">
                 </div>
                 
                 `;
-                    list.appendChild(div);
-                });
-            } else if (type == 'experience') {
-                list = document.getElementById("experienceList");
-                list.innerHTML = "";
-                experiences.forEach(item => {
-                    let div = document.createElement("div");
-                    div.innerHTML = `
+                list.appendChild(div);
+            });
+        } else if (type == 'experience') {
+            list = document.getElementById("experienceList");
+            list.innerHTML = "";
+            experiences.forEach(item => {
+                let div = document.createElement("div");
+                div.innerHTML = `
                 <label> ${item.experience}</label>
                 <div onclick="removeEducation(${item.key},'experience')">
                     <img src="../images/circle-xmark-regular.png" alt="">
                 </div>
                 
                 `;
-                    list.appendChild(div);
-                });
-            } else if (type == 'skill') {
-                list = document.getElementById("skillList");
-                list.innerHTML = "";
-                skills.forEach(item => {
-                    let div = document.createElement("div");
-                    div.innerHTML = `
+                list.appendChild(div);
+            });
+        } else if (type == 'skill') {
+            list = document.getElementById("skillList");
+            list.innerHTML = "";
+            skills.forEach(item => {
+                let div = document.createElement("div");
+                div.innerHTML = `
                 <label> ${item.skillstu}</label>
                 <div onclick="removeEducation(${item.key},'skill')">
                     <img src="../images/circle-xmark-regular.png" alt="">
                 </div>
                 
                 `;
-                    list.appendChild(div);
-                });
-            } else if (type == 'languagestu') {
-                list = document.getElementById("langaugeList");
-                list.innerHTML = "";
-                languages.forEach(item => {
-                    let div = document.createElement("div");
-                    div.innerHTML = `
+                list.appendChild(div);
+            });
+        } else if (type == 'languagestu') {
+            list = document.getElementById("langaugeList");
+            list.innerHTML = "";
+            languages.forEach(item => {
+                let div = document.createElement("div");
+                div.innerHTML = `
                 <label> ${item.languagestudent}</label>
                 <div onclick="removeEducation(${item.key},'languagestu')">
                     <img src="../images/circle-xmark-regular.png" alt="">
                 </div>
                 
                 `;
-                    list.appendChild(div);
-                });
-            }
-
-
-
-
-
+                list.appendChild(div);
+            });
         }
+
+
+
+
+
+    }
     </script>
 
     <!-- =========== Scripts =========  -->
