@@ -8,11 +8,14 @@
     <title>Companies</title>
     <!-- ======= Styles ====== -->
     <link rel="stylesheet" href="../lib/style/student_dash.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
 <body>
     <!-- =============== Navigation ================ -->
-    <div class="container">
+    <div class="container1">
         <div class="navigation">
             <ul>
                 <li>
@@ -143,21 +146,48 @@
                             <h4>Colombo, LK</h4>
                         </div>
                         <div class="int-button">
-                            <button id="myBtn">Details</button>
-                            <button>Apply</button>
+                            <button type="button" data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">Details</button>
+                            <a class="md-none" type="button" href="mailto:ravinduwijekoon123@gmail.com">Apply</a>
                         </div>
                     </div>
 
-                    <!-- The Modal -->
-                    <!-- <div id="myModal" class="modal"> -->
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog ">
+                            <div class=" modal-content">
+                                <div class="md-div1">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="md-div2">
+                                    <div class="mt-title" id="staticBackdropLabel">UI/UX Designer</div>
+                                    <h6>Dribbble Holdings Ltd.</h6>
 
-                    <!-- Modal content -->
-                    <!-- <div class="modal-content">
-                                <span class="close">&times;</span>
-                                <p>Some text in the Modal..</p>
+                                    <div class="md-price">LKR 50,000 - LKR 80,000</div>
+                                </div>
+                                <div class="md-div3">
+                                    UI/UX Designer of Dribbble Holdings Ltd. is a job that challenges the creativity
+                                    of a person.
+                                    Dribbble Holdings Ltd. is known for the quality products among customers. The goal
+                                    of
+                                    the job is
+                                    to
+                                    design efficient UI/UX designs to the web developers.
+                                </div>
+                                <div class="md-lable-bar">
+                                    <div>Online</div>
+                                    <div>Los Angeles, USA</div>
+                                </div>
+                                <div class="md-div4">
+                                    <button type="button" class="md-button" data-bs-dismiss="modal">Close</button>
+                                    <a class="md-button md-none" type="button"
+                                        href="mailto:ravinduwijekoon123@gmail.com">Apply</a>
+                                </div>
                             </div>
-
-                        </div> -->
+                        </div>
+                    </div>
                     <?php
                     }
                     ?>
@@ -169,32 +199,9 @@
     </div>
 
     <!-- =========== Scripts =========  -->
-    <script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
+    <script src="../lib/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
     <!-- ====== ionicons ======= -->
