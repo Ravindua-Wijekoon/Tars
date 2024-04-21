@@ -165,72 +165,73 @@ $user_id = $_SESSION['id'];
                                     echo "<tr><td colspan='4'>No students found.</td></tr>";
                                 }
                                 
+                                
+
+                                echo '</div>';
+                                echo '</div>';
+
+                                echo '<div class="section2">';
+                                echo '<div class="button-sec">';
+                                echo '</div>';
+
+                                echo '<form action="../lib/php/com_profile_edit.php" method="POST">';
+                                echo '<div class="edit-sec">';
+                                echo '<div class="div2">';
+                                echo '<label>Company Name</label>';
+                                echo '<div class="input-full">';
+                                echo '<input class="edit-input" type="text" name="comname" value="' . $row['name'] . '">';
+                                echo '</div>';
+                                echo '</div>';
+
+                                echo '<div class="div2">';
+                                echo '<label>Company Type</label>';
+                                echo '<div class="input-full">';
+                                echo '<input class="edit-input" type="text" name="type" value="' . $row['type'] . '">';
+                                echo '</div>';
+                                echo '</div>';
+
+                                echo '<div class="div2">';
+                                echo '<label>Location</label>';
+                                echo '<div class="input-full">';
+                                echo '<input class="edit-input" type="text" name="location" value="' . $row['location'] . '">';
+                                echo '</div>';
+                                echo '</div>';
+
+                                echo '<div class="div2">';
+                                echo '<label>Email Address</label>';
+                                echo '<div class="input-full">';
+                                echo '<input class="edit-input" type="text" name="comemail" value="' . $row['com_email'] . '">';
+                                echo '</div>';
+                                echo '</div>';
+
+                                echo '<div class="div3">';
+                                echo '<label>About</label>';
+                                echo '<div class="input-full">';
+                                echo '<textarea class="edit-input" name="about" rows="8">' . $row['about'] . '</textarea>';
+                                echo '</div>';
+                                echo '</div>';
+
+                                echo '<div class="div2">';
+                                echo '<label>LinkedIn</label>';
+                                echo '<div class="input-full">';
+                                echo '<input class="edit-input" type="text" name="link" value="' . $row['linkedin'] . '">';
+                                echo '</div>';
+                                echo '</div>';
+
+                                echo '<div class="div2">';
+                                echo '<label>Twitter</label>';
+                                echo '<div class="input-full">';
+                                echo '<input class="edit-input" type="text" name="twitter" value="' . $row['twitter'] . '">';
+                                echo '</div>';
+                                echo '<input type="hidden" name="user_id" value="<?php echo htmlspecialchars($user_id); ?>">';
+                                echo '</div>';
+
+                                echo '</div>';
+                                echo '</form>';
+                                echo '</div>';
+
                                 ?>
 
-                        </div>
-                    </div>
-
-                    <div class="section2">
-                        <div class="button-sec">
-
-                        </div>
-                        <form action="../lib/php/com_profile_edit.php" method="POST">
-                            <div class="edit-sec">
-                                <div class="div2">
-                                    <label>Company Name</label>
-                                    <div class="input-full">
-                                        <input class="edit-input" type="text" name="comname" value="Get old data from DB">
-                                    </div>
-
-                                </div>
-
-                                <div class="div2">
-                                    <label>Company Type</label>
-                                    <div class="input-full">
-                                        <input class="edit-input" type="text" name="type" value="Get old data from DB">
-                                    </div>
-
-                                </div>
-
-                                <div class="div2">
-                                    <label>Location</label>
-                                    <div class="input-full">
-                                        <input class="edit-input" type="text" name="location" value="Get old data from DB">
-                                    </div>
-
-                                </div>
-
-                                <div class="div2">
-                                    <label>Email Address</label>
-                                    <div class="input-full">
-                                        <input class="edit-input" type="text" name="comemail" value="Get old data from DB">
-                                    </div>
-
-                                </div>
-
-                                <div class="div3">
-                                    <label>About</label>
-                                    <div class="input-full">
-                                        <textarea class="edit-input" name="about" rows="8">Get old data from DB</textarea>
-                                    </div>
-                                </div>
-
-                                <div class="div2">
-                                    <label>LinkedIn</label>
-                                    <div class="input-full">
-                                        <input class="edit-input" type="text" name="link" value="Get old data from DB">
-                                    </div>
-
-                                </div>
-                                <div class="div2">
-                                    <label>Twitter</label>
-                                    <div class="input-full">
-                                        <input class="edit-input" type="text" name="twitter" value="Get old data from DB">
-                                    </div>
-                                    <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($user_id); ?>">
-
-                                </div>
-                            </div>
                         
                         <button class="button-sec2" type="submit">
                             <div>Save</div>

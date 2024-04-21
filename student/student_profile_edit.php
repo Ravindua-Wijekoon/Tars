@@ -175,163 +175,120 @@ $uocindex = $_SESSION['id'];
                                 echo "<tr><td colspan='4'>No students found.</td></tr>";
                             }
 
+                           
+
+                            echo '</div>';
+                            echo '</div>';
+
+                            echo '<form class="sd-form" action="../lib/php/student_profile_edit_02.php" method="post">';
+                            echo '<div class="section2">';
+                            echo '<div class="button-sec"></div>';
+                            echo '<div class="edit-sec">';
+                            echo '<div class="div2">';
+                            echo '<label>Full Name</label>';
+                            echo '<div class="input-full">';
+                            echo '<input class="edit-input" type="text" value="' . $row['fullname'] . '" name="fullname">';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<div class="div2">';
+                            echo '<label>Address</label>';
+                            echo '<div class="input-full">';
+                            echo '<input class="edit-input" type="text" value="' . $row['address'] . '" name="address">';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<div class="div1">';
+                            echo '<label>City/Town</label>';
+                            echo '<div>';
+                            echo '<input class="edit-input" type="text" value="' . $row['city'] . '" name="city">';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<div class="div1">';
+                            echo '<label>Date of Birth</label>';
+                            echo '<div>';
+                            echo '<input class="edit-input" type="date" value="' . $row['dob'] . '" name="dob">';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<div class="div1">';
+                            echo '<label>Email</label>';
+                            echo '<div>';
+                            echo '<input class="edit-input" type="text" value="' . $row['email'] . '" name="email">';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<div class="div2">';
+                            echo '<label>Education</label><br>';
+                            echo '<div>';
+                            echo '<input class="edit-input" id="institute_edu" name="institution_edu" type="text" placeholder="Enter New Education">';
+                            echo '</div>';
+                            echo '<div class="short">';
+                            echo '<input class="edit-input" id="startYear_edu" name="start_edu" type="date">';
+                            echo '</div>';
+                            echo '<div class="short">';
+                            echo '<input class="edit-input" id="endYear_edu" name="end_edu" type="date">';
+                            echo '</div>';
+                            echo '<div class="plus" onclick="addEducation(\'education\');">';
+                            echo '<img src="../images/plus.svg" alt="" />';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<div class="preview" id="educationList"></div>';
+                            echo '<div class="div2">';
+                            echo '<label>Experience</label><br>';
+                            echo '<div>';
+                            echo '<input class="edit-input" type="text" id="institution_exp" name="institution_exp" placeholder="Enter New Experience">';
+                            echo '</div>';
+                            echo '<div class="short">';
+                            echo '<input class="edit-input" id="start_exp" name="start_exp" type="date" placeholder="Get">';
+                            echo '</div>';
+                            echo '<div class="short">';
+                            echo '<input class="edit-input" id="end_exp" name="end_exp" type="date" placeholder="Get">';
+                            echo '</div>';
+                            echo '<div class="plus" onclick="addEducation(\'experience\');">';
+                            echo '<img src="../images/plus.svg" alt="" />';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<div class="preview" id="experienceList"></div>';
+                            echo '<div class="div2">';
+                            echo '<label>Skills</label><br>';
+                            echo '<div>';
+                            echo '<input class="edit-input" type="text" id="skillstudent" name="skills" placeholder="Enter New Skills">';
+                            echo '</div>';
+                            echo '<div class="plus" onclick="addEducation(\'skill\');">';
+                            echo '<img src="../images/plus.svg" alt="" />';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<div class="preview" id="skillList"></div>';
+                            echo '<div class="div2">';
+                            echo '<label>Language</label><br>';
+                            echo '<div>';
+                            echo '<input class="edit-input" type="text" id="languagesstu" name="language" placeholder="Enter New Language">';
+                            echo '</div>';
+                            echo '<div class="plus" onclick="addEducation(\'languagestu\');">';
+                            echo '<img src="../images/plus.svg" alt="" />';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<div class="preview" id="langaugeList"></div>';
+                            echo '<div class="div2">';
+                            echo '<label>GitHub</label>';
+                            echo '<div class="input-full">';
+                            echo '<input class="edit-input" type="text" value="' . $row['github'] . '" name="github">';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<div class="div2">';
+                            echo '<label>LinkedIn</label>';
+                            echo '<div class="input-full">';
+                            echo '<input class="edit-input" type="text" value="' . $row['linkedin'] . '" name="link">';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<div class="div2">';
+                            echo '<label>Portfolio</label>';
+                            echo '<div class="input-full">';
+                            echo '<input class="edit-input" type="text" value="' . $row['portfolio'] . '" name="port">';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</form>';
+
                             ?>
-
-                        </div>
-                    </div>
-
-                    <form class="sd-form" action="../lib/php/student_profile_edit_02.php" method="post">
-
-                        <div class="section2">
-                            <div class="button-sec">
-
-                            </div>
-
-                            <div class="edit-sec">
-                                <div class="div2">
-                                    <label>Full Name</label>
-                                    <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB"
-                                            name="fullname">
-                                    </div>
-
-                                </div>
-
-                                <div class="div2">
-                                    <label>Address</label>
-                                    <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB"
-                                            name="address">
-                                    </div>
-
-                                </div>
-
-                                <div class="div1">
-                                    <label>City/Town</label>
-                                    <div>
-                                        <input class="edit-input" type="text" value="Get old data from DB" name="city">
-                                    </div>
-                                </div>
-                                <div class="div1">
-                                    <label>Date of Birth</label>
-                                    <div>
-                                        <input class="edit-input" type="date" value="Get old data from DB" name="dob">
-                                    </div>
-
-                                </div>
-                                <div class="div1">
-                                    <label>Email</label>
-                                    <div>
-                                        <input class="edit-input" type="text" value="Get old data from DB" name="email">
-                                    </div>
-                                </div>
-                                <div class="div1">
-
-                                </div>
-
-                                <div class="div2">
-                                    <label>Education</label><br>
-                                    <div>
-                                        <input class="edit-input" id='institute_edu' name="institution_edu" type="text"
-                                            placeholder="Enter New Education">
-                                    </div>
-                                    <div class="short">
-                                        <input class="edit-input" id='startYear_edu' name="start_edu" type="date">
-                                    </div>
-                                    <div class="short">
-                                        <input class="edit-input" id='endYear_edu' name="end_edu" type="date">
-                                    </div>
-                                    <div class="plus" onclick="addEducation('education');">
-                                        <img src="../images/plus.svg" alt="" />
-                                    </div>
-                                </div>
-                                <div class="preview" id="educationList">
-
-                                </div>
-                                <div class="div2">
-                                    <label>Experience</label><br>
-                                    <div>
-                                        <input class="edit-input" type="text" id='institution_exp'
-                                            name="institution_exp" placeholder="Enter New Experience">
-                                    </div>
-                                    <div class="short">
-                                        <input class="edit-input" id='start_exp' name="start_exp" type="date"
-                                            placeholder="Get">
-                                    </div>
-                                    <div class="short">
-                                        <input class="edit-input" id='end_exp' name="end_exp" type="date"
-                                            placeholder="Get">
-                                    </div>
-                                    <div class="plus" onclick="addEducation('experience');">
-                                        <img src="../images/plus.svg" alt="" />
-                                    </div>
-
-                                </div>
-
-
-                                <div class="preview" id="experienceList">
-
-                                </div>
-
-
-                                <div class="div2">
-                                    <label>Skills</label><br>
-                                    <div>
-                                        <input class="edit-input" type="text" id="skillstudent" name="skills"
-                                            placeholder="Enter New Skills">
-                                    </div>
-
-                                    <div class="plus" onclick="addEducation('skill');">
-                                        <img src="../images/plus.svg" alt="" />
-                                    </div>
-
-                                </div>
-
-                                <div class="preview" id="skillList">
-
-                                </div>
-
-                                <div class="div2">
-                                    <label>Language</label><br>
-                                    <div>
-                                        <input class="edit-input" type="text" id="languagesstu" name="language"
-                                            placeholder="Enter New Language">
-                                    </div>
-
-                                    <div class="plus" onclick="addEducation('languagestu');">
-                                        <img src="../images/plus.svg" alt="" />
-                                    </div>
-
-                                </div>
-
-                                <div class="preview" id="langaugeList">
-
-                                </div>
-
-
-
-                                <div class="div2">
-                                    <label>GitHub</label>
-                                    <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB"
-                                            name="github">
-                                    </div>
-
-                                </div>
-                                <div class="div2">
-                                    <label>LinkedIn</label>
-                                    <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB" name="link">
-                                    </div>
-
-                                </div>
-                                <div class="div2">
-                                    <label>Portfolio</label>
-                                    <div class="input-full">
-                                        <input class="edit-input" type="text" value="Get old data from DB" name="port">
-                                    </div>
-
-                                </div>
 
                                 <input type="hidden" id="educationData" name="educationData" />
                                 <input type="hidden" id="experienceData" name="experienceData" />
