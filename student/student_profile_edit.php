@@ -290,27 +290,30 @@ $uocindex = $_SESSION['id'];
 
                             ?>
 
-                                <input type="hidden" id="educationData" name="educationData" />
-                                <input type="hidden" id="experienceData" name="experienceData" />
-                                <input type="hidden" id="langauesData" name="langauesData" />
-                                <input type="hidden" id="skillsData" name="skillsData" />
-
-
-                            </div>
+                            <input type="hidden" id="educationData" name="educationData" />
+                            <input type="hidden" id="experienceData" name="experienceData" />
+                            <input type="hidden" id="langauesData" name="langauesData" />
+                            <input type="hidden" id="skillsData" name="skillsData" />
 
                             <button class="button-sec2" type="submit">
                                 <div>Save</div>
                             </button>
 
-                    </form>
+                        </div>
 
+
+
+
+
+                        </form>
+
+                    </div>
                 </div>
+
+
             </div>
 
-
         </div>
-
-    </div>
     </div>
 
     <script>
