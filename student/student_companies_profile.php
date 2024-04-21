@@ -165,74 +165,88 @@
                 } else {
                     echo "<tr><td colspan='4'>No company found for the provided email.</td></tr>";
                 }
-
-                // Query to fetch job postings for the company
-                $sql3 = "SELECT * FROM company_post_job WHERE email = ?";
-                $stmt3 = $con->prepare($sql3);
-                $stmt3->bind_param('s', $emailget);
-                $stmt3->execute();
-                $result3 = $stmt3->get_result();
-
-                if ($result3 && mysqli_num_rows($result3) > 0) {
-                    while ($row = mysqli_fetch_assoc($result3)) {
-                        // Query to fetch company information again to get 'contact_email'
-                        $sql5 = "SELECT * FROM company_info WHERE email = ?";
-                        $stmt5 = $con->prepare($sql5);
-                        $stmt5->bind_param('s', $emailget);
-                        $stmt5->execute();
-                        $result5 = $stmt5->get_result();
-                        $row5 = mysqli_fetch_assoc($result5); // Fetch the row
-
-                        echo '<div class="intern-card">';
-                        echo '<div class="int-name">';
-                        echo '<h3>' . $row['title'] . '</h3><br>';
-                        echo '<h4>' . $row['location'] . '</h4>';
-                        echo '</div>';
-                        echo '<div class="int-button">';
-                        echo '<button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Details</button>';
-                        echo '<a class="md-none" type="button" href="mailto:' . $row5['com_email'] . '">Apply</a>';
-                        echo '</div>';
-                        echo '</div>';
-
-                        //////////////////////////////////////////////////////////
-
-                        echo '<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">';
-                        echo '<div class="modal-dialog">';
-                        echo '<div class="modal-content">';
-                        echo '<div class="md-div1">';
-                        echo '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
-                        echo '</div>';
-                        echo '<div class="md-div2">';
-                        echo '<div class="mt-title" id="staticBackdropLabel">' . $row['title'] . '</div>';
-                        echo '<h6>' . $row5['name'] . '</h6>';
-                        //echo '<div class="md-price">LKR 50,000 - LKR 80,000</div>';
-                        echo '</div>';
-                        echo '<div class="md-div3">' . $row['description'] . '</div>';
-                        echo '<div class="md-lable-bar">';
-                        echo '<div>' . $row['type'] . '</div>';
-                        echo '<div>' . $row['location'] . '</div>';
-                        echo '</div>';
-                        echo '<div class="md-div4">';
-                        echo '<button type="button" class="md-button" data-bs-dismiss="modal">Close</button>';
-                        echo '<a class="md-button md-none" type="button" href="mailto:' . $row5['com_email'] . '">Apply</a>';
-                        echo '</div>';
-                        echo '</div>';
-                        echo '</div>';
-                        echo '</div>';
-                    }
-                } else {
-                    echo "<tr><td colspan='4'>No job postings found for the company.</td></tr>";
-                }
                 ?>
 
+                <h2>Internships</h2>
+
+                <div class="intern-sec">
+
+
+                    <?php
+
+
+
+                    // Query to fetch job postings for the company
+                    $sql3 = "SELECT * FROM company_post_job WHERE email = ?";
+                    $stmt3 = $con->prepare($sql3);
+                    $stmt3->bind_param('s', $emailget);
+                    $stmt3->execute();
+                    $result3 = $stmt3->get_result();
+
+                    if ($result3 && mysqli_num_rows($result3) > 0) {
+                        while ($row = mysqli_fetch_assoc($result3)) {
+                            // Query to fetch company information again to get 'contact_email'
+                            $sql5 = "SELECT * FROM company_info WHERE email = ?";
+                            $stmt5 = $con->prepare($sql5);
+                            $stmt5->bind_param('s', $emailget);
+                            $stmt5->execute();
+                            $result5 = $stmt5->get_result();
+                            $row5 = mysqli_fetch_assoc($result5); // Fetch the row
+                    
+                            echo '<div class="intern-card">';
+                            echo '<div class="int-name">';
+                            echo '<h3>' . $row['title'] . '</h3><br>';
+                            echo '<h4>' . $row['location'] . '</h4>';
+                            echo '</div>';
+                            echo '<div class="int-button">';
+                            echo '<button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Details</button>';
+                            echo '<a class="md-none" type="button" href="mailto:' . $row5['com_email'] . '">Apply</a>';
+                            echo '</div>';
+                            echo '</div>';
 
 
 
 
-                <!-- Modal -->
+                            //////////////////////////////////////////////////////////
+                    
+                            echo '<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">';
+                            echo '<div class="modal-dialog">';
+                            echo '<div class="modal-content">';
+                            echo '<div class="md-div1">';
+                            echo '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>';
+                            echo '</div>';
+                            echo '<div class="md-div2">';
+                            echo '<div class="mt-title" id="staticBackdropLabel">' . $row['title'] . '</div>';
+                            echo '<h6>' . $row5['name'] . '</h6>';
+                            //echo '<div class="md-price">LKR 50,000 - LKR 80,000</div>';
+                            echo '</div>';
+                            echo '<div class="md-div3">' . $row['description'] . '</div>';
+                            echo '<div class="md-lable-bar">';
+                            echo '<div>' . $row['type'] . '</div>';
+                            echo '<div>' . $row['location'] . '</div>';
+                            echo '</div>';
+                            echo '<div class="md-div4">';
+                            echo '<button type="button" class="md-button" data-bs-dismiss="modal">Close</button>';
+                            echo '<a class="md-button md-none" type="button" href="mailto:' . $row5['com_email'] . '">Apply</a>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</div>';
+
+                        }
+                    } else {
+                        echo "<tr><td colspan='4'>No job postings found for the company.</td></tr>";
+                    }
+                    ?>
 
 
 
+
+
+                    <!-- Modal -->
+
+
+                </div>
             </div>
         </div>
 
@@ -243,7 +257,7 @@
     <script src="../lib/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+        </script>
 
     <!-- ====== ionicons ======= -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
