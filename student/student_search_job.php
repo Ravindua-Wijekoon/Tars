@@ -184,6 +184,7 @@
                         echo '<div class="job-card" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">';
                         echo '<div class="sec">';
                         echo '<span class="card-name">';
+
                         echo '' . $row3['name'] . '<br>';
                         echo '<span class="card-topic">' . $name . '</span>';
                         echo '</span>';
@@ -191,7 +192,7 @@
                         echo '<img src="../images/Group 105.png" alt="">';
                         echo '</div>';
                         echo '</div>';
-                        echo '<div class="price-tag">' . $quali . '</div><br>';
+                        echo '<div class="price-tag"><h5>Experience</h5>' . $quali . '</div><br>';
                         echo '<div class="about">' . $des . '</div>';
                         echo '<div class="lable-bar">';
                         echo '<div>' . $type . '</div>';
@@ -210,7 +211,7 @@
                         echo '<div class="md-div2">';
                         echo '<div class="mt-title" id="staticBackdropLabel">' . $name . '</div>';
                         echo '<h6>' . $row3['name'] . '</h6>';
-                        echo '<div class="md-price">' . $quali . '</div>';
+                        echo '<div class="md-price"><h5>Experience</h5>' . $quali . '</div>';
                         echo '</div>';
                         echo '<div class="md-div3">' . $des . '</div>';
                         echo '<div class="md-lable-bar">';

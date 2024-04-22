@@ -363,7 +363,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  cursor: pointer;
+  /* cursor: pointer; */
   margin-bottom: 20px;
 }
 
@@ -518,6 +518,31 @@ input[type="radio"] {
   justify-content: center;
   cursor: pointer;
 }
+
+.dd {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  cursor: context-menu;
+}
+
+.dd a {
+  width: auto;
+}
+
+.dd .delete {
+  margin-bottom: 0px;
+}
+
+.delete button {
+  background-color: rgb(231, 84, 84);
+  height: 30px;
+  width: 80px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 /* ############## company Application ################ */
 
 .marg {

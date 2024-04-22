@@ -108,7 +108,7 @@ $user_id = $_SESSION['id'];
                         <!-- <img src="../images/notification.png" alt="" /> -->
                     </div>
                     <div class="logout">
-                        <a class="none" href="#">Logout</a>
+                        <a class="none" href="../login/login.php">Logout</a>
                     </div>
 
                     <div class="user">
@@ -159,9 +159,14 @@ $user_id = $_SESSION['id'];
                         echo "<h2>" . $row['title'] . "</h2>";
                         echo "<h4>" . $row['description'] . "</h4>";
                         echo "<div class='type'>" . $row['type'] . "</div>";
-                        echo "<h6>Applied</h6>";
-                        echo "<h5>14</h5>";
+                        // echo "<h6>Applied</h6>";
+                        // echo "<h5>14</h5>";
+                        echo '<div class="dd" >';
+                        echo '<a href = "#" class="delete" > <button>Delete</button> </a>';
+                        echo '</div>';
                         echo "</div>";
+
+
 
 
                     }
