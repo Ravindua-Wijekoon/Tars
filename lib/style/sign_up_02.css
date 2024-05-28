@@ -20,6 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: scroll;
 }
 
 .title {
@@ -67,6 +68,15 @@ body {
   width: 40px;
 }
 
+.none {
+  text-decoration: none;
+  color: #949494;
+}
+
+.none :hover {
+  color: #949494;
+}
+
 .text-03 {
   color: #949494;
   font-family: "Castoro Titling", cursive;
@@ -78,6 +88,11 @@ body {
 .textboxsec {
   width: 75%;
   margin: auto;
+}
+
+.main-div {
+  width: 60%;
+  text-align: center;
 }
 
 .input-box1 {
@@ -129,10 +144,6 @@ body {
   justify-content: center;
 }
 
-.none {
-  text-decoration: none;
-}
-
 /* personal_details_01 */
 
 .right-box2 {
@@ -148,6 +159,7 @@ body {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .input-box2 {
@@ -223,7 +235,7 @@ body {
 }
 
 .plus {
-  width: 40px;
+  width: 30px;
   margin-bottom: 10px;
   margin-left: 15px;
   border: none;
@@ -234,13 +246,64 @@ body {
 
 .right-box3 {
   width: 70%;
-  display: flex;
+  max-height: 100vh;
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
+  padding-top: 50px;
+  overflow: scroll;
 }
 
-@media screen and (max-width: 700px) {
+.preview {
+  width: 80%;
+  background-color: white;
+  padding: 5px 10px 0px 10px;
+  margin-bottom: 10px;
+  margin-left: 20%;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.preview div {
+  background-color: #b3b2b2;
+  height: auto;
+  width: auto;
+  border-radius: 15px;
+  padding: 0px 5px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-wrap: nowrap;
+  margin-bottom: 5px;
+}
+
+.preview div div {
+  color: black;
+  margin-left: 5px;
+  border-radius: 7px;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.preview div div img {
+  width: 12px;
+}
+
+.input-box6 {
+  width: 70%;
+  background-color: #d9d9d9;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 900px) {
   body {
     margin: 0px;
     padding: 0px;
@@ -265,6 +328,11 @@ body {
     display: flex;
     height: 550px;
     justify-content: center;
+  }
+
+  .main-div {
+    width: 70%;
+    text-align: center;
   }
 
   .title {
